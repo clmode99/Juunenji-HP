@@ -1,0 +1,64 @@
+@use "common/var";
+
+@mixin header-center {
+	max-width: 1920px;
+	margin: 0 auto; 
+}
+
+.header {
+	width: 100%;
+
+	background-image: url("../images/header-bg.png");
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: center;
+
+	&-inner {
+		@include header-center;
+		display: flex;
+		justify-content: space-between;
+
+		&-left {
+
+			&-logo {
+				margin: 20px 13px;
+			}
+		}
+
+		&-right {
+			&-menu {
+				height: 100%;
+				display: flex;
+				align-items: center;
+
+				&-normal {
+					margin-right: 74px;
+
+					&-list {
+						display : flex;
+					}
+
+					&-item {
+						a {
+							font-size: 18px;
+							color: var.$font-color;
+						}
+
+						&:not(:last-child) {
+							margin-right: 40px;
+						}
+					}
+				}
+
+				&-contact {
+					height: 100%;
+					font-size: 24px;
+					padding: 0 50px;
+					color: var.$contact-color;
+					background-color: var.$contact-bg-color;
+					border: none;
+				}
+			}
+		}
+	}
+}

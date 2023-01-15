@@ -1,0 +1,26 @@
+@use "header";
+@use "main";
+@use "footer";
+
+html {
+	font-size: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Source Han Serif', sans-serif;
+	letter-spacing: 0.05em;
+}
+
+body {
+	overflow-x: hidden;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hidden {
+	display: block;
+}
