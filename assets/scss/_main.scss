@@ -5,8 +5,7 @@
 .main {
 
 	&-visual{
-
-
+		// TODO: innerいらなかったかも。最終的に不要だったらinner消すこと(htmlも)
 		&-inner {
 			position: relative;
 			height: 950px;		// 画像の高さ
@@ -28,7 +27,63 @@
 				}
 			}
 		}
+	}
 
+	&-bg {
+		background-image: url("../images/bg.png");
+		background-repeat: repeat;
+	}
+
+	&-contents {
+		width: 100%;
+		max-width: var.$contents-width;
+		margin: 0 auto;
+	}
+
+	&-about {
+		display: flex;
+		justify-content: center;
+
+		padding-top: 200px;
+		padding-bottom : 200px;
+		text-align: center;
+
+		&-left {
+			margin-right: 125.5px;
+			object-fit: contain;
+		}
+
+		&-right {
+			margin-left: 125.5px;
+			object-fit: contain;
+		}
+
+		&-contents {
+			&-title {
+				font-size: 45px;
+				font-weight: bold;
+				@include mixin.LineHeight(45, 64);
+	
+				&-small {
+					font-size: 37px;
+				}
+			}
+
+			&-text {
+				margin-top: 45px;
+
+				font-size: 18px;
+				@include mixin.LineHeight(18, 30);
+			}
+
+			&-button {
+				margin-top: 56px;
+
+				font-size: 23px;
+				background: transparent;
+			}
+		}
 
 	}
+	
 }

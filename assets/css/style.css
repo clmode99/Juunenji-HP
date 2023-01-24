@@ -42,6 +42,11 @@
   border: none;
 }
 
+.button-normal {
+  border: 2px solid #272727;
+  padding: 14px 50px;
+}
+
 .loading {
   position: absolute;
   top: 50%;
@@ -120,6 +125,50 @@
 .main-visual-inner-title-img {
   height: 100%;
 }
+.main-bg {
+  background-image: url("../images/bg.png");
+  background-repeat: repeat;
+}
+.main-contents {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.main-about {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+.main-about-left {
+  margin-right: 125.5px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-about-right {
+  margin-left: 125.5px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-about-contents-title {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 1.4222222222;
+}
+.main-about-contents-title-small {
+  font-size: 37px;
+}
+.main-about-contents-text {
+  margin-top: 45px;
+  font-size: 18px;
+  line-height: 1.6666666667;
+}
+.main-about-contents-button {
+  margin-top: 56px;
+  font-size: 23px;
+  background: transparent;
+}
 
 html {
   font-size: 100%;
@@ -133,12 +182,16 @@ html {
 
 body {
   overflow-x: hidden;
-  color: black;
+  color: #272727;
   background-color: lightgreen;
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .hidden {

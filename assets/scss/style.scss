@@ -1,6 +1,7 @@
 @use "header";
 @use "main";
 @use "footer";
+@use "common/var";
 
 html {
 	font-size: 100%;
@@ -14,14 +15,17 @@ html {
 
 body {
 	overflow-x: hidden;
-	color: black;
+	color: var.$font-color;
 
 	background-color: lightgreen;		// デバッグ
-
 }
 
 a {
 	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
 }
 
 .hidden {

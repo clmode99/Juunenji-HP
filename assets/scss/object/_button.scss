@@ -1,0 +1,8 @@
+@use "../common/var";
+
+.button {
+	&-normal {
+		border: 2px solid var.$font-color;
+		padding: 14px 50px;
+	}
+}

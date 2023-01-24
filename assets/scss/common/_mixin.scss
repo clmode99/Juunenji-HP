@@ -5,3 +5,8 @@
 	left : 50%;
 	transform: translate(-50%, -50%);
 }
+
+// 行間を求める(XD用)
+@mixin LineHeight($xdLineHeight, $fontSize) {
+	line-height: calc($fontSize / $xdLineHeight);
+}
