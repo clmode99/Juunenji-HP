@@ -63,9 +63,7 @@
   min-height: 100%;
 }
 .youtube-area {
-  position: fixed;
   z-index: 1;
-  position: 0;
   overflow: hidden;
   opacity: 0;
 }
