@@ -1,0 +1,7 @@
+// 中央配置(親要素にdisplay: relativeをつけること)
+@mixin ArrangementCenter {
+	position: absolute;
+	top: 50%;
+	left : 50%;
+	transform: translate(-50%, -50%);
+}

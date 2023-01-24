@@ -1,0 +1,34 @@
+@use "common/var";
+@use "common/mixin";
+@use "object/object";
+
+.main {
+
+	&-visual{
+
+
+		&-inner {
+			position: relative;
+			height: 950px;		// 画像の高さ
+			text-align: center;
+
+			background-image: url("../images/junenji_top.png");
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			background-color: white;		// debug
+
+			&-title {
+				@include mixin.ArrangementCenter;
+				z-index: 2;
+
+				&-img {
+					height: 100%
+				}
+			}
+		}
+
+
+	}
+}

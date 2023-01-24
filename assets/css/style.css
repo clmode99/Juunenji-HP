@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   width: 100%;
   background-image: url("../images/header-bg.png");
@@ -41,6 +42,87 @@
   border: none;
 }
 
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading.disppear {
+  display: none;
+}
+
+.youtube {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.7777778vh; /* 16:9の幅 */
+  height: 56.25vw; /* 16:9の高さ */
+  min-width: 100%;
+  min-height: 100%;
+}
+.youtube-area {
+  position: fixed;
+  z-index: 1;
+  position: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.youtube-area.appear {
+  -webkit-animation-name: PageAnimeAppear;
+          animation-name: PageAnimeAppear;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.youtube-mask {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main-visual-inner {
+  position: relative;
+  height: 950px;
+  text-align: center;
+  background-image: url("../images/junenji_top.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+.main-visual-inner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.main-visual-inner-title-img {
+  height: 100%;
+}
+
 html {
   font-size: 100%;
 }
@@ -54,6 +136,7 @@ html {
 body {
   overflow-x: hidden;
   color: black;
+  background-color: lightgreen;
 }
 
 a {

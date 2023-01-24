@@ -1,0 +1,9 @@
+@use "../common/mixin";
+
+.loading {
+	@include mixin.ArrangementCenter;
+
+	&.disppear {
+		display: none;
+	}
+}
