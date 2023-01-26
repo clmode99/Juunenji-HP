@@ -1,3 +1,5 @@
+@use "var";
+
 // 中央配置(親要素にdisplay: relativeをつけること)
 @mixin ArrangementCenter {
 	position: absolute;
@@ -6,7 +8,21 @@
 	transform: translate(-50%, -50%);
 }
 
+@mixin FixContentsCenter {
+	width: 100%;
+	max-width: var.$contents-width;
+	margin: 0 auto;
+}
+
 // 行間を求める(XD用)
 @mixin LineHeight($xdLineHeight, $fontSize) {
 	line-height: calc($fontSize / $xdLineHeight);
+}
+
+// 背景画像を設定する
+@mixin SetBackGroundImage($url) {
+	background-image: url($url);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }

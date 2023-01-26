@@ -19,9 +19,11 @@
 		justify-content: space-between;
 
 		&-left {
-
 			&-logo {
-				margin: 20px 13px;
+				&-link {
+					display: block;
+					margin: 20px 13px;
+				}
 			}
 		}
 
@@ -57,6 +59,10 @@
 					color: var.$contact-color;
 					background-color: var.$contact-bg-color;
 					border: none;
+
+					&:hover {
+						color: var.$header-contact-hover-color;
+					}
 				}
 			}
 		}

@@ -2,7 +2,18 @@
 
 .button {
 	&-normal {
+		border: 1px solid var.$font-color;
+		padding: 9px 30px;
+		background: transparent;
+
+		&-radius {
+			border-radius: 3px;
+		}
+	}
+
+	&-normal2 {
 		border: 2px solid var.$font-color;
 		padding: 14px 50px;
+		background: transparent;
 	}
 }

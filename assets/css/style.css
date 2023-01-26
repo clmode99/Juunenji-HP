@@ -12,7 +12,8 @@
   display: flex;
   justify-content: space-between;
 }
-.header-inner-left-logo {
+.header-inner-left-logo-link {
+  display: block;
   margin: 20px 13px;
 }
 .header-inner-right-menu {
@@ -41,10 +42,22 @@
   background-color: #272727;
   border: none;
 }
+.header-inner-right-menu-contact:hover {
+  color: #FFF3B1;
+}
 
 .button-normal {
+  border: 1px solid #272727;
+  padding: 9px 30px;
+  background: transparent;
+}
+.button-normal-radius {
+  border-radius: 3px;
+}
+.button-normal2 {
   border: 2px solid #272727;
   padding: 14px 50px;
+  background: transparent;
 }
 
 .loading {
@@ -125,10 +138,6 @@
 .main-visual-inner-title-img {
   height: 100%;
 }
-.main-bg {
-  background-image: url("../images/bg.png");
-  background-repeat: repeat;
-}
 .main-contents {
   width: 100%;
   max-width: 1320px;
@@ -140,6 +149,10 @@
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+}
+.main-about-bg {
+  background-image: url("../images/bg.png");
+  background-repeat: repeat;
 }
 .main-about-left {
   margin-right: 125.5px;
@@ -167,7 +180,89 @@
 .main-about-contents-button {
   margin-top: 56px;
   font-size: 23px;
-  background: transparent;
+}
+.main-about-contents-button:hover {
+  background-color: #272727;
+  color: #FFFFFF;
+}
+.main-menu-item {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-menu-item-card {
+  width: 300px;
+  padding-top: 132px;
+  padding-bottom: 40px;
+  background-color: #FFFFFF;
+  opacity: 0.9;
+  border: 1px solid #272727;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.main-menu-item-card-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+.main-menu-item-card-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+.main-menu-item-card-inner {
+  margin: 0 auto;
+  max-width: 200px;
+  width: 100%;
+}
+.main-menu-item-card-title {
+  font-size: 37px;
+  text-align: center;
+}
+.main-menu-item-card-text {
+  margin-top: 97px;
+  height: 90px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.4285714286;
+}
+.main-menu-item-card-button {
+  margin: 28px auto 0;
+  display: block;
+}
+.main-menu-item-card-button:hover {
+  background-color: #272727;
+  color: #FFFFFF;
+}
+.main-menu-item-bg {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.main-menu-item-bg:nth-child(1) {
+  background-image: url(../images/junenji_front.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-menu-item-bg:nth-child(2) {
+  background-image: url(../images/junenji_chant.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-menu-item-bg:nth-child(3) {
+  background-image: url(../images/junenji_event.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-menu-item-bg:nth-child(4) {
+  background-image: url(../images/junenji_grave.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 html {
