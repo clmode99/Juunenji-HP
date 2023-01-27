@@ -229,4 +229,22 @@
 			}
 		}
 	}
+
+	&-slider {
+		&-list {
+			position: relative;
+
+			.slick-slide {
+				height: 700px;
+			}
+		}
+
+		@for $i from 1 through length(var.$main-slider-url-list) {
+			&-item#{$i} {
+				@include mixin.SetBackGroundImage(#{nth(var.$main-slider-url-list, $i)});
+
+
+			}
+		}
+	}
 }

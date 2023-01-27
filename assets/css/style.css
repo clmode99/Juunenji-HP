@@ -322,6 +322,42 @@
   background-color: #707070;
   color: #FFFFFF;
 }
+.main-slider-list {
+  position: relative;
+}
+.main-slider-list .slick-slide {
+  height: 700px;
+}
+.main-slider-item1 {
+  background-image: url(../images/slider/junenji_hondonai.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-slider-item2 {
+  background-image: url(../images/slider/junenji_hondokazari.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-slider-item3 {
+  background-image: url(../images/slider/junenji_nishimon3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-slider-item4 {
+  background-image: url(../images/slider/junenji_kobodo4.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-slider-item5 {
+  background-image: url(../images/slider/junenji_bell.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 html {
   font-size: 100%;
