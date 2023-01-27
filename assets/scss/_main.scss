@@ -29,6 +29,12 @@
 		@include mixin.FixContentsCenter;
 	}
 
+	&-bg {
+		background-image: url("../images/bg.png");
+		background-repeat: repeat;
+	}
+
+
 	&-about {
 		display: flex;
 		justify-content: center;
@@ -36,11 +42,6 @@
 		padding-top: 200px;
 		padding-bottom : 200px;
 		text-align: center;
-
-		&-bg {
-			background-image: url("../images/bg.png");
-			background-repeat: repeat;
-		}
 
 		&-left {
 			margin-right: 125.5px;
@@ -161,6 +162,7 @@
 					}
 				}
 
+				/* アニメーション参考サイト：https://www.webopixel.net/html-css/1019.html */
 				&::after {
 					position: absolute;
 					content: "";
@@ -181,4 +183,50 @@
 		}
 	}
 	
+	&-traffic {
+		padding-top: 200px;
+		padding-bottom: 200px;
+		
+		&-title {
+			text-align: center;
+			font-size:35px;
+			font-weight: bold;
+			@include mixin.LineHeight(50, 35);
+			@include mixin.LetterSpacing(200);
+		}
+
+		&-map {
+			margin-top: 87px;
+
+			width: 100%;
+			max-width: var.$contents-width;
+			height: 500px;
+		}
+
+		&-text {
+			font-size: 20px;
+			text-align: center;
+		}
+
+		&-address {
+			margin-top: 82px;
+		}
+
+		&-tel {
+			margin-top: 24px;
+		}
+
+		&-more {
+			display: block;
+			margin: 51px auto 0;
+
+			font-size: 20px;
+			font-weight: bold;
+			
+			&:hover {
+				background-color: var.$button-traffic-more-hover-bg-color;
+				color: var.$button-hover-color;
+			}
+		}
+	}
 }

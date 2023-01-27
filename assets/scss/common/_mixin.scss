@@ -19,6 +19,10 @@
 	line-height: calc($fontSize / $xdLineHeight);
 }
 
+@mixin LetterSpacing($xdLetterSpacing) {
+	letter-spacing: calc($xdLetterSpacing / 1000) + em;
+}
+
 // 背景画像を設定する
 @mixin SetBackGroundImage($url) {
 	background-image: url($url);
