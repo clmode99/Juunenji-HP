@@ -359,28 +359,93 @@
   background-repeat: no-repeat;
 }
 
+.footer {
+  background-image: url("../images/footer-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer-inner {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+.footer-inner-logo {
+  text-align: center;
+}
+.footer-inner-address {
+  margin-top: 94px;
+  text-align: center;
+  font-weight: bold;
+}
+.footer-inner-address-text {
+  font-size: 23px;
+}
+.footer-inner-address-tel-text {
+  margin-top: 12px;
+  font-size: 30px;
+}
+.footer-inner-menu {
+  margin-top: 94px;
+}
+.footer-inner-menu-list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #272727;
+  padding-bottom: 14px;
+}
+.footer-inner-menu-item {
+  font-size: 21px;
+}
+.footer-inner-sns {
+  margin: 33px auto 0;
+  display: block;
+}
+.footer-inner-sns-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-inner-sns-line {
+  margin-right: 25px;
+}
+.footer-inner-copyright {
+  margin-top: 57.5px;
+}
+.footer-inner-copyright-text {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 900;
+}
+
 html {
   font-size: 100%;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Source Han Serif", sans-serif;
   letter-spacing: 0.05em;
 }
 
 body {
   overflow-x: hidden;
   color: #272727;
+  font-family: "Source Han Serif", sans-serif;
   background-color: lightgreen;
 }
 
 a {
   text-decoration: none;
+  color: #272727;
 }
 
 button {
   cursor: pointer;
+  font-family: "Source Han Serif", sans-serif;
 }
 
 .hidden {
