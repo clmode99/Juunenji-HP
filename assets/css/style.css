@@ -195,6 +195,7 @@
 }
 .main-menu-item-card {
   width: 300px;
+  z-index: 2;
   padding-top: 132px;
   padding-bottom: 40px;
   background-color: #FFFFFF;
@@ -237,32 +238,46 @@
 }
 .main-menu-item-bg {
   position: relative;
+  overflow: hidden;
   width: 100%;
   height: 600px;
+  z-index: 1;
 }
-.main-menu-item-bg:nth-child(1) {
+.main-menu-item-bg:nth-child(1)::after {
   background-image: url(../images/junenji_front.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.main-menu-item-bg:nth-child(2) {
+.main-menu-item-bg:nth-child(2)::after {
   background-image: url(../images/junenji_chant.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.main-menu-item-bg:nth-child(3) {
+.main-menu-item-bg:nth-child(3)::after {
   background-image: url(../images/junenji_event.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.main-menu-item-bg:nth-child(4) {
+.main-menu-item-bg:nth-child(4)::after {
   background-image: url(../images/junenji_grave.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.main-menu-item-bg::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transition: all 0.3s ease-out;
+}
+.main-menu-item-bg:hover::after {
+  transform: scale(1.05);
 }
 
 html {
