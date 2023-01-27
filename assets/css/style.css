@@ -127,11 +127,11 @@
   position: relative;
   height: 950px;
   text-align: center;
+  pointer-events: none;
   background-image: url("../images/junenji_top.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: white;
 }
 .main-visual-inner-title {
   position: absolute;

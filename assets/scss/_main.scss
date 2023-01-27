@@ -10,9 +10,9 @@
 			position: relative;
 			height: 950px;		// 画像の高さ
 			text-align: center;
+			pointer-events: none;
 
 			@include mixin.SetBackGroundImage("../images/junenji_top.png");
-			background-color: white;		// debug
 
 			&-title {
 				@include mixin.ArrangementCenter;
