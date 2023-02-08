@@ -14,6 +14,11 @@
 	margin: 0 auto;
 }
 
+@mixin FixContentsCenterTablet {
+	width: var.$main-content-width-tablet;
+	margin: 0 auto;
+}
+
 // 行間を求める(XD用)
 @mixin LineHeight($xdLineHeight, $fontSize) {
 	line-height: calc($fontSize / $xdLineHeight);

@@ -9,9 +9,24 @@
 		@include mixin.FixContentsCenter;
 		padding-top: 150px;
 		padding-bottom: 80px;
+
+		@include tablet {
+			display: none;
+		}
 		
 		&-logo {
 			text-align: center;
+
+			@include tablet {
+				display: block;
+				margin: 74px auto 0;
+			}
+
+			img {
+				@include tablet {
+					width: 30%;
+				}
+			}
 		}
 
 		&-address {
@@ -19,14 +34,27 @@
 			text-align: center;
 			font-weight: bold;
 
+			@include tablet {
+				margin-top: 38px;
+			}
+
 			&-text {
 				@include mixin.FontSize(23px);
+
+				@include tablet {
+					@include mixin.FontSize(17px);
+				}
 			}
 
 			&-tel {
 				&-text {
 					margin-top: 12px;
 					@include mixin.FontSize(30px);
+
+					@include tablet {
+						margin-top: 10px;
+						@include mixin.FontSize(17px);
+					}
 				}
 			}
 		}
@@ -34,12 +62,22 @@
 		&-menu {
 			margin-top: 94px;
 
+			@include tablet {
+				margin-top: 0;
+			}
+
 			&-list {
 				display: flex;
 				justify-content: space-between;
 
 				border-bottom: 1px solid var.$font-color;
 				padding-bottom: 14px;
+
+				@include tablet {
+					display: block;
+					text-align: center;
+					padding-bottom: 74px;
+				}
 			}
 
 			&-item {
@@ -47,6 +85,13 @@
 
 				@include otherResponsive(1000px) {
 					@include mixin.FontSize(18px);
+				}
+
+				@include tablet {
+					@include mixin.FontSize(21px);
+					font-weight: bold;
+
+					margin-bottom: 30px;
 				}
 			}
 		}
@@ -70,12 +115,31 @@
 		&-copyright {
 			margin-top: 57.5px;
 
+			@include tablet {
+				margin-top: 50px;
+			}
+
 			&-text {
 				display: block;
 				text-align: center;
 				@include mixin.FontSize(16px);
 				font-family: 'Zen Old Mincho', serif;
 				font-weight: 900;
+
+				@include tablet {
+					@include mixin.FontSize(14px);
+				}
+			}
+		}
+
+		&-tablet {
+			display: none;
+
+			@include tablet {
+				display: block;
+				@include mixin.FixContentsCenterTablet;
+				padding-top: 100px;
+				padding-bottom: 70px;
 			}
 		}
 	}

@@ -795,23 +795,60 @@
   padding-top: 150px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 960px) {
+  .footer-inner {
+    display: none;
+  }
+}
 .footer-inner-logo {
   text-align: center;
+}
+@media screen and (max-width: 960px) {
+  .footer-inner-logo {
+    display: block;
+    margin: 74px auto 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .footer-inner-logo img {
+    width: 30%;
+  }
 }
 .footer-inner-address {
   margin-top: 94px;
   text-align: center;
   font-weight: bold;
 }
+@media screen and (max-width: 960px) {
+  .footer-inner-address {
+    margin-top: 38px;
+  }
+}
 .footer-inner-address-text {
   font-size: 2.3rem;
+}
+@media screen and (max-width: 960px) {
+  .footer-inner-address-text {
+    font-size: 1.7rem;
+  }
 }
 .footer-inner-address-tel-text {
   margin-top: 12px;
   font-size: 3rem;
 }
+@media screen and (max-width: 960px) {
+  .footer-inner-address-tel-text {
+    margin-top: 10px;
+    font-size: 1.7rem;
+  }
+}
 .footer-inner-menu {
   margin-top: 94px;
+}
+@media screen and (max-width: 960px) {
+  .footer-inner-menu {
+    margin-top: 0;
+  }
 }
 .footer-inner-menu-list {
   display: flex;
@@ -819,12 +856,26 @@
   border-bottom: 1px solid #272727;
   padding-bottom: 14px;
 }
+@media screen and (max-width: 960px) {
+  .footer-inner-menu-list {
+    display: block;
+    text-align: center;
+    padding-bottom: 74px;
+  }
+}
 .footer-inner-menu-item {
   font-size: 2.1rem;
 }
 @media screen and (max-width: 1000px) {
   .footer-inner-menu-item {
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .footer-inner-menu-item {
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 30px;
   }
 }
 .footer-inner-sns {
@@ -842,12 +893,34 @@
 .footer-inner-copyright {
   margin-top: 57.5px;
 }
+@media screen and (max-width: 960px) {
+  .footer-inner-copyright {
+    margin-top: 50px;
+  }
+}
 .footer-inner-copyright-text {
   display: block;
   text-align: center;
   font-size: 1.6rem;
   font-family: "Zen Old Mincho", serif;
   font-weight: 900;
+}
+@media screen and (max-width: 960px) {
+  .footer-inner-copyright-text {
+    font-size: 1.4rem;
+  }
+}
+.footer-inner-tablet {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .footer-inner-tablet {
+    display: block;
+    width: 93%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
 }
 
 html {
