@@ -145,7 +145,24 @@
 
 	&-menu {
 		&-list {
-			
+			@include tablet {
+				display: none;
+			}
+
+			&-tablet {
+				padding-top: 100px;
+				padding-bottom: 150px;
+				
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+
+				&-bg {
+					background-image: url("../images/menu-bg.png");
+					background-repeat: repeat;
+				}
+			}
 		}
 
 		&-item {
@@ -239,12 +256,67 @@
 					}
 				}
 			}
+
+			&-tablet {
+				@include tablet {
+					position: relative;
+					width: 95%;
+					margin: 0 auto 150px;
+					padding-top: 35px;
+					padding-bottom: 35px;
+
+					background-color: var.$card-bg-color;
+					border: 1px solid var.$card-border-color-tablet;
+				}
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				// カードの中身を初期化するときに共通するものをまとめたもの(作業用)
+				@mixin InitCard {
+					display: block;
+					width: var.$main-content-width-tablet;
+					margin: 0 auto;
+				}
+
+				&-img {
+					@include InitCard();
+				}
+				
+				&-text {
+					@include InitCard();
+					margin-top: 45px;
+
+					@include mixin.FontSize(17px);
+					@include mixin.LineHeight(17, 30);
+					font-weight: bold;
+				}
+
+				&-button {
+					@include InitCard();
+					margin-top: 65px;
+
+					background: transparent;
+					border: 1px solid var.$card-border-color-tablet;
+					border-radius: 3px;
+					padding-top: 25px;
+					padding-bottom: 25px;
+
+					@include mixin.FontSize(36px);
+					font-weight: bold;
+				}
+			}
 		}
 	}
 	
 	&-traffic {
 		padding-top: 200px;
 		padding-bottom: 200px;
+
+		@include tablet {
+			padding-top: 100px;
+		}
 		
 		&-title {
 			text-align: center;
@@ -252,6 +324,11 @@
 			font-weight: bold;
 			@include mixin.LineHeight(50, 35);
 			@include mixin.LetterSpacing(200);
+
+			@include tablet {
+				@include mixin.FontSize(40px);
+				@include mixin.LetterSpacing(0);
+			}
 		}
 
 		&-map {
@@ -260,15 +337,34 @@
 			width: 100%;
 			max-width: var.$contents-width;
 			height: 500px;
+
+			@include tablet {
+				display: block;
+				margin: 80px auto 0;
+				width: var.$main-content-width-tablet;
+				height: 650px;
+
+				border: 1px solid var.$card-border-color-tablet;
+				border-radius: 1px;
+			}
 		}
 
 		&-text {
 			@include mixin.FontSize(20px);
 			text-align: center;
+
+			@include tablet {
+				@include mixin.FontSize(17px);
+				font-weight: bold;
+			}
 		}
 
 		&-address {
 			margin-top: 82px;
+
+			@include tablet {
+				margin-top: 45px;
+			}
 		}
 
 		&-tel {
@@ -281,6 +377,13 @@
 
 			@include mixin.FontSize(20px);
 			font-weight: bold;
+
+			@include tablet {
+				width: var.$main-content-width-tablet;
+				margin: 80px auto 0;
+
+				@include mixin.FontSize(34px);
+			}
 			
 			&:hover {
 				background-color: var.$button-traffic-more-hover-bg-color;
@@ -290,6 +393,10 @@
 	}
 
 	&-slider {
+		@include tablet {
+			display: none;
+		}
+		
 		&-list {
 			position: relative;
 

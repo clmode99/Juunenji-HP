@@ -38,7 +38,5 @@ $(function () {
 			$('.header-inner-right-mb-menu-list-overlay').remove();
 		});
 	});
-
-	
 });
 

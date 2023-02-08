@@ -26,6 +26,10 @@
 		border: none;
 		padding: 16px 50px;
 		background-color: var.$button-traffic-more-bg-color;
+
+		@include tablet {
+			padding: 26px 50px;
+		}
 	}
 
 	&-header {
