@@ -23,6 +23,10 @@
 	letter-spacing: calc($xdLetterSpacing / 1000) + em;
 }
 
+@mixin FontSize($xdFontSize) {
+	font-size: calc($xdFontSize / var.$base-font-size) + rem;
+}
+
 // 背景画像を設定する
 @mixin SetBackGroundImage($url) {
 	background-image: url($url);

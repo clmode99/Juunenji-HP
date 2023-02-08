@@ -1,5 +1,6 @@
 @use "common/mixin";
 @use "common/var";
+@use "common/responsive" as *;
 
 .footer {
 	@include mixin.SetBackGroundImage("../images/footer-bg.png");
@@ -19,13 +20,13 @@
 			font-weight: bold;
 
 			&-text {
-				font-size: 23px;
+				@include mixin.FontSize(23px);
 			}
 
 			&-tel {
 				&-text {
 					margin-top: 12px;
-					font-size: 30px;
+					@include mixin.FontSize(30px);
 				}
 			}
 		}
@@ -42,7 +43,11 @@
 			}
 
 			&-item {
-				font-size: 21px;
+				@include mixin.FontSize(21px);
+
+				@include otherResponsive(1000px) {
+					@include mixin.FontSize(18px);
+				}
 			}
 		}
 
@@ -68,7 +73,7 @@
 			&-text {
 				display: block;
 				text-align: center;
-				font-size: 16px;
+				@include mixin.FontSize(16px);
 				font-family: 'Zen Old Mincho', serif;
 				font-weight: 900;
 			}

@@ -1,6 +1,7 @@
 @use "common/var";
 @use "common/mixin";
 @use "object/object";
+@use "common/responsive" as *;
 
 .main {
 
@@ -8,15 +9,21 @@
 		// TODO: innerいらなかったかも。最終的に不要だったらinner消すこと(htmlも)
 		&-inner {
 			position: relative;
+			width: 100%;
 			height: 950px;		// 画像の高さ
 			text-align: center;
 			pointer-events: none;
 
 			@include mixin.SetBackGroundImage("../images/junenji_top.png");
 
+			@include tablet {
+				height: 930px;
+			}
+
 			&-title {
 				@include mixin.ArrangementCenter;
 				z-index: 2;
+				width: 30%;
 
 				&-img {
 					height: 100%
@@ -43,38 +50,90 @@
 		padding-bottom : 200px;
 		text-align: center;
 
+		@include tablet {
+			display: none;
+		}
+
+		&-tablet {
+			display: none;
+
+			@include tablet {
+				display: block;
+				justify-content: center;
+
+				padding-top: 72px;
+				padding-bottom: 100px;
+				text-align: center;
+			}
+
+			&-img {
+				display: flex;
+				justify-content: center;
+			}
+		}
+
 		&-left {
 			margin-right: 125.5px;
 			object-fit: contain;
+
+			@include tablet {
+				margin-right: 3%;
+				width: 60px;
+			}
 		}
 
 		&-right {
 			margin-left: 125.5px;
 			object-fit: contain;
+
+			@include tablet {
+				margin-left: 0;
+				width: 60px;
+			}
 		}
 
 		&-contents {
 			&-title {
-				font-size: 45px;
+				@include mixin.FontSize(45px);
 				font-weight: bold;
 				@include mixin.LineHeight(45, 64);
 	
+				@include tablet {
+					margin-top: 20px;
+					@include mixin.FontSize(40px);
+					@include mixin.LineHeight(40, 70);
+				}
+
 				&-small {
-					font-size: 37px;
+					@include mixin.FontSize(37px);
+
+					@include tablet {
+						@include mixin.FontSize(35px);
+					}
 				}
 			}
 
 			&-text {
 				margin-top: 45px;
 
-				font-size: 18px;
+				@include mixin.FontSize(18px);
 				@include mixin.LineHeight(18, 30);
+
+				@include tablet {
+					@include mixin.FontSize(24px);
+					@include mixin.LineHeight(24, 40);
+				}
 			}
 
 			&-button {
 				margin-top: 56px;
 
-				font-size: 23px;
+				@include mixin.FontSize(23px);
+
+				@include tablet {
+					@include mixin.FontSize(38px);
+					font-weight: bold;
+				}
 
 				&:hover {
 					background-color: var.$font-color;
@@ -125,7 +184,7 @@
 				}
 
 				&-title {
-					font-size: 37px;
+					@include mixin.FontSize(37px);
 					text-align: center;
 				}
 
@@ -133,7 +192,7 @@
 					margin-top: 97px;
 					height: 90px;
 
-					font-size: 14px;
+					@include mixin.FontSize(14px);
 					text-align: left;
 					@include mixin.LineHeight(14, 20);
 				}
@@ -189,7 +248,7 @@
 		
 		&-title {
 			text-align: center;
-			font-size:35px;
+			@include mixin.FontSize(35px);
 			font-weight: bold;
 			@include mixin.LineHeight(50, 35);
 			@include mixin.LetterSpacing(200);
@@ -204,7 +263,7 @@
 		}
 
 		&-text {
-			font-size: 20px;
+			@include mixin.FontSize(20px);
 			text-align: center;
 		}
 
@@ -220,7 +279,7 @@
 			display: block;
 			margin: 51px auto 0;
 
-			font-size: 20px;
+			@include mixin.FontSize(20px);
 			font-weight: bold;
 			
 			&:hover {

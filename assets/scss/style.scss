@@ -4,7 +4,7 @@
 @use "common/var";
 
 html {
-	font-size: 100%;
+	font-size: var.$base-font-size;
 }
 
 * {
@@ -19,7 +19,6 @@ body {
 
 	background-color: lightgreen;		// デバッグ
 }
-
 a {
 	text-decoration: none;
 	color: var.$font-color;
@@ -28,6 +27,11 @@ a {
 button {
 	cursor: pointer;
 	font-family: 'Source Han Serif', sans-serif;
+}
+
+img {
+	max-width: 100%;
+	image-rendering: -webkit-optimize-contrast;
 }
 
 .hidden {
