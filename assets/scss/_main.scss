@@ -145,22 +145,32 @@
 
 	&-menu {
 		&-list {
+
 			@include tablet {
 				display: none;
 			}
 
 			&-tablet {
-				padding-top: 100px;
-				padding-bottom: 150px;
+				display: none;
 				
-				position: relative;
-				display: flex;
-				flex-direction: column;
-				width: 100%;
+				@include tablet {
+					padding-top: 100px;
+					padding-bottom: 150px;
+					
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					width: 100%;	
+				}
 
 				&-bg {
-					background-image: url("../images/menu-bg.png");
-					background-repeat: repeat;
+					display: none;
+
+					@include tablet {
+						display: block;
+						background-image: url("../images/menu-bg.png");
+						background-repeat: repeat;	
+					}
 				}
 			}
 		}

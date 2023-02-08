@@ -506,16 +506,27 @@
   }
 }
 .main-menu-list-tablet {
-  padding-top: 100px;
-  padding-bottom: 150px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .main-menu-list-tablet {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .main-menu-list-tablet-bg {
-  background-image: url("../images/menu-bg.png");
-  background-repeat: repeat;
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .main-menu-list-tablet-bg {
+    display: block;
+    background-image: url("../images/menu-bg.png");
+    background-repeat: repeat;
+  }
 }
 .main-menu-item {
   width: 100%;
