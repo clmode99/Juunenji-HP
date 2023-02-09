@@ -21,6 +21,8 @@ $mobile-break-point: 520px;
 	}
 }
 
+// ↓これあんま使わないかも・・・
+
 .tablet-hidden {
 	@include tablet {
 		display: none;

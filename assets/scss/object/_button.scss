@@ -20,6 +20,10 @@
 		border: 2px solid var.$font-color;
 		padding: 14px 50px;
 		background: transparent;
+
+		@include mobile {
+			padding: 12px 34px;
+		}
 	}
 
 	&-normal3 {
@@ -29,6 +33,11 @@
 
 		@include tablet {
 			padding: 26px 50px;
+
+			@include mobile {
+				padding-top: 13px;
+				padding-bottom: 13px;
+			}
 		}
 	}
 

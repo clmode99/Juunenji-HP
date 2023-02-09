@@ -6,7 +6,6 @@
 .main {
 
 	&-visual{
-		// TODO: innerいらなかったかも。最終的に不要だったらinner消すこと(htmlも)
 		&-inner {
 			position: relative;
 			width: 100%;
@@ -18,6 +17,10 @@
 
 			@include tablet {
 				height: 930px;
+			}
+
+			@include tablet {
+				height: 607px;
 			}
 
 			&-title {
@@ -66,6 +69,11 @@
 				text-align: center;
 			}
 
+			@include mobile {
+				padding-top: 35px;
+				padding-bottom: 57px;
+			}
+
 			&-img {
 				display: flex;
 				justify-content: center;
@@ -80,6 +88,10 @@
 				margin-right: 3%;
 				width: 60px;
 			}
+
+			@include mobile {
+				width: 30px;
+			}
 		}
 
 		&-right {
@@ -89,6 +101,10 @@
 			@include tablet {
 				margin-left: 0;
 				width: 60px;
+			}
+
+			@include mobile {
+				width: 30px;
 			}
 		}
 
@@ -104,11 +120,21 @@
 					@include mixin.LineHeight(40, 70);
 				}
 
+				@include mobile {
+					margin-top: 7px;
+					@include mixin.FontSize(27px);
+					@include mixin.LineHeight(27, 39);
+				}
+
 				&-small {
 					@include mixin.FontSize(37px);
 
 					@include tablet {
 						@include mixin.FontSize(35px);
+					}
+
+					@include mobile {
+						@include mixin.FontSize(24px);
 					}
 				}
 			}
@@ -123,6 +149,12 @@
 					@include mixin.FontSize(24px);
 					@include mixin.LineHeight(24, 40);
 				}
+
+				@include mobile {
+					margin-top: 40px;
+					@include mixin.FontSize(14px);
+					@include mixin.LineHeight(14, 20);
+				}
 			}
 
 			&-button {
@@ -135,6 +167,11 @@
 					font-weight: bold;
 				}
 
+				@include mobile {
+					margin-top: 48px;
+					@include mixin.FontSize(19px);
+				}
+
 				&:hover {
 					background-color: var.$font-color;
 					color: var.$button-hover-color;
@@ -145,7 +182,6 @@
 
 	&-menu {
 		&-list {
-
 			@include tablet {
 				display: none;
 			}
@@ -161,6 +197,10 @@
 					display: flex;
 					flex-direction: column;
 					width: 100%;	
+				}
+
+				@include mobile{
+					padding-bottom: 94px;
 				}
 
 				&-bg {
@@ -279,6 +319,12 @@
 					border: 1px solid var.$card-border-color-tablet;
 				}
 
+				@include mobile {
+					padding-top: 17px;
+					padding-bottom: 17px;
+					margin-bottom: 57px;
+				}
+
 				&:last-of-type {
 					margin-bottom: 0;
 				}
@@ -301,6 +347,12 @@
 					@include mixin.FontSize(17px);
 					@include mixin.LineHeight(17, 30);
 					font-weight: bold;
+
+					@include mobile {
+						margin-top: 22px;
+						@include mixin.FontSize(13px);
+						@include mixin.LineHeight(13, 19);
+					}
 				}
 
 				&-button {
@@ -315,6 +367,13 @@
 
 					@include mixin.FontSize(36px);
 					font-weight: bold;
+
+					@include mobile {
+						margin-top: 22px;
+						@include mixin.FontSize(18px);
+						padding-top: 12px;
+						padding-bottom: 12px;
+					}
 				}
 			}
 		}
@@ -327,6 +386,11 @@
 		@include tablet {
 			padding-top: 100px;
 		}
+
+		@include mobile {
+			padding-top: 94px;
+			padding-bottom: 94px;
+		}
 		
 		&-title {
 			text-align: center;
@@ -338,6 +402,11 @@
 			@include tablet {
 				@include mixin.FontSize(40px);
 				@include mixin.LetterSpacing(0);
+			}
+
+			@include mobile {
+				@include mixin.FontSize(26px);
+				@include mixin.LetterSpacing(200);
 			}
 		}
 
@@ -357,6 +426,11 @@
 				border: 1px solid var.$card-border-color-tablet;
 				border-radius: 1px;
 			}
+
+			@include mobile {
+				margin-top: 40px;
+				height: 330px;
+			}
 		}
 
 		&-text {
@@ -367,6 +441,14 @@
 				@include mixin.FontSize(17px);
 				font-weight: bold;
 			}
+
+			@include mobile {
+				@include mixin.FontSize(16px);
+			}
+
+			@include otherResponsive(300px) {
+				@include mixin.FontSize(12px);
+			}
 		}
 
 		&-address {
@@ -375,10 +457,18 @@
 			@include tablet {
 				margin-top: 45px;
 			}
+
+			@include mobile {
+				margin-top: 30px;
+			}
 		}
 
 		&-tel {
 			margin-top: 24px;
+
+			@include mobile {
+				margin-top: 12px;
+			}
 		}
 
 		&-more {
@@ -393,6 +483,11 @@
 				margin: 80px auto 0;
 
 				@include mixin.FontSize(34px);
+			}
+
+			@include mobile {
+				margin-top: 30px;
+				@include mixin.FontSize(17px);
 			}
 			
 			&:hover {

@@ -22,9 +22,17 @@
 				margin: 74px auto 0;
 			}
 
+			@include mobile {
+				margin-top: 59px;
+			}
+
 			img {
 				@include tablet {
 					width: 30%;
+				}
+
+				@include mobile {
+					width: 60%;
 				}
 			}
 		}
@@ -38,11 +46,19 @@
 				margin-top: 38px;
 			}
 
+			@include mobile {
+				margin-top: 41px;
+			}
+
 			&-text {
 				@include mixin.FontSize(23px);
 
 				@include tablet {
 					@include mixin.FontSize(17px);
+				}
+
+				@include mobile {
+					@include mixin.FontSize(16px);
 				}
 			}
 
@@ -54,6 +70,11 @@
 					@include tablet {
 						margin-top: 10px;
 						@include mixin.FontSize(17px);
+					}
+
+					@include mobile {
+						margin-top: 14px;
+						@include mixin.FontSize(14px);
 					}
 				}
 			}
@@ -78,6 +99,10 @@
 					text-align: center;
 					padding-bottom: 74px;
 				}
+
+				@include mobile {
+					padding-bottom: 54px;
+				}
 			}
 
 			&-item {
@@ -93,14 +118,28 @@
 
 					margin-bottom: 30px;
 				}
+
+				@include mobile {
+					@include mixin.FontSize(15px);
+					font-weight: var.$font-bold-semiBold;
+
+					margin-bottom: 23px;
+				}
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
 			}
 		}
 
 		&-sns {
 			margin: 33px auto 0;
 			display: block;
-			
 
+			@include mobile {
+				margin-top: 50px;
+			}
+			
 			&-list {
 				display: flex;
 				justify-content: center;
@@ -119,15 +158,23 @@
 				margin-top: 50px;
 			}
 
+			@include mobile {
+				margin-top: 34px;
+			}
+
 			&-text {
 				display: block;
 				text-align: center;
 				@include mixin.FontSize(16px);
 				font-family: 'Zen Old Mincho', serif;
-				font-weight: 900;
+				font-weight: var.$font-bold-semiBold;
 
 				@include tablet {
 					@include mixin.FontSize(14px);
+				}
+
+				@include mobile {
+					@include mixin.FontSize(12px);
 				}
 			}
 		}
@@ -140,6 +187,11 @@
 				@include mixin.FixContentsCenterTablet;
 				padding-top: 100px;
 				padding-bottom: 70px;
+			}
+
+			@include mobile {
+				padding-top: 75px;
+				padding-bottom: 30px;
 			}
 		}
 	}
