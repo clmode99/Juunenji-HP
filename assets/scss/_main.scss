@@ -32,6 +32,29 @@
 					height: 100%
 				}
 			}
+
+			&-memorial {
+				@extend .main-visual-inner;
+				height: 600px;
+				@include mixin.SetBackGroundImage("../images/junenji_memorial_mv.png");
+			
+				&-title {
+					@extend .main-visual-inner-title;
+					width: 25%;
+					padding: 2% 4%; 
+					background-color: rgba(64, 64, 64, 0.75);		// #404040をrgbに変換
+					color: var.$main-visual-color;
+					font-weight: bold;
+					@include mixin.FontSize(37px);
+
+					@include otherResponsive(1400px) {
+						@include mixin.FontSize(30px);
+					}
+					@include otherResponsive(1100px) {
+						@include mixin.FontSize(25px);
+					}
+				}
+			}
 		}
 	}
 
@@ -44,6 +67,14 @@
 		background-repeat: repeat;
 	}
 
+	&-bg2 {
+		background-image: url("../images/bg2.png");
+		background-repeat: repeat;
+	}
+
+	&-bg3 {
+		background-color: var.$main-accept-bg-color;
+	}
 
 	&-about {
 		display: flex;
@@ -155,6 +186,13 @@
 					@include mixin.FontSize(14px);
 					@include mixin.LineHeight(14, 20);
 				}
+
+				&-memorial {
+					margin-top: 80px;
+
+					@include mixin.FontSize(25px);
+					@include mixin.LineHeight(25, 48);
+				}
 			}
 
 			&-button {
@@ -177,6 +215,11 @@
 					color: var.$button-hover-color;
 				}
 			}
+		}
+		
+		&-memorial {
+			padding-top: 150px;
+			padding-bottom: 150px;
 		}
 	}
 
@@ -378,6 +421,37 @@
 			}
 		}
 	}
+
+	&-video {
+		&-memorial {
+
+			padding-top: 150px;
+			padding-bottom: 150px;
+
+			&-video {
+				width: 100%;
+				max-width: var.$contents-width;
+				height: 700px;
+			}
+
+			&-text {
+				margin-top: 70px;
+
+				@include mixin.FontSize(20px);
+			}
+
+			&-button {
+				display: block;
+				margin: 70px auto 0;
+				padding: 16px 40px;
+
+				@include mixin.FontSize(30px);
+				font-weight: bold;
+				background-color: var.$contact-color;
+				border: 2px solid var.$button-memorial-contact-border-color;	
+			}
+		}
+	}
 	
 	&-traffic {
 		padding-top: 200px;
@@ -496,6 +570,41 @@
 			}
 		}
 	}
+
+	&-accept {
+		position: relative;
+		padding-top: 150px;
+		padding-bottom: 200px;
+
+		&-title {
+			@include mixin.FontSize(45px);
+			font-weight: bold;
+
+			display: block;
+			margin: 0 auto;
+			width: 50%;
+			padding: 26px 115px;
+			border: 2px solid  var.$button-memorial-contact-border-color;
+		}
+
+		&-list {
+			list-style-image: url("../images/list-icon.png");
+			
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: 40px;		// アイコン分ずらす
+			margin-top: 100px;
+		}
+
+		&-item {
+			width: 50%;
+
+			@include mixin.FontSize(40px);
+			font-weight: bold;
+			margin-bottom: 40px;
+		}
+	}
+
 
 	&-slider {
 		@include tablet {
