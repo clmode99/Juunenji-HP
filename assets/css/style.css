@@ -517,6 +517,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 960px) {
+  .main-visual-inner-memorial {
+    height: 400px;
+  }
+}
 .main-visual-inner-memorial-title {
   width: 25%;
   padding: 2% 4%;
@@ -533,6 +538,13 @@
 @media screen and (max-width: 1100px) {
   .main-visual-inner-memorial-title {
     font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .main-visual-inner-memorial-title {
+    border: 1px solid #FFFFFF;
+    width: 40%;
+    font-size: 3.4rem;
   }
 }
 .main-contents {
@@ -649,6 +661,11 @@
     font-size: 2.4rem;
   }
 }
+@media screen and (max-width: 960px) {
+  .main-about-contents-title-memorial {
+    font-size: 4rem;
+  }
+}
 .main-about-contents-text {
   margin-top: 45px;
   font-size: 1.8rem;
@@ -671,6 +688,13 @@
   margin-top: 80px;
   font-size: 2.5rem;
   line-height: 1.92;
+}
+@media screen and (max-width: 960px) {
+  .main-about-contents-text-memorial {
+    margin-top: 40px;
+    font-size: 2rem;
+    line-height: 1.8;
+  }
 }
 .main-about-contents-button {
   margin-top: 56px;
@@ -891,14 +915,35 @@
   padding-top: 150px;
   padding-bottom: 150px;
 }
+@media screen and (max-width: 960px) {
+  .main-video-memorial {
+    display: block;
+    width: 93%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 .main-video-memorial-video {
   width: 100%;
   max-width: 1320px;
   height: 700px;
 }
+@media screen and (max-width: 960px) {
+  .main-video-memorial-video {
+    height: 390px;
+  }
+}
 .main-video-memorial-text {
   margin-top: 70px;
   font-size: 2rem;
+}
+@media screen and (max-width: 960px) {
+  .main-video-memorial-text {
+    margin-top: 45px;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
 }
 .main-video-memorial-button {
   display: block;
@@ -908,6 +953,20 @@
   font-weight: bold;
   background-color: #FFFFFF;
   border: 2px solid #707070;
+}
+@media screen and (max-width: 960px) {
+  .main-video-memorial-button {
+    font-size: 0rem;
+    margin-top: 60px;
+    background: transparent;
+    padding: 23px 92px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .main-video-memorial-button:before {
+    font-size: 2.3rem;
+    content: "お問い合わせ";
+  }
 }
 .main-traffic {
   padding-top: 200px;
@@ -1034,14 +1093,30 @@
   padding-top: 150px;
   padding-bottom: 200px;
 }
+@media screen and (max-width: 960px) {
+  .main-accept {
+    padding-top: 100px;
+    width: 93%;
+    margin: 0 auto;
+  }
+}
 .main-accept-title {
   font-size: 4.5rem;
   font-weight: bold;
   display: block;
   margin: 0 auto;
   width: 50%;
-  padding: 26px 115px;
+  padding: 2% 8%;
   border: 2px solid #707070;
+}
+@media screen and (max-width: 960px) {
+  .main-accept-title {
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
 }
 .main-accept-list {
   list-style-image: url("../images/list-icon.png");
@@ -1050,11 +1125,30 @@
   margin-left: 40px;
   margin-top: 100px;
 }
+@media screen and (max-width: 960px) {
+  .main-accept-list {
+    width: 50%;
+    margin: 60px auto 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .main-accept-list li {
+    padding-left: 20px;
+  }
+}
 .main-accept-item {
   width: 50%;
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 960px) {
+  .main-accept-item {
+    width: 100%;
+    font-size: 2.1rem;
+    margin-bottom: 26px;
+    margin-left: 40px;
+  }
 }
 @media screen and (max-width: 960px) {
   .main-slider {
