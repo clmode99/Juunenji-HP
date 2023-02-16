@@ -39,7 +39,13 @@
 				@include mixin.SetBackGroundImage("../images/junenji_memorial_mv.png");
 			
 				@include tablet {
+					@include mixin.SetBackGroundImage("../images/junenji_memorial_mv_tablet.png");
 					height: 400px;
+				}
+
+				@include mobile {
+					height: 327px;
+					background-position: center center;
 				}
 
 				&-title {
@@ -60,8 +66,16 @@
 
 					@include tablet {
 						border: 1px solid var.$main-visual-color;
-						width: 40%;
+						width: 50%;		// 横長すぎる気がするけど、これくらいにしないと折り返される機種が存在するので・・・
 						@include mixin.FontSize(34px);
+					}
+					
+					@include mobile {
+						padding-top: 5%;
+						padding-bottom: 5%;
+						
+						width: 65%;
+						@include mixin.FontSize(20px);
 					}
 				}
 			}
@@ -75,11 +89,19 @@
 	&-bg {
 		background-image: url("../images/bg.png");
 		background-repeat: repeat;
+
+		@include mobile {
+			background-image: url("../images/bg_mb.png");
+		}
 	}
 
 	&-bg2 {
 		background-image: url("../images/bg2.png");
 		background-repeat: repeat;
+
+		@include mobile {
+			background-image: url("../images/bg2_mb.png");
+		}
 	}
 
 	&-bg3 {
@@ -183,6 +205,10 @@
 					@include tablet {
 						@include mixin.FontSize(40px);
 					}
+
+					@include mobile {
+						@include mixin.FontSize(27px);
+					}
 				}
 			}
 
@@ -214,6 +240,13 @@
 
 						@include mixin.FontSize(20px);
 						@include mixin.LineHeight(20, 36);
+					}
+
+					@include mobile {
+						margin-top: 20px;
+
+						@include mixin.FontSize(14px);
+						@include mixin.LineHeight(14, 20);
 					}
 				}
 			}
@@ -457,6 +490,11 @@
 				padding-bottom: 100px;
 			}
 
+			@include mobile {
+				padding-top: 57px;
+				padding-bottom: 57px;
+			}
+
 			&-video {
 				width: 100%;
 				max-width: var.$contents-width;
@@ -464,6 +502,10 @@
 
 				@include tablet {
 					height: 390px;
+				}
+				
+				@include mobile {
+					height: 190px;
 				}
 			}
 
@@ -477,6 +519,13 @@
 
 					@include mixin.FontSize(17px);
 					font-weight: bold;
+				}
+
+				@include mobile {
+					margin-top: 22px;
+
+					@include mixin.FontSize(13px);
+					@include mixin.LineHeight(13, 19);
 				}
 			}
 
@@ -499,13 +548,25 @@
 					padding: 23px 92px;
 				}
 
+				@include mobile {
+					margin-top: 30px;
+					padding: 10px 60px;
+
+					border-width: 2px;
+				}
+
 				&:before {
 					@include tablet {
 						@include mixin.FontSize(23px);
 						content: 'お問い合わせ';
 					}
 					
+					@include mobile {
+						@include mixin.FontSize(19px);
+					}
 				}
+
+
 			}
 		}
 	}
@@ -638,6 +699,11 @@
 			@include mixin.FixContentsCenterTablet;
 		}
 
+		@include mobile {
+			padding-top: 94px;
+			padding-bottom: 94px;
+		}
+
 		&-title {
 			@include mixin.FontSize(45px);
 			font-weight: bold;
@@ -656,24 +722,48 @@
 				padding: 0;
 				border: none;
 			}
+
+			@include mobile {
+				@include mixin.FontSize(23px);
+			}
 		}
 
 		&-list {
-			list-style-image: url("../images/list-icon.png");
+			//list-style-image: url("../images/list-icon.png");
 			
 			display: flex;
 			flex-wrap: wrap;
-			margin-left: 40px;		// アイコン分ずらす
 			margin-top: 100px;
 
 			@include tablet {
 				width: 50%;
 				margin: 60px auto 0;
 			}
+			
+			@include mobile {
+				width: 60%;
+				margin-top: 40px;
+			}
 
 			li {
+				//リストのアイコン画像をサイズ変更できるようにする。参考サイト：https://ws-pilgrimage.jp/webcreate/701/
+				background-image: url("../images/list-icon.png");
+				background-position: top left;
+				background-repeat: no-repeat;
+				background-size: auto;
+
+				padding-left: 50px;
+				line-height: 0.75;
+
 				@include tablet {
-					padding-left: 20px;
+					line-height: 2;
+				}
+
+				@include mobile {
+					background-size: 22px;
+
+					padding-left: 30px;
+					line-height: 1.5;
 				}
 			}
 		}
@@ -687,10 +777,17 @@
 
 			@include tablet {
 				width: 100%;
+				height: 40px;
 				@include mixin.FontSize(21px);
 
 				margin-bottom: 26px;
-				margin-left: 40px;		// アイコン分ずらす
+			}
+
+			@include mobile {
+				height: 23px;
+				@include mixin.FontSize(15px);
+
+				margin-bottom: 10px;
 			}
 		}
 	}
