@@ -50,7 +50,7 @@
 
 				&-title {
 					@extend .main-visual-inner-title;
-					width: 25%;
+					width: 30%;
 					padding: 2% 4%; 
 					background-color: rgba(64, 64, 64, 0.75);		// #404040をrgbに変換
 					color: var.$main-visual-color;
@@ -78,6 +78,11 @@
 						@include mixin.FontSize(20px);
 					}
 				}
+			}
+
+			&-grave {
+				@extend .main-visual-inner-memorial;
+				@include mixin.SetBackGroundImage("../images/junenji_grave_mv.png");
 			}
 		}
 	}
@@ -212,6 +217,11 @@
 				}
 			}
 
+			&-image {
+				margin-top: 90px;
+				height: 560px;
+			}
+
 			&-text {
 				margin-top: 45px;
 
@@ -249,6 +259,12 @@
 						@include mixin.LineHeight(14, 20);
 					}
 				}
+
+				&-grave {
+					margin-top: 70px;
+
+					@include mixin.FontSize(20px);
+				}
 			}
 
 			&-button {
@@ -270,10 +286,20 @@
 					background-color: var.$font-color;
 					color: var.$button-hover-color;
 				}
+				
+				&-grave {
+					@extend .main-video-memorial-button;
+					//margin-top: 70px;
+				}
 			}
 		}
 		
 		&-memorial {
+			padding-top: 150px;
+			padding-bottom: 150px;
+		}
+
+		&-grave {
 			padding-top: 150px;
 			padding-bottom: 150px;
 		}
@@ -568,6 +594,44 @@
 
 
 			}
+		}
+	}
+
+	&-grave {
+		position: relative;
+		padding-top: 150px;
+		padding-bottom: 200px;
+
+		&-title {
+			@include mixin.FontSize(45px);
+			font-weight: bold;
+			text-align: center;
+
+			&-sub {
+				width: 45%;
+				margin: 90px auto 0;
+				padding-top: 26px;
+				padding-bottom: 26px;
+
+				background: transparent;
+				border: 2px solid var.$button-memorial-contact-border-color;
+				@include mixin.FontSize(45px);
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+
+		&-image {
+			margin-top: 90px;
+
+			height: 560px;
+		}
+
+		&-text {
+			margin-top: 70px;
+
+			@include mixin.FontSize(20px);
+			@include mixin.LineHeight(20, 36);
 		}
 	}
 	

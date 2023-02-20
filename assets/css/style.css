@@ -478,7 +478,7 @@
     opacity: 1;
   }
 }
-.main-visual-inner, .main-visual-inner-memorial {
+.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-grave {
   position: relative;
   width: 100%;
   height: 950px;
@@ -490,12 +490,12 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner, .main-visual-inner-memorial {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-grave {
     height: 930px;
   }
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner, .main-visual-inner-memorial {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-grave {
     height: 607px;
   }
 }
@@ -510,7 +510,7 @@
 .main-visual-inner-title-img {
   height: 100%;
 }
-.main-visual-inner-memorial {
+.main-visual-inner-memorial, .main-visual-inner-grave {
   height: 600px;
   background-image: url("../images/junenji_memorial_mv.png");
   background-position: center;
@@ -518,7 +518,7 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner-memorial {
+  .main-visual-inner-memorial, .main-visual-inner-grave {
     background-image: url("../images/junenji_memorial_mv_tablet.png");
     background-position: center;
     background-size: cover;
@@ -527,13 +527,13 @@
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner-memorial {
+  .main-visual-inner-memorial, .main-visual-inner-grave {
     height: 327px;
     background-position: center center;
   }
 }
 .main-visual-inner-memorial-title {
-  width: 25%;
+  width: 30%;
   padding: 2% 4%;
   background-color: rgba(64, 64, 64, 0.75);
   color: #FFFFFF;
@@ -564,6 +564,12 @@
     width: 65%;
     font-size: 2rem;
   }
+}
+.main-visual-inner-grave {
+  background-image: url("../images/junenji_grave_mv.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .main-contents {
   width: 100%;
@@ -699,6 +705,10 @@
     font-size: 2.7rem;
   }
 }
+.main-about-contents-image {
+  margin-top: 90px;
+  height: 560px;
+}
 .main-about-contents-text {
   margin-top: 45px;
   font-size: 1.8rem;
@@ -736,6 +746,10 @@
     line-height: 1.4285714286;
   }
 }
+.main-about-contents-text-grave {
+  margin-top: 70px;
+  font-size: 2rem;
+}
 .main-about-contents-button {
   margin-top: 56px;
   font-size: 2.3rem;
@@ -757,6 +771,10 @@
   color: #FFFFFF;
 }
 .main-about-memorial {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.main-about-grave {
   padding-top: 150px;
   padding-bottom: 150px;
 }
@@ -1003,7 +1021,7 @@
     line-height: 1.4615384615;
   }
 }
-.main-video-memorial-button {
+.main-video-memorial-button, .main-about-contents-button-grave {
   display: block;
   margin: 70px auto 0;
   padding: 16px 40px;
@@ -1013,7 +1031,7 @@
   border: 2px solid #707070;
 }
 @media screen and (max-width: 960px) {
-  .main-video-memorial-button {
+  .main-video-memorial-button, .main-about-contents-button-grave {
     font-size: 0rem;
     margin-top: 60px;
     background: transparent;
@@ -1021,22 +1039,52 @@
   }
 }
 @media screen and (max-width: 520px) {
-  .main-video-memorial-button {
+  .main-video-memorial-button, .main-about-contents-button-grave {
     margin-top: 30px;
     padding: 10px 60px;
     border-width: 2px;
   }
 }
 @media screen and (max-width: 960px) {
-  .main-video-memorial-button:before {
+  .main-video-memorial-button:before, .main-about-contents-button-grave:before {
     font-size: 2.3rem;
     content: "お問い合わせ";
   }
 }
 @media screen and (max-width: 520px) {
-  .main-video-memorial-button:before {
+  .main-video-memorial-button:before, .main-about-contents-button-grave:before {
     font-size: 1.9rem;
   }
+}
+.main-grave {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+.main-grave-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-grave-title-sub {
+  width: 45%;
+  margin: 90px auto 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  background: transparent;
+  border: 2px solid #707070;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-grave-image {
+  margin-top: 90px;
+  height: 560px;
+}
+.main-grave-text {
+  margin-top: 70px;
+  font-size: 2rem;
+  line-height: 1.8;
 }
 .main-traffic {
   padding-top: 200px;
