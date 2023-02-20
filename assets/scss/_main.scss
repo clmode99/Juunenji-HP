@@ -83,6 +83,11 @@
 			&-grave {
 				@extend .main-visual-inner-memorial;
 				@include mixin.SetBackGroundImage("../images/junenji_grave_mv.png");
+
+				@include tablet {
+					@include mixin.SetBackGroundImage("../images/junenji_grave_mv_tablet.png");
+					height: 450px;
+				}
 			}
 		}
 	}
@@ -215,11 +220,26 @@
 						@include mixin.FontSize(27px);
 					}
 				}
+
+				&-grave {
+					@include tablet {
+						margin-top: 0;
+						@include mixin.FontSize(30px);
+						text-align: center;
+					}
+
+				}
+
 			}
 
 			&-image {
 				margin-top: 90px;
 				height: 560px;
+				
+				@include tablet {
+					margin-top: 80px;
+					height: 390px;
+				}
 			}
 
 			&-text {
@@ -261,9 +281,17 @@
 				}
 
 				&-grave {
+					@include mixin.FixContentsCenterTablet;
 					margin-top: 70px;
 
 					@include mixin.FontSize(20px);
+
+					@include tablet {
+						margin-top: 50px;
+						
+						@include mixin.FontSize(17px);
+						@include mixin.LineHeight(17, 30);
+					}
 				}
 			}
 
@@ -289,7 +317,10 @@
 				
 				&-grave {
 					@extend .main-video-memorial-button;
-					//margin-top: 70px;
+				
+					@include tablet {
+						margin-top: 40px !important;		// うぅ・・・
+					}
 				}
 			}
 		}
@@ -300,8 +331,15 @@
 		}
 
 		&-grave {
+			text-align: left;
 			padding-top: 150px;
 			padding-bottom: 150px;
+
+			@include tablet {
+				display: block;
+
+				padding-top: 100px;
+			}
 		}
 	}
 
@@ -602,10 +640,18 @@
 		padding-top: 150px;
 		padding-bottom: 200px;
 
+		@include tablet {
+			padding-top: 100px;
+		}
+
 		&-title {
 			@include mixin.FontSize(45px);
 			font-weight: bold;
 			text-align: center;
+
+			@include tablet {
+				@include mixin.FontSize(30px);
+			}
 
 			&-sub {
 				width: 45%;
@@ -618,6 +664,13 @@
 				@include mixin.FontSize(45px);
 				font-weight: bold;
 				text-align: center;
+
+				@include tablet {
+					margin-top: 60px;
+					padding: 0;
+					border: none;
+					@include mixin.FontSize(30px);
+				}
 			}
 		}
 
@@ -625,6 +678,12 @@
 			margin-top: 90px;
 
 			height: 560px;
+
+			@include tablet {
+				margin-top: 80px;
+
+				height: 390px;
+			}
 		}
 
 		&-text {
@@ -632,6 +691,14 @@
 
 			@include mixin.FontSize(20px);
 			@include mixin.LineHeight(20, 36);
+
+			@include tablet {
+				@include mixin.FixContentsCenterTablet;
+				margin-top: 40px;
+
+				@include mixin.FontSize(17px);
+				@include mixin.LineHeight(17, 30);
+			}
 		}
 	}
 	

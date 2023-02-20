@@ -446,12 +446,9 @@
   opacity: 0;
 }
 .youtube-area.appear {
-  -webkit-animation-name: PageAnimeAppear;
-          animation-name: PageAnimeAppear;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: PageAnimeAppear;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 .youtube-mask {
   position: absolute;
@@ -459,15 +456,6 @@
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@-webkit-keyframes PageAnimeAppear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes PageAnimeAppear {
@@ -570,6 +558,15 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 960px) {
+  .main-visual-inner-grave {
+    background-image: url("../images/junenji_grave_mv_tablet.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+  }
 }
 .main-contents {
   width: 100%;
@@ -705,9 +702,22 @@
     font-size: 2.7rem;
   }
 }
+@media screen and (max-width: 960px) {
+  .main-about-contents-title-grave {
+    margin-top: 0;
+    font-size: 3rem;
+    text-align: center;
+  }
+}
 .main-about-contents-image {
   margin-top: 90px;
   height: 560px;
+}
+@media screen and (max-width: 960px) {
+  .main-about-contents-image {
+    margin-top: 80px;
+    height: 390px;
+  }
 }
 .main-about-contents-text {
   margin-top: 45px;
@@ -747,8 +757,17 @@
   }
 }
 .main-about-contents-text-grave {
+  width: 93%;
+  margin: 0 auto;
   margin-top: 70px;
   font-size: 2rem;
+}
+@media screen and (max-width: 960px) {
+  .main-about-contents-text-grave {
+    margin-top: 50px;
+    font-size: 1.7rem;
+    line-height: 1.7647058824;
+  }
 }
 .main-about-contents-button {
   margin-top: 56px;
@@ -770,13 +789,25 @@
   background-color: #272727;
   color: #FFFFFF;
 }
+@media screen and (max-width: 960px) {
+  .main-about-contents-button-grave {
+    margin-top: 40px !important;
+  }
+}
 .main-about-memorial {
   padding-top: 150px;
   padding-bottom: 150px;
 }
 .main-about-grave {
+  text-align: left;
   padding-top: 150px;
   padding-bottom: 150px;
+}
+@media screen and (max-width: 960px) {
+  .main-about-grave {
+    display: block;
+    padding-top: 100px;
+  }
 }
 @media screen and (max-width: 960px) {
   .main-menu-list {
@@ -1061,10 +1092,20 @@
   padding-top: 150px;
   padding-bottom: 200px;
 }
+@media screen and (max-width: 960px) {
+  .main-grave {
+    padding-top: 100px;
+  }
+}
 .main-grave-title {
   font-size: 4.5rem;
   font-weight: bold;
   text-align: center;
+}
+@media screen and (max-width: 960px) {
+  .main-grave-title {
+    font-size: 3rem;
+  }
 }
 .main-grave-title-sub {
   width: 45%;
@@ -1077,14 +1118,37 @@
   font-weight: bold;
   text-align: center;
 }
+@media screen and (max-width: 960px) {
+  .main-grave-title-sub {
+    margin-top: 60px;
+    padding: 0;
+    border: none;
+    font-size: 3rem;
+  }
+}
 .main-grave-image {
   margin-top: 90px;
   height: 560px;
+}
+@media screen and (max-width: 960px) {
+  .main-grave-image {
+    margin-top: 80px;
+    height: 390px;
+  }
 }
 .main-grave-text {
   margin-top: 70px;
   font-size: 2rem;
   line-height: 1.8;
+}
+@media screen and (max-width: 960px) {
+  .main-grave-text {
+    width: 93%;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 1.7rem;
+    line-height: 1.7647058824;
+  }
 }
 .main-traffic {
   padding-top: 200px;
