@@ -4,7 +4,6 @@
 @use "common/responsive" as *;
 
 .main {
-
 	&-visual{
 		&-inner {
 			position: relative;
@@ -19,7 +18,7 @@
 				height: 930px;
 			}
 
-			@include tablet {
+			@include mobile {
 				height: 607px;
 			}
 
@@ -66,7 +65,7 @@
 
 					@include tablet {
 						border: 1px solid var.$main-visual-color;
-						width: 50%;		// 横長すぎる気がするけど、これくらいにしないと折り返される機種が存在するので・・・
+						width: 60%;		// 横長すぎる気がするけど、これくらいにしないと折り返される機種が存在するので・・・
 						@include mixin.FontSize(34px);
 					}
 					
@@ -87,6 +86,11 @@
 				@include tablet {
 					@include mixin.SetBackGroundImage("../images/junenji_grave_mv_tablet.png");
 					height: 450px;
+				}
+
+				@include mobile {
+					@include mixin.SetBackGroundImage("../images/junenji_grave_mv_mb.png");
+					height: 327px;
 				}
 			}
 		}
@@ -228,6 +232,10 @@
 						text-align: center;
 					}
 
+					@include mobile {
+						@include mixin.FontSize(23px);
+					}
+
 				}
 
 			}
@@ -239,6 +247,11 @@
 				@include tablet {
 					margin-top: 80px;
 					height: 390px;
+				}
+
+				@include mobile {
+					margin-top: 52px;
+					height: 190px;
 				}
 			}
 
@@ -292,6 +305,13 @@
 						@include mixin.FontSize(17px);
 						@include mixin.LineHeight(17, 30);
 					}
+
+					@include mobile {
+						margin-top: 30px;
+
+						@include mixin.FontSize(13px);
+						@include mixin.LineHeight(13, 22);
+					}
 				}
 			}
 
@@ -321,6 +341,10 @@
 					@include tablet {
 						margin-top: 40px !important;		// うぅ・・・
 					}
+
+					@include mobile {
+						margin-top: 30px !important;		// うぅぅ・・・
+					}
 				}
 			}
 		}
@@ -339,6 +363,11 @@
 				display: block;
 
 				padding-top: 100px;
+			}
+
+			@include mobile {
+				padding-top: 57px;
+				padding-bottom: 94px;
 			}
 		}
 	}
@@ -644,6 +673,11 @@
 			padding-top: 100px;
 		}
 
+		@include mobile {
+			padding-top: 70px;
+			padding-bottom: 94px;
+		}
+
 		&-title {
 			@include mixin.FontSize(45px);
 			font-weight: bold;
@@ -651,6 +685,10 @@
 
 			@include tablet {
 				@include mixin.FontSize(30px);
+			}
+
+			@include mobile {
+				@include mixin.FontSize(23px);
 			}
 
 			&-sub {
@@ -671,18 +709,27 @@
 					border: none;
 					@include mixin.FontSize(30px);
 				}
+
+				@include mobile {
+					width: 60%;
+					margin-top: 52px;
+					@include mixin.FontSize(23px);
+				}
 			}
 		}
 
 		&-image {
 			margin-top: 90px;
-
 			height: 560px;
 
 			@include tablet {
 				margin-top: 80px;
-
 				height: 390px;
+			}
+
+			@include mobile {
+				margin-top: 52px;
+				height: 190px;
 			}
 		}
 
@@ -698,6 +745,14 @@
 
 				@include mixin.FontSize(17px);
 				@include mixin.LineHeight(17, 30);
+			}
+
+			@include mobile {
+				margin-top: 30px;
+
+				@include mixin.FontSize(13px);
+				@include mixin.LineHeight(13, 22);
+				font-weight: bold;
 			}
 		}
 	}

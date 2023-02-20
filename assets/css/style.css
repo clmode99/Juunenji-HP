@@ -482,7 +482,7 @@
     height: 930px;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 520px) {
   .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-grave {
     height: 607px;
   }
@@ -541,7 +541,7 @@
 @media screen and (max-width: 960px) {
   .main-visual-inner-memorial-title {
     border: 1px solid #FFFFFF;
-    width: 50%;
+    width: 60%;
     font-size: 3.4rem;
   }
 }
@@ -566,6 +566,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 450px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-visual-inner-grave {
+    background-image: url("../images/junenji_grave_mv_mb.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 327px;
   }
 }
 .main-contents {
@@ -709,6 +718,11 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-about-contents-title-grave {
+    font-size: 2.3rem;
+  }
+}
 .main-about-contents-image {
   margin-top: 90px;
   height: 560px;
@@ -717,6 +731,12 @@
   .main-about-contents-image {
     margin-top: 80px;
     height: 390px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-about-contents-image {
+    margin-top: 52px;
+    height: 190px;
   }
 }
 .main-about-contents-text {
@@ -769,6 +789,13 @@
     line-height: 1.7647058824;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-about-contents-text-grave {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    line-height: 1.6923076923;
+  }
+}
 .main-about-contents-button {
   margin-top: 56px;
   font-size: 2.3rem;
@@ -794,6 +821,11 @@
     margin-top: 40px !important;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-about-contents-button-grave {
+    margin-top: 30px !important;
+  }
+}
 .main-about-memorial {
   padding-top: 150px;
   padding-bottom: 150px;
@@ -807,6 +839,12 @@
   .main-about-grave {
     display: block;
     padding-top: 100px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-about-grave {
+    padding-top: 57px;
+    padding-bottom: 94px;
   }
 }
 @media screen and (max-width: 960px) {
@@ -1097,6 +1135,12 @@
     padding-top: 100px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-grave {
+    padding-top: 70px;
+    padding-bottom: 94px;
+  }
+}
 .main-grave-title {
   font-size: 4.5rem;
   font-weight: bold;
@@ -1105,6 +1149,11 @@
 @media screen and (max-width: 960px) {
   .main-grave-title {
     font-size: 3rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-grave-title {
+    font-size: 2.3rem;
   }
 }
 .main-grave-title-sub {
@@ -1126,6 +1175,13 @@
     font-size: 3rem;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-grave-title-sub {
+    width: 60%;
+    margin-top: 52px;
+    font-size: 2.3rem;
+  }
+}
 .main-grave-image {
   margin-top: 90px;
   height: 560px;
@@ -1134,6 +1190,12 @@
   .main-grave-image {
     margin-top: 80px;
     height: 390px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-grave-image {
+    margin-top: 52px;
+    height: 190px;
   }
 }
 .main-grave-text {
@@ -1148,6 +1210,14 @@
     margin-top: 40px;
     font-size: 1.7rem;
     line-height: 1.7647058824;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-grave-text {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    line-height: 1.6923076923;
+    font-weight: bold;
   }
 }
 .main-traffic {
