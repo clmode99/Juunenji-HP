@@ -466,7 +466,7 @@
     opacity: 1;
   }
 }
-.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-grave {
+.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
   position: relative;
   width: 100%;
   height: 950px;
@@ -478,12 +478,12 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-grave {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 930px;
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-grave {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 607px;
   }
 }
@@ -498,7 +498,7 @@
 .main-visual-inner-title-img {
   height: 100%;
 }
-.main-visual-inner-memorial, .main-visual-inner-grave {
+.main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
   height: 600px;
   background-image: url("../images/junenji_memorial_mv.png");
   background-position: center;
@@ -506,7 +506,7 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner-memorial, .main-visual-inner-grave {
+  .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
     background-image: url("../images/junenji_memorial_mv_tablet.png");
     background-position: center;
     background-size: cover;
@@ -515,7 +515,7 @@
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner-memorial, .main-visual-inner-grave {
+  .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 327px;
     background-position: center center;
   }
@@ -576,6 +576,12 @@
     background-repeat: no-repeat;
     height: 327px;
   }
+}
+.main-visual-inner-traffic {
+  background-image: url("../images/junenji_traffic_mv.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .main-contents {
   width: 100%;
@@ -669,6 +675,9 @@
     width: 30px;
   }
 }
+.main-about-contents {
+  width: 100%;
+}
 .main-about-contents-title {
   font-size: 4.5rem;
   font-weight: bold;
@@ -710,6 +719,9 @@
   .main-about-contents-title-memorial {
     font-size: 2.7rem;
   }
+}
+.main-about-contents-title-grave {
+  text-align: center;
 }
 @media screen and (max-width: 960px) {
   .main-about-contents-title-grave {
@@ -846,6 +858,28 @@
     padding-top: 57px;
     padding-bottom: 94px;
   }
+}
+.main-about-traffic-map {
+  margin-top: 70px;
+  height: 560px !important;
+}
+.main-about-traffic-button {
+  display: block;
+  margin: 70px auto 0;
+  width: 32%;
+  padding: 2% 6%;
+  padding-right: 4%;
+  font-size: 2.5rem;
+  border: 2px solid #707070;
+}
+.main-about-traffic-button img {
+  margin-left: 13px;
+}
+.main-about-traffic-text {
+  margin-top: 50px;
+  font-size: 2rem;
+  line-height: 1.8;
+  text-align: center;
 }
 @media screen and (max-width: 960px) {
   .main-menu-list {
@@ -1339,6 +1373,14 @@
 .main-traffic-more:hover {
   background-color: #707070;
   color: #FFFFFF;
+}
+.main-parking-image {
+  margin-top: 90px;
+  height: 650px;
+}
+.main-parking-text {
+  margin-top: 70px;
+  font-size: 2rem;
 }
 .main-accept {
   position: relative;
