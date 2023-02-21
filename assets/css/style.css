@@ -859,9 +859,36 @@
     padding-bottom: 94px;
   }
 }
+@media screen and (max-width: 960px) {
+  .main-about-traffic {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.main-about-traffic-pc {
+  display: block;
+}
+@media screen and (max-width: 960px) {
+  .main-about-traffic-pc {
+    display: none;
+  }
+}
+.main-about-traffic-tablet {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .main-about-traffic-tablet {
+    display: block;
+  }
+}
 .main-about-traffic-map {
   margin-top: 70px;
   height: 560px !important;
+}
+@media screen and (max-width: 960px) {
+  .main-about-traffic-map {
+    height: 500px !important;
+  }
 }
 .main-about-traffic-button {
   display: block;
@@ -872,14 +899,34 @@
   font-size: 2.5rem;
   border: 2px solid #707070;
 }
+@media screen and (max-width: 960px) {
+  .main-about-traffic-button {
+    margin-top: 50px;
+    width: 56%;
+    padding: 4% 6%;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
 .main-about-traffic-button img {
   margin-left: 13px;
+}
+@media screen and (max-width: 960px) {
+  .main-about-traffic-button img {
+    margin-left: 20px;
+  }
 }
 .main-about-traffic-text {
   margin-top: 50px;
   font-size: 2rem;
   line-height: 1.8;
   text-align: center;
+}
+@media screen and (max-width: 960px) {
+  .main-about-traffic-text {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
 }
 @media screen and (max-width: 960px) {
   .main-menu-list {
@@ -1374,13 +1421,31 @@
   background-color: #707070;
   color: #FFFFFF;
 }
+.main-parking {
+  width: 93%;
+  margin: 0 auto;
+}
 .main-parking-image {
   margin-top: 90px;
   height: 650px;
 }
+@media screen and (max-width: 960px) {
+  .main-parking-image {
+    height: 390px;
+  }
+}
 .main-parking-text {
   margin-top: 70px;
   font-size: 2rem;
+}
+@media screen and (max-width: 960px) {
+  .main-parking-text {
+    width: 85%;
+    margin: 50px auto 0;
+    font-size: 1.7rem;
+    line-height: 1.7647058824;
+    font-weight: bold;
+  }
 }
 .main-accept {
   position: relative;

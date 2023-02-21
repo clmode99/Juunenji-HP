@@ -381,9 +381,34 @@
 		}
 
 		&-traffic {
+			@include tablet {
+				padding-top: 100px;
+				padding-bottom: 100px;
+			}
+
+			&-pc {
+				display: block;
+
+				@include tablet {
+					display: none;
+				}
+			}
+
+			&-tablet {
+				display: none;
+
+				@include tablet {
+					display: block;
+				}
+			}
+
 			&-map {
 				margin-top: 70px;
 				height: 560px !important;		// うぅ・・・
+
+				@include tablet {
+					height: 500px !important;		// うぅぅ・・・
+				}
 			}
 
 			&-button {
@@ -397,8 +422,21 @@
 				@include mixin.FontSize(25px);
 				border: 2px solid var.$card-border-color-tablet;
 
+				@include tablet {
+					margin-top: 50px;
+					width: 56%;
+					padding: 4% 6%;
+
+					@include mixin.FontSize(30px);
+					font-weight: bold;
+				}
+
 				img {
 					margin-left: 13px;
+
+					@include tablet {
+						margin-left: 20px;
+					}
 				}
 			}
 
@@ -408,6 +446,11 @@
 				@include mixin.FontSize(20px);
 				@include mixin.LineHeight(20, 36);
 				text-align: center;
+
+				@include tablet {
+					@include mixin.FontSize(17px);
+					font-weight: bold;
+				}
 			}
 		}
 	}
@@ -916,19 +959,32 @@
 	}
 
 	&-parking {
+		@include mixin.FixContentsCenterTablet;
 
 		&-image {
 			margin-top: 90px;
 			height: 650px;
+
+			@include tablet {
+				height: 390px;
+			}
 		}
 
 		&-text {
 			margin-top: 70px;
 
 			@include mixin.FontSize(20px);
+
+			@include tablet {
+				width: 85%;
+				margin: 50px auto 0;
+
+				@include mixin.FontSize(17px);
+				@include mixin.LineHeight(17, 30);
+				font-weight: bold;
+			}
 		}
 	}
-
 
 	&-accept {
 		position: relative;
