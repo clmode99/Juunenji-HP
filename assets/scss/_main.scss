@@ -413,6 +413,7 @@
 
 			&-button {
 				display: block;
+				position: relative;
 				margin: 70px auto 0;
 
 				width: 32%;
@@ -424,7 +425,7 @@
 
 				@include tablet {
 					margin-top: 50px;
-					width: 56%;
+					width: 55%;
 					padding: 4% 6%;
 
 					@include mixin.FontSize(30px);
@@ -432,7 +433,8 @@
 				}
 
 				img {
-					margin-left: 13px;
+					position: absolute;
+					right: 10%;
 
 					@include tablet {
 						margin-left: 20px;

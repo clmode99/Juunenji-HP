@@ -892,6 +892,7 @@
 }
 .main-about-traffic-button {
   display: block;
+  position: relative;
   margin: 70px auto 0;
   width: 32%;
   padding: 2% 6%;
@@ -902,14 +903,15 @@
 @media screen and (max-width: 960px) {
   .main-about-traffic-button {
     margin-top: 50px;
-    width: 56%;
+    width: 55%;
     padding: 4% 6%;
     font-size: 3rem;
     font-weight: bold;
   }
 }
 .main-about-traffic-button img {
-  margin-left: 13px;
+  position: absolute;
+  right: 10%;
 }
 @media screen and (max-width: 960px) {
   .main-about-traffic-button img {
