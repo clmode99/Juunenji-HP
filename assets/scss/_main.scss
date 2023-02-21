@@ -386,6 +386,11 @@
 				padding-bottom: 100px;
 			}
 
+			@include mobile {
+				padding-top: 57px;
+				padding-bottom: 94px;
+			}
+
 			&-pc {
 				display: block;
 
@@ -404,10 +409,16 @@
 
 			&-map {
 				margin-top: 70px;
-				height: 560px !important;		// うぅ・・・
+				height: 560px !important;			// うぅ・・・
 
 				@include tablet {
 					height: 500px !important;		// うぅぅ・・・
+				}
+
+				@include mobile {
+					margin-top: 52px !important;
+					height: 330px !important;		// うぅぅぅ・・・
+					border: 1px solid var.$card-border-color-tablet;
 				}
 			}
 
@@ -432,12 +443,26 @@
 					font-weight: bold;
 				}
 
+				@include mobile {
+					margin-top: 30px;
+					width: var.$main-content-width-tablet;
+					padding: 5% 6%;
+
+					@include mixin.FontSize(20px);
+					text-align: center;
+				}
+
+				@include otherResponsive(280px) {
+					padding: 6%;
+					@include mixin.FontSize(17px);
+				}
+
 				img {
 					position: absolute;
 					right: 10%;
 
-					@include tablet {
-						margin-left: 20px;
+					@include otherResponsive(280px) {
+						right: 2%;
 					}
 				}
 			}
@@ -452,6 +477,12 @@
 				@include tablet {
 					@include mixin.FontSize(17px);
 					font-weight: bold;
+				}
+
+				@include mobile {
+					margin-top: 30px;
+
+					@include mixin.FontSize(16px);
 				}
 			}
 		}
@@ -963,12 +994,22 @@
 	&-parking {
 		@include mixin.FixContentsCenterTablet;
 
+		@include mobile {
+			padding-top: 57px;
+			padding-bottom: 94px;
+		}
+
 		&-image {
 			margin-top: 90px;
 			height: 650px;
 
 			@include tablet {
 				height: 390px;
+			}
+
+			@include mobile {
+				margin-top: 52px;
+				height: 190px;
 			}
 		}
 
@@ -984,6 +1025,13 @@
 				@include mixin.FontSize(17px);
 				@include mixin.LineHeight(17, 30);
 				font-weight: bold;
+			}
+
+			@include mobile {
+				margin-top: 30px;
+
+				@include mixin.FontSize(13px);
+				@include mixin.LineHeight(13, 22);
 			}
 		}
 	}
