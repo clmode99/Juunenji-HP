@@ -598,6 +598,15 @@
     height: 450px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-visual-inner-event {
+    background-image: url("../images/junenji_event_mv_mb.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 327px;
+  }
+}
 .main-contents {
   width: 100%;
   max-width: 1320px;
@@ -986,6 +995,11 @@
     padding-bottom: 100px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-about-event {
+    padding-bottom: 60px;
+  }
+}
 .main-about-event-list {
   position: relative;
   margin-top: 80px;
@@ -994,6 +1008,16 @@
   .main-about-event-list {
     margin: 50px auto 0;
     width: 70%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-about-event-list {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .main-about-event-list {
+    width: 85%;
   }
 }
 .main-about-event-item {
@@ -1016,6 +1040,13 @@
     font-size: 1.7rem;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-about-event-item-left, .main-about-event-item-right {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 1.4rem;
+  }
+}
 .main-about-event-text {
   display: flex;
   justify-content: center;
@@ -1025,6 +1056,11 @@
 @media screen and (max-width: 960px) {
   .main-about-event-text {
     margin-top: 50px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-about-event-text {
+    margin-top: 22px;
   }
 }
 @media screen and (max-width: 960px) {
@@ -1042,6 +1078,11 @@
     font-size: 1.7rem;
     font-weight: bold;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-about-event-text p {
+    font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 960px) {
@@ -1691,9 +1732,21 @@
     padding-bottom: 100px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-fes {
+    padding-top: 57px;
+    padding-bottom: 57px;
+  }
+}
 @media screen and (max-width: 960px) {
   .main-fes-title {
     display: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-fes-title {
+    display: block;
+    font-size: 2.3rem;
   }
 }
 .main-fes-video {
@@ -1702,6 +1755,12 @@
 @media screen and (max-width: 960px) {
   .main-fes-video {
     margin-top: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-fes-video {
+    margin-top: 30px;
+    height: 190px;
   }
 }
 .main-fes-text {
@@ -1717,6 +1776,13 @@
     font-weight: bold;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-fes-text {
+    margin-top: 22px;
+    font-size: 1.3rem;
+    line-height: 1.4615384615;
+  }
+}
 .main-event-slider {
   position: relative;
   padding-top: 150px;
@@ -1725,6 +1791,12 @@
 @media screen and (max-width: 960px) {
   .main-event-slider {
     padding-top: 200px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-event-slider {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 .main-event-slider-title {
@@ -1751,6 +1823,11 @@
     border: none;
     padding: 0;
     font-size: 3rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-event-slider-title-tablet {
+    font-size: 2.3rem;
   }
 }
 .main-event-slider-for {
@@ -1784,6 +1861,11 @@
     margin-top: 80px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-event-slider-tablet {
+    margin-top: 52px;
+  }
+}
 .main-event-slider-text {
   margin-top: 80px;
   font-size: 2rem;
@@ -1797,6 +1879,13 @@
     font-size: 1.7rem;
     line-height: 1.7647058824;
     font-weight: bold;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-event-slider-text {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    line-height: 1.6923076923;
   }
 }
 @media screen and (max-width: 960px) {
@@ -1851,6 +1940,11 @@
 .main-event-slider-tablet .slick-arrow:before {
   font-size: 5rem;
 }
+@media screen and (max-width: 520px) {
+  .main-event-slider-tablet .slick-arrow:before {
+    font-size: 2.5rem;
+  }
+}
 
 .main-event-slider-tablet .slick-prev {
   left: 0;
@@ -1860,6 +1954,11 @@
   content: "◀︎";
   position: absolute;
   left: 20px;
+}
+@media screen and (max-width: 520px) {
+  .main-event-slider-tablet .slick-prev:before {
+    left: 10px;
+  }
 }
 
 .main-event-slider-tablet .slick-next {
@@ -1871,16 +1970,31 @@
   position: absolute;
   right: 40px;
 }
+@media screen and (max-width: 520px) {
+  .main-event-slider-tablet .slick-next:before {
+    right: 10px;
+  }
+}
 
 .main-event-slider-tablet .slick-dots {
   position: absolute;
   bottom: 20px;
   z-index: 1;
 }
+@media screen and (max-width: 520px) {
+  .main-event-slider-tablet .slick-dots {
+    bottom: 10px;
+  }
+}
 
 .main-event-slider-tablet .slick-dots li button::before {
   font-size: 1.6rem;
   color: #FFFFFF;
+}
+@media screen and (max-width: 520px) {
+  .main-event-slider-tablet .slick-dots li button::before {
+    font-size: 1rem;
+  }
 }
 
 .footer {

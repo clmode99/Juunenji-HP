@@ -109,6 +109,11 @@
 					@include mixin.SetBackGroundImage("../images/junenji_event_mv_tablet.png");
 					height: 450px;
 				}
+
+				@include mobile {
+					@include mixin.SetBackGroundImage("../images/junenji_event_mv_mb.png");
+					height: 327px;
+				}
 			}
 
 		}
@@ -505,6 +510,10 @@
 				padding-bottom: 100px;
 			}
 
+			@include mobile {
+				padding-bottom: 60px;
+			}
+
 			&-list {
 				position: relative;
 				margin-top: 80px;
@@ -512,6 +521,14 @@
 				@include tablet {
 					margin: 50px auto 0;
 					width: 70%;
+				}
+
+				@include mobile {
+					margin-top: 25px;
+				}
+
+				@include otherResponsive(280px) {
+					width: 85%;
 				}
 			}
 
@@ -536,6 +553,13 @@
 
 						@include mixin.FontSize(17px);
 					}
+
+					@include mobile {
+						padding-top: 13px;
+						padding-bottom: 13px;
+
+						@include mixin.FontSize(14px);
+					}
 				}
 			}
 			
@@ -547,6 +571,10 @@
 
 				@include tablet {
 					margin-top: 50px;
+				}
+
+				@include mobile {
+					margin-top: 22px;
 				}
 
 				img {
@@ -566,6 +594,10 @@
 						font-weight: bold;
 
 						margin-left: 0;
+					}
+
+					@include mobile {
+						@include mixin.FontSize(13px);
 					}
 				}
 			}
@@ -1231,9 +1263,19 @@
 			padding-bottom: 100px;
 		}
 
+		@include mobile {
+			padding-top: 57px;
+			padding-bottom: 57px;
+		}
+
 		&-title {
 			@include tablet {
 				display: none;
+			}
+
+			@include mobile {
+				display: block;
+				@include mixin.FontSize(23px);
 			}
 		}
 
@@ -1242,6 +1284,11 @@
 
 			@include tablet {
 				margin-top: 0;
+			}
+
+			@include mobile {
+				margin-top: 30px;
+				height: 190px;
 			}
 		}
 
@@ -1258,6 +1305,13 @@
 				@include mixin.LineHeight(17, 30);
 				font-weight: bold;
 			}
+
+			@include mobile {
+				margin-top: 22px;
+
+				@include mixin.FontSize(13px);
+				@include mixin.LineHeight(13, 19);
+			}
 		}
 	}
 
@@ -1270,6 +1324,11 @@
 
 			@include tablet {
 				padding-top: 200px;
+			}
+
+			@include mobile {
+				padding-top: 94px;
+				padding-bottom: 94px;
 			}
 
 			&-title {
@@ -1285,7 +1344,6 @@
 
 				@include tablet {
 					display: none;
-
 				}
 
 				&-tablet {
@@ -1297,6 +1355,10 @@
 						border: none;
 						padding: 0;
 						@include mixin.FontSize(30px);
+					}
+
+					@include mobile {
+						@include mixin.FontSize(23px);
 					}
 				}
 			}
@@ -1332,6 +1394,10 @@
 					display: block;
 					margin-top: 80px;
 				}
+
+				@include mobile {
+					margin-top: 52px;
+				}
 			}
 
 			&-text {
@@ -1347,6 +1413,13 @@
 					@include mixin.FontSize(17px);
 					@include mixin.LineHeight(17, 30);
 					font-weight: bold;
+				}
+
+				@include mobile {
+					margin-top: 30px;
+
+					@include mixin.FontSize(13px);
+					@include mixin.LineHeight(13, 22);
 				}
 			}
 		}
@@ -1376,7 +1449,7 @@
 }
 
 // スライドショー関連
-// 参考URL；https://and-ha.com/coding/slick/
+// 参考URL；https://and-ha.com/coding/slick/、https://zero-plus.io/media/jquery-slick/
 .main-event-slider-tablet .slick-arrow {
 	color: var.$slider-arrow-color;
 	@include mixin.FontSize(0px);
@@ -1386,6 +1459,10 @@
 
 .main-event-slider-tablet .slick-arrow:before {
 	@include mixin.FontSize(50px);
+
+	@include mobile {
+		@include mixin.FontSize(25px);
+	}
 }
 
 .main-event-slider-tablet .slick-prev {
@@ -1396,6 +1473,10 @@
 	content: '◀︎';
 	position: absolute;
 	left: 20px;
+
+	@include mobile {
+		left: 10px;
+	}
 }
 
 .main-event-slider-tablet .slick-next {
@@ -1406,15 +1487,27 @@
 	content: '▶︎';
 	position: absolute;
 	right: 40px;
+
+	@include mobile {
+		right: 10px;
+	}
 }
 
 .main-event-slider-tablet .slick-dots {
 	position: absolute;
 	bottom: 20px;
 	z-index: 1;
+
+	@include mobile {
+		bottom: 10px;
+	}
 }
 
 .main-event-slider-tablet .slick-dots li button::before {
 	@include mixin.FontSize(16px);
 	color: var.$slider-arrow-color;
+
+	@include mobile {
+		@include mixin.FontSize(10px);
+	}
 }
