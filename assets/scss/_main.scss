@@ -97,11 +97,18 @@
 			&-traffic {
 				@extend .main-visual-inner-memorial;
 				@include mixin.SetBackGroundImage("../images/junenji_traffic_mv.png");
+
+				// TODO:タブレット、スマホ版なし？？要確認
 			}
 
 			&-event {
 				@extend .main-visual-inner-memorial;
 				@include mixin.SetBackGroundImage("../images/junenji_event_mv.png");
+
+				@include tablet{
+					@include mixin.SetBackGroundImage("../images/junenji_event_mv_tablet.png");
+					height: 450px;
+				}
 			}
 
 		}
@@ -493,11 +500,21 @@
 		}
 
 		&-event {
+			@include tablet {
+				@include mixin.FixContentsCenterTablet;
+				padding-bottom: 100px;
+			}
+
 			&-list {
 				position: relative;
-
 				margin-top: 80px;
+
+				@include tablet {
+					margin: 50px auto 0;
+					width: 70%;
+				}
 			}
+
 			&-item {
 				display: flex;
 				flex-wrap: wrap;
@@ -513,6 +530,12 @@
 					@include mixin.FontSize(25px);
 					font-weight: var.$font-bold-semiBold;
 
+					@include tablet {
+						padding-top: 21px;
+						padding-bottom: 21px;
+
+						@include mixin.FontSize(17px);
+					}
 				}
 			}
 			
@@ -522,11 +545,28 @@
 				align-items: center;
 				margin-top: 70px;
 
+				@include tablet {
+					margin-top: 50px;
+				}
+
+				img {
+					@include tablet {
+						display: none;
+					}
+				}
+
 				p {
 					@include mixin.FontSize(28px);
 					font-weight: var.$font-bold-semiBold;
 
 					margin-left: 10px;
+
+					@include tablet {
+						@include mixin.FontSize(17px);
+						font-weight: bold;
+
+						margin-left: 0;
+					}
 				}
 			}
 		}
@@ -1186,8 +1226,23 @@
 	&-fes {
 		padding-bottom: 150px;
 
+		@include tablet {
+			@include mixin.FixContentsCenterTablet;
+			padding-bottom: 100px;
+		}
+
+		&-title {
+			@include tablet {
+				display: none;
+			}
+		}
+
 		&-video {
 			margin-top: 80px;
+
+			@include tablet {
+				margin-top: 0;
+			}
 		}
 
 		&-text {
@@ -1195,6 +1250,14 @@
 
 			@include mixin.FontSize(20px);
 			@include mixin.LineHeight(20, 36);
+
+			@include tablet {
+				margin-top: 45px;
+
+				@include mixin.FontSize(17px);
+				@include mixin.LineHeight(17, 30);
+				font-weight: bold;
+			}
 		}
 	}
 
@@ -1204,6 +1267,10 @@
 
 			padding-top: 150px;
 			padding-bottom: 200px;
+
+			@include tablet {
+				padding-top: 200px;
+			}
 
 			&-title {
 				width: 80%;
@@ -1215,14 +1282,39 @@
 				@include mixin.FontSize(45px);
 				font-weight: bold;
 				text-align: center;
+
+				@include tablet {
+					display: none;
+
+				}
+
+				&-tablet {
+					display: none;
+
+					@include tablet {
+						display: block;
+
+						border: none;
+						padding: 0;
+						@include mixin.FontSize(30px);
+					}
+				}
 			}
 
 			&-for {
 				margin-top: 80px;
+
+				@include tablet {
+					display: none;
+				}
 			}
 
 			&-nav {
 				margin-top: 30px;
+
+				@include tablet {
+					display: none;
+				}
 
 				&-item {
 					margin-right: 30px;
@@ -1233,11 +1325,29 @@
 				}
 			}
 
+			&-tablet {
+				display: none;
+
+				@include tablet {
+					display: block;
+					margin-top: 80px;
+				}
+			}
+
 			&-text {
 				margin-top: 80px;
 
 				@include mixin.FontSize(20px);
 				@include mixin.LineHeight(20, 36);
+
+				@include tablet {
+					@include mixin.FixContentsCenterTablet;
+					margin-top: 60px;
+
+					@include mixin.FontSize(17px);
+					@include mixin.LineHeight(17, 30);
+					font-weight: bold;
+				}
 			}
 		}
 	}
@@ -1263,4 +1373,48 @@
 			}
 		}
 	}
+}
+
+// スライドショー関連
+// 参考URL；https://and-ha.com/coding/slick/
+.main-event-slider-tablet .slick-arrow {
+	color: var.$slider-arrow-color;
+	@include mixin.FontSize(0px);
+	cursor: pointer;
+	z-index: 1;
+}
+
+.main-event-slider-tablet .slick-arrow:before {
+	@include mixin.FontSize(50px);
+}
+
+.main-event-slider-tablet .slick-prev {
+	left: 0;
+}
+
+.main-event-slider-tablet .slick-prev:before {
+	content: '◀︎';
+	position: absolute;
+	left: 20px;
+}
+
+.main-event-slider-tablet .slick-next {
+	right: 0;
+}
+
+.main-event-slider-tablet .slick-next:before {
+	content: '▶︎';
+	position: absolute;
+	right: 40px;
+}
+
+.main-event-slider-tablet .slick-dots {
+	position: absolute;
+	bottom: 20px;
+	z-index: 1;
+}
+
+.main-event-slider-tablet .slick-dots li button::before {
+	@include mixin.FontSize(16px);
+	color: var.$slider-arrow-color;
 }
