@@ -466,7 +466,7 @@
     opacity: 1;
   }
 }
-.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
+.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
   position: relative;
   width: 100%;
   height: 950px;
@@ -478,12 +478,12 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 930px;
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 607px;
   }
 }
@@ -498,7 +498,7 @@
 .main-visual-inner-title-img {
   height: 100%;
 }
-.main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
+.main-visual-inner-memorial, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
   height: 600px;
   background-image: url("../images/junenji_memorial_mv.png");
   background-position: center;
@@ -506,7 +506,7 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner-memorial, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     background-image: url("../images/junenji_memorial_mv_tablet.png");
     background-position: center;
     background-size: cover;
@@ -515,7 +515,7 @@
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner-memorial, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner-memorial, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 327px;
     background-position: center center;
   }
@@ -579,6 +579,12 @@
 }
 .main-visual-inner-traffic {
   background-image: url("../images/junenji_traffic_mv.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-visual-inner-event {
+  background-image: url("../images/junenji_event_mv.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -963,6 +969,34 @@
     margin-top: 30px;
     font-size: 1.6rem;
   }
+}
+.main-about-event-list {
+  position: relative;
+  margin-top: 80px;
+}
+.main-about-event-item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.main-about-event-item-left, .main-about-event-item-right {
+  width: 50%;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #707070;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.main-about-event-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.main-about-event-text p {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-left: 10px;
 }
 @media screen and (max-width: 960px) {
   .main-menu-list {
@@ -1600,6 +1634,50 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
+}
+.main-fes {
+  padding-bottom: 150px;
+}
+.main-fes-video {
+  margin-top: 80px;
+}
+.main-fes-text {
+  margin-top: 70px;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+.main-event-slider {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+.main-event-slider-title {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  border: 2px solid #707070;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-event-slider-for {
+  margin-top: 80px;
+}
+.main-event-slider-nav {
+  margin-top: 30px;
+}
+.main-event-slider-nav-item {
+  margin-right: 30px;
+  width: 140px;
+}
+.main-event-slider-nav-item:last-of-type {
+  margin-right: 0;
+}
+.main-event-slider-text {
+  margin-top: 80px;
+  font-size: 2rem;
+  line-height: 1.8;
 }
 @media screen and (max-width: 960px) {
   .main-slider {

@@ -9,13 +9,30 @@ $(function () {
 			$('.main-visual-inner').YTPlayer();
 		}
 
-	// スライドショー
+	// スライドショー(トップページ)
 	$('.main-slider-list').slick({
 		arrows: false,
 		dots: false,
 		autoplay: true,
 		autoplaySpeed: 3000,		// 画像の保持時間(ms)
 		speed: 1000,				// 画像の切り替わる時間(ms)
+	});
+
+	// スライドショー(年間行事)
+	$('.main-event-slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.main-event-slider-nav',
+	});
+	$(".main-event-slider-nav").slick({
+		slidesToShow: 8,
+		slidesToScroll: 1,
+		asNavFor: '.main-event-slider-for',
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true,
 	});
 
 	// ハンバーガーメニュー
