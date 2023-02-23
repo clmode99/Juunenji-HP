@@ -622,6 +622,15 @@
     height: 450px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-visual-inner-contact {
+    background-image: url("../images/junenji_contact_mv_mb.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 327px;
+  }
+}
 .main-contents {
   width: 100%;
   max-width: 1320px;
@@ -1110,6 +1119,12 @@
     padding-bottom: 100px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-about-contact {
+    padding-top: 57px;
+    padding-bottom: 94px;
+  }
+}
 .main-about-contact-title {
   margin: 0 auto;
   width: 40%;
@@ -1124,6 +1139,11 @@
     font-size: 3rem;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-about-contact-title {
+    font-size: 2.3rem;
+  }
+}
 .main-about-contact-text {
   margin-top: 50px;
   text-align: center;
@@ -1135,6 +1155,25 @@
     margin-top: 20px;
     font-size: 1.7rem;
     line-height: 1.7647058824;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-about-contact-text {
+    display: none;
+  }
+}
+.main-about-contact-text-mobile {
+  display: none;
+}
+@media screen and (max-width: 520px) {
+  .main-about-contact-text-mobile {
+    width: 93%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    font-size: 1.3rem;
+    line-height: 1.4615384615;
     font-weight: bold;
   }
 }

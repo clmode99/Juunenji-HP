@@ -124,6 +124,11 @@
 					@include mixin.SetBackGroundImage("../images/junenji_contact_mv_tablet.png");
 					height: 450px;
 				}
+
+				@include mobile {
+					@include mixin.SetBackGroundImage("../images/junenji_contact_mv_mb.png");
+					height: 327px;
+				}
 			}
 
 		}
@@ -624,6 +629,11 @@
 				padding-bottom: 100px;
 			}
 
+			@include mobile {
+				padding-top: 57px;
+				padding-bottom: 94px;
+			}
+
 			&-title {
 				margin: 0 auto;
 				width: 40%;
@@ -637,6 +647,10 @@
 					border: none;
 
 					@include mixin.FontSize(30px);
+				}
+
+				@include mobile {
+					@include mixin.FontSize(23px);
 				}
 			}
 
@@ -653,6 +667,24 @@
 					@include mixin.FontSize(17px);
 					@include mixin.LineHeight(17, 30);
 					font-weight: bold;
+				}
+
+				@include mobile {
+					display: none;
+				}
+
+				&-mobile {
+					display: none;
+
+					@include mobile {
+						@include mixin.FixContentsCenterTablet;
+						display: block;
+						margin-top: 15px;
+
+						@include mixin.FontSize(13px);
+						@include mixin.LineHeight(13, 19);
+						font-weight: bold;
+					}
 				}
 			}
 		}
