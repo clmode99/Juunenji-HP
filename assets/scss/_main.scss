@@ -119,6 +119,11 @@
 			&-contact {
 				@extend .main-visual-inner-memorial;
 				@include mixin.SetBackGroundImage("../images/junenji_contact_mv.png");
+			
+				@include tablet {
+					@include mixin.SetBackGroundImage("../images/junenji_contact_mv_tablet.png");
+					height: 450px;
+				}
 			}
 
 		}
@@ -612,6 +617,13 @@
 		&-contact {
 			padding-top: 150px;
 
+			@include tablet {
+				display: block;
+
+				padding-top: 100px;
+				padding-bottom: 100px;
+			}
+
 			&-title {
 				margin: 0 auto;
 				width: 40%;
@@ -619,6 +631,13 @@
 				padding-bottom: 15px;
 
 				border: 2px solid var.$button-memorial-contact-border-color;
+
+				@include tablet {
+					padding: 0;
+					border: none;
+
+					@include mixin.FontSize(30px);
+				}
 			}
 
 			&-text {
@@ -627,6 +646,14 @@
 				text-align: center;
 				@include mixin.FontSize(20px);
 				@include mixin.LineHeight(20, 36);
+
+				@include tablet {
+					margin-top: 20px;
+
+					@include mixin.FontSize(17px);
+					@include mixin.LineHeight(17, 30);
+					font-weight: bold;
+				}
 			}
 		}
 	}
