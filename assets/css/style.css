@@ -637,6 +637,15 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 960px) {
+  .main-visual-inner-about {
+    background-image: url("../images/junenji_about_mv_tablet.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+  }
+}
 .main-contents {
   width: 100%;
   max-width: 1320px;
@@ -1183,6 +1192,19 @@
     font-weight: bold;
   }
 }
+.main-about-border {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .main-about-border {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 10px;
+    border-top: 1px solid #272727;
+    border-bottom: 1px solid #272727;
+  }
+}
 @media screen and (max-width: 960px) {
   .main-menu-list {
     display: none;
@@ -1464,6 +1486,13 @@
 .main-video-about-text {
   font-size: 2rem;
   line-height: 1.8;
+}
+@media screen and (max-width: 960px) {
+  .main-video-about-text {
+    font-size: 1.7rem;
+    line-height: 1.7647058824;
+    font-weight: bold;
+  }
 }
 .main-grave {
   position: relative;
@@ -1995,10 +2024,20 @@
   padding-bottom: 200px;
   border-bottom: 1px solid #272727;
 }
+@media screen and (max-width: 960px) {
+  .main-treasure {
+    display: none;
+  }
+}
 .main-treasure-title {
   font-size: 4.5rem;
   font-weight: bold;
   text-align: center;
+}
+@media screen and (max-width: 960px) {
+  .main-treasure-title {
+    font-size: 3rem;
+  }
 }
 .main-treasure-list {
   display: flex;
@@ -2041,16 +2080,62 @@
 .main-treasure-item-text-bottom {
   width: 90%;
 }
+.main-treasure-tablet {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .main-treasure-tablet {
+    display: block;
+    padding-top: 150px;
+  }
+}
+.main-treasure-tablet-list {
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+.main-treasure-tablet-item {
+  margin-top: 150px;
+}
+.main-treasure-tablet-item:first-of-type {
+  margin-top: 0;
+}
+.main-treasure-tablet-item-image {
+  width: 100%;
+  height: 389px;
+}
+.main-treasure-tablet-item-title {
+  margin-top: 60px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-treasure-tablet-item-text {
+  margin: 40px auto 0;
+  width: 80%;
+  font-size: 1.7rem;
+  line-height: 1.7647058824;
+  font-weight: bold;
+}
 .main-facility {
   margin-top: 18px;
   padding-top: 200px;
   padding-bottom: 200px;
   border-top: 1px solid #272727;
 }
+@media screen and (max-width: 960px) {
+  .main-facility {
+    display: none;
+  }
+}
 .main-facility-title {
   font-size: 4.5rem;
   font-weight: bold;
   text-align: center;
+}
+@media screen and (max-width: 960px) {
+  .main-facility-title {
+    font-size: 3rem;
+  }
 }
 .main-facility-list {
   margin-top: 80px;
@@ -2107,6 +2192,47 @@
   bottom: 33px;
   left: 0;
   right: 0;
+}
+.main-facility-tablet {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.main-facility-tablet-list {
+  margin-top: 80px;
+}
+.main-facility-tablet-item {
+  margin-top: 200px;
+}
+.main-facility-tablet-item:first-of-type {
+  margin-top: 0;
+}
+.main-facility-tablet-item-image {
+  width: 100%;
+  height: 389px;
+}
+.main-facility-tablet-item-title {
+  margin-top: 60px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-facility-tablet-item-text {
+  margin: 40px auto 0;
+  width: 80%;
+  font-size: 1.7rem;
+  line-height: 1.7647058824;
+  font-weight: bold;
+}
+.main-facility-tablet-item-link {
+  display: block;
+  margin: 40px auto 0;
+  width: 80%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #707070;
 }
 @media screen and (max-width: 960px) {
   .main-slider {

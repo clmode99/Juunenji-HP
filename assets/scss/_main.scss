@@ -134,6 +134,11 @@
 			&-about {
 				@extend .main-visual-inner-memorial;
 				@include mixin.SetBackGroundImage("../images/junenji_about_mv.png");
+
+				@include tablet {
+					@include mixin.SetBackGroundImage("../images/junenji_about_mv_tablet.png");
+					height: 450px;
+				}
 			}
 
 		}
@@ -693,6 +698,20 @@
 				}
 			}
 		}
+
+		&-border {
+			display: none;
+
+			@include tablet {
+				display: block;
+				margin: 0 auto;
+				width: 80%;
+				height: 10px;
+
+				border-top: 1px solid var.$about-border-color;
+				border-bottom: 1px solid var.$about-border-color;
+			}
+		}
 	}
 
 	&-menu {
@@ -990,6 +1009,12 @@
 			&-text {
 				@include mixin.FontSize(20px);
 				@include mixin.LineHeight(20, 36);
+
+				@include tablet {
+					@include mixin.FontSize(17px);
+					@include mixin.LineHeight(17, 30);
+					font-weight: bold;
+				}
 			}
 		}
 	}
@@ -1529,10 +1554,18 @@
 
 		border-bottom: 1px solid var.$about-border-color;
 
+		@include tablet {
+			display: none;
+		}
+
 		&-title {
 			@include mixin.FontSize(45px);
 			font-weight: bold;
 			text-align: center;
+
+			@include tablet {
+				@include mixin.FontSize(30px);
+			}
 		}
 
 		&-list {
@@ -1590,6 +1623,51 @@
 				}
 			}
 		}
+
+		&-tablet {
+			display: none;
+
+			@include tablet {
+				display: block;
+
+				padding-top: 150px;
+			}
+
+			&-list {
+				margin-top: 80px;
+				margin-bottom: 200px;
+			}
+
+			&-item {
+				margin-top: 150px;
+
+				&:first-of-type {
+					margin-top: 0;
+				}
+
+				&-image {
+					width: 100%;
+					height: 389px;
+				}
+
+				&-title {
+					margin-top: 60px;
+
+					@include mixin.FontSize(30px);
+					font-weight: bold;
+					text-align: center;
+				}
+
+				&-text {
+					margin: 40px auto 0;
+					width: 80%;
+
+					@include mixin.FontSize(17px);
+					@include mixin.LineHeight(17, 30);
+					font-weight: bold;
+				}
+			}
+		}
 	}
 
 	&-facility {
@@ -1599,10 +1677,18 @@
 
 		border-top: 1px solid var.$about-border-color;
 
+		@include tablet {
+			display: none;
+		}
+
 		&-title {
 			@include mixin.FontSize(45px);
 			font-weight: bold;
 			text-align: center;
+
+			@include tablet {
+				@include mixin.FontSize(30px);
+			}
 		}
 
 		&-list {
@@ -1674,6 +1760,59 @@
 					bottom: 33px;
 					left: 0;
 					right: 0;
+				}
+			}
+		}
+
+		&-tablet {
+			padding-top: 200px;
+			padding-bottom: 200px;
+
+			&-list {
+				margin-top: 80px;
+			}
+
+			&-item {
+				margin-top: 200px;
+
+				&:first-of-type {
+					margin-top: 0;
+				}
+
+				&-image {
+					width: 100%;
+					height: 389px;
+				}
+
+				&-title {
+					margin-top: 60px;
+
+					@include mixin.FontSize(30px);
+					font-weight: bold;
+					text-align: center;
+				}
+
+				&-text {
+					margin: 40px auto 0;
+					width: 80%;
+
+					@include mixin.FontSize(17px);
+					@include mixin.LineHeight(17, 30);
+					font-weight: bold;
+				}
+
+				&-link {
+					display: block;
+					margin: 40px auto 0;
+					width: 80%;
+					padding-top: 30px;
+					padding-bottom: 30px;
+
+					@include mixin.FontSize(30px);
+					font-weight: bold;
+					text-align: center;
+					
+					border: 1px solid var.$about-item-border-color;
 				}
 			}
 		}
