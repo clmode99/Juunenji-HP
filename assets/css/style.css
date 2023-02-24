@@ -2041,6 +2041,73 @@
 .main-treasure-item-text-bottom {
   width: 90%;
 }
+.main-facility {
+  margin-top: 18px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  border-top: 1px solid #272727;
+}
+.main-facility-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-facility-list {
+  margin-top: 80px;
+  display: flex;
+  -moz-column-gap: 105px;
+       column-gap: 105px;
+  row-gap: 80px;
+  flex-wrap: wrap;
+}
+.main-facility-item {
+  position: relative;
+  border: 1px solid #707070;
+  padding-bottom: 33px;
+}
+.main-facility-item-top {
+  width: 100%;
+}
+.main-facility-item-bottom {
+  width: 46%;
+  height: 805px;
+}
+.main-facility-item-image-top {
+  height: 560px;
+}
+.main-facility-item-image-bottom {
+  height: 430px;
+}
+.main-facility-item-title {
+  margin-top: 45px;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-facility-item-text {
+  width: 95%;
+  margin: 38px auto 0;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+.main-facility-item-text-bottom {
+  width: 85%;
+}
+.main-facility-item-link {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-facility-item-link-top {
+  margin-top: 27px;
+}
+.main-facility-item-link-bottom {
+  position: absolute;
+  bottom: 33px;
+  left: 0;
+  right: 0;
+}
 @media screen and (max-width: 960px) {
   .main-slider {
     display: none;
