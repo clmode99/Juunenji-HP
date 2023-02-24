@@ -466,7 +466,7 @@
     opacity: 1;
   }
 }
-.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
   position: relative;
   width: 100%;
   height: 950px;
@@ -478,12 +478,12 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 930px;
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 607px;
   }
 }
@@ -498,7 +498,7 @@
 .main-visual-inner-title-img {
   height: 100%;
 }
-.main-visual-inner-memorial, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+.main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
   height: 600px;
   background-image: url("../images/junenji_memorial_mv.png");
   background-position: center;
@@ -506,7 +506,7 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner-memorial, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     background-image: url("../images/junenji_memorial_mv_tablet.png");
     background-position: center;
     background-size: cover;
@@ -515,7 +515,7 @@
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner-memorial, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 327px;
     background-position: center center;
   }
@@ -630,6 +630,12 @@
     background-repeat: no-repeat;
     height: 327px;
   }
+}
+.main-visual-inner-about {
+  background-image: url("../images/junenji_about_mv.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .main-contents {
   width: 100%;
@@ -1455,6 +1461,10 @@
     font-size: 1.9rem;
   }
 }
+.main-video-about-text {
+  font-size: 2rem;
+  line-height: 1.8;
+}
 .main-grave {
   position: relative;
   padding-top: 150px;
@@ -1979,6 +1989,57 @@
     font-size: 1.3rem;
     line-height: 1.6923076923;
   }
+}
+.main-treasure {
+  padding-top: 150px;
+  padding-bottom: 200px;
+  border-bottom: 1px solid #272727;
+}
+.main-treasure-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-treasure-list {
+  display: flex;
+  position: relative;
+  margin-top: 80px;
+}
+.main-treasure-item {
+  border: 1px solid #707070;
+  padding-bottom: 84px;
+}
+.main-treasure-item-top {
+  width: 100%;
+}
+.main-treasure-item-bottom {
+  width: 50%;
+  margin-right: 80px;
+  padding-bottom: 32px;
+}
+.main-treasure-item-bottom:last-of-type {
+  margin-right: 0;
+}
+.main-treasure-item-image {
+  height: 560px;
+}
+.main-treasure-item-image-bottom {
+  height: 430px;
+}
+.main-treasure-item-title {
+  margin-top: 48px;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-treasure-item-text {
+  width: 87%;
+  margin: 38px auto 0;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+.main-treasure-item-text-bottom {
+  width: 90%;
 }
 @media screen and (max-width: 960px) {
   .main-slider {
