@@ -139,6 +139,11 @@
 					@include mixin.SetBackGroundImage("../images/junenji_about_mv_tablet.png");
 					height: 450px;
 				}
+
+				@include mobile {
+					@include mixin.SetBackGroundImage("../images/junenji_about_mv_mb.png");
+					height: 327px;
+				}
 			}
 
 		}
@@ -1015,6 +1020,11 @@
 					@include mixin.LineHeight(17, 30);
 					font-weight: bold;
 				}
+
+				@include mobile {
+					@include mixin.FontSize(13px);
+					@include mixin.LineHeight(13, 19);
+				}
 			}
 		}
 	}
@@ -1566,6 +1576,10 @@
 			@include tablet {
 				@include mixin.FontSize(30px);
 			}
+
+			@include mobile {
+				@include mixin.FontSize(23px);
+			}
 		}
 
 		&-list {
@@ -1633,9 +1647,18 @@
 				padding-top: 150px;
 			}
 
+			@include mobile {
+				padding-top: 94px;
+			}
+
 			&-list {
 				margin-top: 80px;
 				margin-bottom: 200px;
+
+				@include mobile {
+					margin-top: 52px;
+					margin-bottom: 94px;
+				}
 			}
 
 			&-item {
@@ -1645,9 +1668,17 @@
 					margin-top: 0;
 				}
 
+				@include mobile {
+					margin-top: 94px;
+				}
+
 				&-image {
 					width: 100%;
 					height: 389px;
+
+					@include mobile {
+						height: 190px;
+					}
 				}
 
 				&-title {
@@ -1656,6 +1687,12 @@
 					@include mixin.FontSize(30px);
 					font-weight: bold;
 					text-align: center;
+
+					@include mobile {
+						margin-top: 24px;
+
+						@include mixin.FontSize(21px);
+					}
 				}
 
 				&-text {
@@ -1665,6 +1702,13 @@
 					@include mixin.FontSize(17px);
 					@include mixin.LineHeight(17, 30);
 					font-weight: bold;
+
+					@include mobile {
+						margin-top: 17px;
+
+						@include mixin.FontSize(13px);
+						@include mixin.LineHeight(13, 22);
+					}
 				}
 			}
 		}
@@ -1688,6 +1732,10 @@
 
 			@include tablet {
 				@include mixin.FontSize(30px);
+			}
+
+			@include mobile {
+				@include mixin.FontSize(23px);
 			}
 		}
 
@@ -1768,12 +1816,25 @@
 			padding-top: 200px;
 			padding-bottom: 200px;
 
+			@include mobile {
+				padding-top: 94px;
+				padding-bottom: 94px;
+			}
+
 			&-list {
 				margin-top: 80px;
+
+				@include mobile {
+					margin-top: 52px;
+				}
 			}
 
 			&-item {
 				margin-top: 200px;
+
+				@include mobile {
+					margin-top: 94px;
+				}
 
 				&:first-of-type {
 					margin-top: 0;
@@ -1782,6 +1843,10 @@
 				&-image {
 					width: 100%;
 					height: 389px;
+
+					@include mobile {
+						height: 190px;
+					}
 				}
 
 				&-title {
@@ -1790,6 +1855,12 @@
 					@include mixin.FontSize(30px);
 					font-weight: bold;
 					text-align: center;
+
+					@include mobile {
+						margin-top: 24px;
+
+						@include mixin.FontSize(21px);
+					}
 				}
 
 				&-text {
@@ -1799,6 +1870,13 @@
 					@include mixin.FontSize(17px);
 					@include mixin.LineHeight(17, 30);
 					font-weight: bold;
+
+					@include mobile {
+						margin-top: 17px;
+						
+						@include mixin.FontSize(13px);
+						@include mixin.LineHeight(13, 22);
+					}
 				}
 
 				&-link {
@@ -1813,6 +1891,15 @@
 					text-align: center;
 					
 					border: 1px solid var.$about-item-border-color;
+
+					@include mobile {
+						margin-top: 20px;
+						padding-top: 14px;
+						padding-bottom: 14px;
+						border-radius: 3px;
+
+						@include mixin.FontSize(18px);
+					}
 				}
 			}
 		}

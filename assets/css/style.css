@@ -646,6 +646,15 @@
     height: 450px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-visual-inner-about {
+    background-image: url("../images/junenji_about_mv_mb.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 327px;
+  }
+}
 .main-contents {
   width: 100%;
   max-width: 1320px;
@@ -1494,6 +1503,12 @@
     font-weight: bold;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-video-about-text {
+    font-size: 1.3rem;
+    line-height: 1.4615384615;
+  }
+}
 .main-grave {
   position: relative;
   padding-top: 150px;
@@ -2039,6 +2054,11 @@
     font-size: 3rem;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-treasure-title {
+    font-size: 2.3rem;
+  }
+}
 .main-treasure-list {
   display: flex;
   position: relative;
@@ -2089,9 +2109,20 @@
     padding-top: 150px;
   }
 }
+@media screen and (max-width: 520px) {
+  .main-treasure-tablet {
+    padding-top: 94px;
+  }
+}
 .main-treasure-tablet-list {
   margin-top: 80px;
   margin-bottom: 200px;
+}
+@media screen and (max-width: 520px) {
+  .main-treasure-tablet-list {
+    margin-top: 52px;
+    margin-bottom: 94px;
+  }
 }
 .main-treasure-tablet-item {
   margin-top: 150px;
@@ -2099,9 +2130,19 @@
 .main-treasure-tablet-item:first-of-type {
   margin-top: 0;
 }
+@media screen and (max-width: 520px) {
+  .main-treasure-tablet-item {
+    margin-top: 94px;
+  }
+}
 .main-treasure-tablet-item-image {
   width: 100%;
   height: 389px;
+}
+@media screen and (max-width: 520px) {
+  .main-treasure-tablet-item-image {
+    height: 190px;
+  }
 }
 .main-treasure-tablet-item-title {
   margin-top: 60px;
@@ -2109,12 +2150,25 @@
   font-weight: bold;
   text-align: center;
 }
+@media screen and (max-width: 520px) {
+  .main-treasure-tablet-item-title {
+    margin-top: 24px;
+    font-size: 2.1rem;
+  }
+}
 .main-treasure-tablet-item-text {
   margin: 40px auto 0;
   width: 80%;
   font-size: 1.7rem;
   line-height: 1.7647058824;
   font-weight: bold;
+}
+@media screen and (max-width: 520px) {
+  .main-treasure-tablet-item-text {
+    margin-top: 17px;
+    font-size: 1.3rem;
+    line-height: 1.6923076923;
+  }
 }
 .main-facility {
   margin-top: 18px;
@@ -2135,6 +2189,11 @@
 @media screen and (max-width: 960px) {
   .main-facility-title {
     font-size: 3rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-facility-title {
+    font-size: 2.3rem;
   }
 }
 .main-facility-list {
@@ -2197,11 +2256,27 @@
   padding-top: 200px;
   padding-bottom: 200px;
 }
+@media screen and (max-width: 520px) {
+  .main-facility-tablet {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .main-facility-tablet-list {
   margin-top: 80px;
 }
+@media screen and (max-width: 520px) {
+  .main-facility-tablet-list {
+    margin-top: 52px;
+  }
+}
 .main-facility-tablet-item {
   margin-top: 200px;
+}
+@media screen and (max-width: 520px) {
+  .main-facility-tablet-item {
+    margin-top: 94px;
+  }
 }
 .main-facility-tablet-item:first-of-type {
   margin-top: 0;
@@ -2210,11 +2285,22 @@
   width: 100%;
   height: 389px;
 }
+@media screen and (max-width: 520px) {
+  .main-facility-tablet-item-image {
+    height: 190px;
+  }
+}
 .main-facility-tablet-item-title {
   margin-top: 60px;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
+}
+@media screen and (max-width: 520px) {
+  .main-facility-tablet-item-title {
+    margin-top: 24px;
+    font-size: 2.1rem;
+  }
 }
 .main-facility-tablet-item-text {
   margin: 40px auto 0;
@@ -2222,6 +2308,13 @@
   font-size: 1.7rem;
   line-height: 1.7647058824;
   font-weight: bold;
+}
+@media screen and (max-width: 520px) {
+  .main-facility-tablet-item-text {
+    margin-top: 17px;
+    font-size: 1.3rem;
+    line-height: 1.6923076923;
+  }
 }
 .main-facility-tablet-item-link {
   display: block;
@@ -2233,6 +2326,15 @@
   font-weight: bold;
   text-align: center;
   border: 1px solid #707070;
+}
+@media screen and (max-width: 520px) {
+  .main-facility-tablet-item-link {
+    margin-top: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 3px;
+    font-size: 1.8rem;
+  }
 }
 @media screen and (max-width: 960px) {
   .main-slider {
