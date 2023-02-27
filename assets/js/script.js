@@ -42,6 +42,23 @@ $(function () {
 		speed: 1000,				// 画像の切り替わる時間(ms)
 	});
 
+	// スライドショー(十念寺のご案内)
+	$('.main-guide-slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.main-guide-slider-nav',
+	});
+	$(".main-guide-slider-nav").slick({
+		slidesToShow: 8,
+		slidesToScroll: 1,
+		asNavFor: '.main-guide-slider-for',
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true,
+	});
+
 	// ハンバーガーメニュー
 	$('.button-header-hamburger').click(function() {
 		$(this).blur();

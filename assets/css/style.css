@@ -466,7 +466,7 @@
     opacity: 1;
   }
 }
-.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+.main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-guide, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
   position: relative;
   width: 100%;
   height: 950px;
@@ -478,12 +478,12 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-guide, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 930px;
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-guide, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 607px;
   }
 }
@@ -498,7 +498,7 @@
 .main-visual-inner-title-img {
   height: 100%;
 }
-.main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+.main-visual-inner-memorial, .main-visual-inner-guide, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
   height: 600px;
   background-image: url("../images/junenji_memorial_mv.png");
   background-position: center;
@@ -506,7 +506,7 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner-memorial, .main-visual-inner-guide, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     background-image: url("../images/junenji_memorial_mv_tablet.png");
     background-position: center;
     background-size: cover;
@@ -515,7 +515,7 @@
   }
 }
 @media screen and (max-width: 520px) {
-  .main-visual-inner-memorial, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
+  .main-visual-inner-memorial, .main-visual-inner-guide, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
     height: 327px;
     background-position: center center;
   }
@@ -654,6 +654,12 @@
     background-repeat: no-repeat;
     height: 327px;
   }
+}
+.main-visual-inner-guide {
+  background-image: url("../images/junenji_guide_mv.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .main-contents {
   width: 100%;
@@ -1509,6 +1515,9 @@
     line-height: 1.4615384615;
   }
 }
+.main-video-guide-text {
+  font-size: 1.9rem;
+}
 .main-grave {
   position: relative;
   padding-top: 150px;
@@ -2336,6 +2345,229 @@
     font-size: 1.8rem;
   }
 }
+.main-guide {
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+.main-guide-link-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  -moz-column-gap: 63px;
+       column-gap: 63px;
+}
+.main-guide-link-item {
+  width: 33%;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 1px solid #272727;
+  text-align: center;
+}
+.main-guide-list {
+  margin-top: 200px;
+}
+.main-guide-item {
+  margin-top: 400px;
+}
+.main-guide-item:first-of-type {
+  margin-top: 0;
+}
+.main-guide-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-guide-slider-for {
+  margin-top: 80px;
+}
+.main-guide-slider-nav {
+  cursor: pointer;
+  margin-top: 20px;
+}
+.main-guide-slider-nav-item {
+  margin-right: 30px;
+  height: 65px;
+}
+.main-guide-text {
+  margin-top: 50px;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+.main-guide-button-list {
+  margin-top: 80px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+.main-guide-button-item {
+  display: block;
+  width: 33%;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  padding: 17px 20px;
+  border: 1px solid #707070;
+  cursor: pointer;
+}
+.main-guide-button-item:hover {
+  background-color: #707070;
+  color: #FFFFFF;
+}
+.main-guide-button-item-inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.main-guide-button-item-image {
+  width: 50%;
+  height: 95px;
+  border: 1px solid #707070;
+}
+.main-guide-button-item-text {
+  width: 50%;
+  font-weight: bold;
+  text-align: center;
+}
+.main-guide-button-item-text-triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 19px 19px 0;
+  border-color: transparent #7E7D7D transparent transparent;
+}
+.main-guide-button-item-text-top {
+  font-size: 1.3rem;
+}
+.main-guide-button-item-text-bottom {
+  margin-top: 8px;
+  font-size: 2rem;
+}
+.main-guide-modal {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.main-guide-modal:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.main-guide-modal:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.main-guide-modal::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  vertical-align: middle;
+  content: "";
+}
+.main-guide-modal-window {
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  padding-left: 100px;
+  padding-right: 75px;
+  background: #343434;
+  vertical-align: middle;
+}
+.main-guide-modal-contents {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 600px;
+  overflow-y: auto;
+  overscroll-behavior-y: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.main-guide-modal-contents-left {
+  width: 45%;
+  height: 100%;
+}
+.main-guide-modal-contents-left-image {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: 600px;
+}
+.main-guide-modal-contents-left-image-2 {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: 388px;
+  margin-top: 40px;
+}
+.main-guide-modal-contents-left-image-2:first-of-type {
+  margin-top: 0;
+}
+.main-guide-modal-contents-left-image-3 {
+  height: 741px;
+}
+.main-guide-modal-contents-right {
+  width: 50%;
+  height: 100%;
+  color: #FFFFFF;
+  position: relative;
+}
+.main-guide-modal-contents-right-title {
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.main-guide-modal-contents-right-title-small {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.main-guide-modal-contents-right-text {
+  margin-top: 33px;
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 900;
+  text-align: left;
+}
+.main-guide-modal-contents-right-button {
+  display: block;
+  width: 30%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 100px auto 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #272727;
+  background-color: #E6E6E6;
+  border-radius: 3px;
+}
+.main-guide-modal-contents-right-button:hover {
+  color: #FFFFFF;
+  background-color: #707070;
+}
+.main-guide-modal-overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 @media screen and (max-width: 960px) {
   .main-slider {
     display: none;
@@ -2376,6 +2608,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.main-guide-button-item:hover .main-guide-button-item-text-triangle {
+  border-color: transparent #FFFFFF transparent transparent;
 }
 
 .main-event-slider-tablet .slick-arrow {

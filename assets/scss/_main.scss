@@ -146,6 +146,13 @@
 				}
 			}
 
+			&-guide {
+				@extend .main-visual-inner-memorial;
+				@include mixin.SetBackGroundImage("../images/junenji_guide_mv.png");
+
+
+			}
+
 		}
 	}
 
@@ -1027,6 +1034,12 @@
 				}
 			}
 		}
+
+		&-guide {
+			&-text {
+				@include mixin.FontSize(19px);
+			}
+		}
 	}
 
 	&-grave {
@@ -1906,6 +1919,288 @@
 
 	}
 
+	&-guide {
+		padding-top: 150px;
+		padding-bottom: 200px;
+
+		&-link {
+			&-list {
+				display: flex;
+				position: relative;
+				width: 100%;
+				column-gap: 63px;
+			}
+
+			&-item {
+				width: 33%;
+				padding-top: 17px;
+				padding-bottom: 17px;
+
+				@include mixin.FontSize(30px);
+				font-weight: bold;
+				border: 1px solid var.$about-border-color;
+				text-align: center;
+			}
+		}
+
+		&-list {
+			margin-top: 200px;
+		}
+
+		&-item {
+			margin-top: 400px;
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+
+		&-title {
+			@include mixin.FontSize(45px);
+			font-weight: bold;
+			text-align: center;
+		}
+
+		&-slider {
+			&-for {
+				margin-top: 80px;
+			}
+
+			&-nav {
+				cursor: pointer;
+				margin-top: 20px;
+
+				&-item {
+					margin-right: 30px;
+					height: 65px;
+				}
+			}
+		}
+
+		&-text {
+			margin-top: 50px;
+
+			@include mixin.FontSize(20px);
+			@include mixin.LineHeight(20, 36);
+		}
+
+		&-button {
+			&-list { 
+				margin-top: 80px;
+				display: flex;
+
+				position: relative;
+				width: 100%;
+				column-gap: 60px;
+			}
+
+			&-item {
+				display: block;
+				width: 33%;
+				column-gap: 60px;
+
+				padding: 17px 20px;
+				border: 1px solid var.$about-item-border-color;
+
+				cursor: pointer;
+
+				&:hover {
+					background-color: var.$about-item-border-color;
+					color: var.$triangle-hover-color;
+				}
+
+				&-inner {
+					display: flex;
+					align-items: center;
+					position: relative;
+				}
+
+				&-image {
+					width: 50%;
+					height: 95px;
+
+					border: 1px solid var.$about-item-border-color;
+				}
+
+				&-text {
+					width: 50%;
+
+					font-weight: bold;
+					text-align: center;
+
+					// 参考サイト：CSS三角形作成ツール(http://apps.eky.hk/css-triangle-generator/ja)
+					&-triangle{
+						position: absolute;
+						top: 0;
+						right: 0;
+
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 0 19px 19px 0;
+						border-color: transparent var.$triangle-color transparent transparent;
+					}
+
+					&-top {
+						@include mixin.FontSize(13px);
+
+					}
+
+					&-bottom {
+						margin-top: 8px;
+
+						@include mixin.FontSize(20px);
+					}
+				}
+			}
+		}
+
+		// モーダル作成の参考サイト：https://dubdesign.net/download/html-css/modal-window/#!
+		&-modal {
+			z-index: 999;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			text-align: center;
+
+			&:not(:target) {
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity .3s, visibility .3s;
+			}
+
+			&:target {
+				opacity: 1;
+				visibility: visible;
+				transition: opacity .4s, visibility .4s;
+			}
+
+			&::after {
+				display: inline-block;
+				height: 100%;
+				margin-left: -.05em;
+				vertical-align: middle;
+				content: "";
+			}
+
+			&-window {
+				display: inline-block;
+				z-index: 20;
+				position: relative;
+				width: 100%;
+				max-width: 1320px;
+				padding-top: 100px;
+				padding-bottom: 60px;
+				padding-left: 100px;
+				padding-right: 75px;
+				background: var.$modal-window-bg-color;
+				vertical-align: middle;
+			}
+
+			&-contents {
+				width: 100%;
+				max-width: var.$contents-width;
+				margin: 0 auto;
+				height: 600px;
+				overflow-y: auto;
+				overscroll-behavior-y: none;
+
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+
+				&-left {
+					width: 45%;
+					height: 100%;
+
+					&-image {
+						display: block;
+						width: 100%;
+						max-width: 500px;
+						height: 600px;
+
+						&-2 {
+							display: block;
+							width: 100%;
+							max-width: 500px;
+							height: 388px;
+							margin-top: 40px;
+
+							&:first-of-type {
+								margin-top: 0;
+							}
+						}
+
+						&-3 {
+							height: 741px;
+						}
+					}
+				}
+
+				&-right {
+					width: 50%;
+					height: 100%;
+					color: var.$modal-window-color;
+					position: relative;
+
+					&-title {
+						@include mixin.FontSize(40px);
+						line-height: 1.5;
+						font-weight: bold;
+
+						&-small {
+							@include mixin.FontSize(25px);
+							font-weight: bold;
+						}
+					}
+
+					&-text {
+						margin-top: 33px;
+
+						@include mixin.FontSize(20px);
+						@include mixin.LineHeight(20, 28);
+						font-weight: var.$font-bold-semiBold;
+						text-align: left;
+					}
+
+					&-button {
+						display: block;
+						width: 30%;
+						padding-top: 20px;
+						padding-bottom: 20px;
+						margin: 100px auto 0;
+
+						@include mixin.FontSize(20px);
+						font-weight: bold;
+						text-align: center;
+						color: var.$modal-window-button-color;
+						
+						background-color: var.$modal-window-button-bg-color;
+						border-radius: 3px;
+
+						&:hover {
+							color: var.$modal-window-button-hover-color;
+							background-color: var.$modal-window-button-hover-bg-color;
+						}
+					}
+				}
+
+			}
+
+			&-overlay {
+				z-index: 10;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				//background: white;		// デバッグ
+			}
+		}
+	}
+
 	&-slider {
 		@include tablet {
 			display: none;
@@ -1927,6 +2222,11 @@
 			}
 		}
 	}
+}
+
+// ホバー関連(こうしないと動かない系)
+.main-guide-button-item:hover .main-guide-button-item-text-triangle {
+	border-color: transparent var.$triangle-hover-color transparent transparent;
 }
 
 // スライドショー関連
