@@ -150,6 +150,10 @@
 				@extend .main-visual-inner-memorial;
 				@include mixin.SetBackGroundImage("../images/junenji_guide_mv.png");
 
+				@include tablet {
+					@include mixin.SetBackGroundImage("../images/junenji_guide_mv_tablet.png");
+					height: 450px;
+				}
 
 			}
 
@@ -1038,6 +1042,11 @@
 		&-guide {
 			&-text {
 				@include mixin.FontSize(19px);
+
+				@include tablet {
+					@include mixin.FontSize(17px);
+					@include mixin.LineHeight(17, 30);
+				}
 			}
 		}
 	}
@@ -1923,12 +1932,22 @@
 		padding-top: 150px;
 		padding-bottom: 200px;
 
+		@include tablet {
+			padding-top: 100px;
+		}
+
 		&-link {
 			&-list {
 				display: flex;
 				position: relative;
 				width: 100%;
 				column-gap: 63px;
+				margin: 0 auto;
+
+				@include tablet {
+					width: 70%;
+					column-gap: 19px;
+				}
 			}
 
 			&-item {
@@ -1940,6 +1959,14 @@
 				font-weight: bold;
 				border: 1px solid var.$about-border-color;
 				text-align: center;
+
+				@include tablet {
+					padding-top: 23px;
+					padding-bottom: 23px;
+
+					@include mixin.FontSize(22px);
+					@include mixin.LineHeight(22, 36);
+				}
 			}
 		}
 
@@ -1950,6 +1977,10 @@
 		&-item {
 			margin-top: 400px;
 
+			@include tablet {
+				margin-top: 200px;
+			}
+
 			&:first-of-type {
 				margin-top: 0;
 			}
@@ -1959,20 +1990,47 @@
 			@include mixin.FontSize(45px);
 			font-weight: bold;
 			text-align: center;
+
+			@include tablet {
+				@include mixin.FontSize(40px);
+			}
 		}
 
 		&-slider {
+			position: relative;
+
 			&-for {
 				margin-top: 80px;
+
+				@include tablet {
+					display: none;
+				}
 			}
 
 			&-nav {
 				cursor: pointer;
 				margin-top: 20px;
 
+				@include tablet {
+					display: none;
+				}
+
 				&-item {
 					margin-right: 30px;
 					height: 65px;
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+			}
+
+			&-tablet {
+				display: none;
+
+				@include tablet {
+					display: block;
+					margin-top: 80px;
 				}
 			}
 		}
@@ -1982,6 +2040,15 @@
 
 			@include mixin.FontSize(20px);
 			@include mixin.LineHeight(20, 36);
+
+			@include tablet {
+				@include mixin.FixContentsCenterTablet;
+				margin-top: 80px;
+
+				@include mixin.FontSize(17px);
+				@include mixin.LineHeight(17, 30);
+				font-weight: bold;
+			}
 		}
 
 		&-button {
@@ -1992,6 +2059,13 @@
 				position: relative;
 				width: 100%;
 				column-gap: 60px;
+
+				@include tablet {
+					@include mixin.FixContentsCenterTablet;
+					margin-top: 80px;
+					flex-wrap: wrap;
+					row-gap: 20px;
+				}
 			}
 
 			&-item {
@@ -2003,6 +2077,12 @@
 				border: 1px solid var.$about-item-border-color;
 
 				cursor: pointer;
+
+				@include tablet {
+					width: 100%;
+
+					padding: 0;
+				}
 
 				&:hover {
 					background-color: var.$about-item-border-color;
@@ -2020,6 +2100,19 @@
 					height: 95px;
 
 					border: 1px solid var.$about-item-border-color;
+				
+					@include tablet {
+						display: none;
+					}
+
+					&-tablet {
+						display: none;
+						
+						@include tablet {
+							display: block;
+							height: 200px;
+						}
+					}
 				}
 
 				&-text {
@@ -2039,17 +2132,32 @@
 						border-style: solid;
 						border-width: 0 19px 19px 0;
 						border-color: transparent var.$triangle-color transparent transparent;
+					
+						@include tablet {
+							top: 15%;
+							right: 5%;
+							border-width: 0 30px 30px 0;
+						}
 					}
 
 					&-top {
 						@include mixin.FontSize(13px);
 
+						@include tablet {
+							@include mixin.FontSize(16px);
+						}
 					}
 
 					&-bottom {
 						margin-top: 8px;
 
 						@include mixin.FontSize(20px);
+
+						@include tablet {
+							margin-top: 15px;
+
+							@include mixin.FontSize(29px);
+						}
 					}
 				}
 			}
@@ -2097,6 +2205,11 @@
 				padding-right: 75px;
 				background: var.$modal-window-bg-color;
 				vertical-align: middle;
+
+				@include tablet {
+					height: 100vh;
+					padding: 0;
+				}
 			}
 
 			&-contents {
@@ -2110,6 +2223,10 @@
 				position: relative;
 				display: flex;
 				justify-content: space-between;
+
+				@include tablet {
+					display: none;
+				}
 
 				&-left {
 					width: 45%;
@@ -2187,6 +2304,71 @@
 					}
 				}
 
+				&-tablet {
+					display: none;
+					color: var.$modal-window-color;
+					font-weight: bold;
+
+					@include tablet {
+						display: block;
+
+						height: 100vh;
+						overflow-y: auto;
+						overscroll-behavior-y: none;
+					}
+
+					&-image {
+						width: 100%;
+						height: 389px;
+					}
+
+					&-title {
+						@include mixin.FontSize(30px);
+						line-height: 1.5;
+
+						&-small {
+							@include mixin.FontSize(17px);
+						}
+					}
+
+					&-text {
+						margin-top: 50px;
+
+						@include mixin.FontSize(17px);
+						@include mixin.LineHeight(17, 30);
+						text-align: left;
+
+						&-list {
+							@include mixin.FixContentsCenterTablet;
+							margin-top: 40px;
+							margin-bottom: 100px;
+						}
+
+						&-image {
+							margin-top: 50px;
+							height: 451px;
+
+							&-2 {
+								margin-top: 50px;
+								height: 904px;
+							}
+						}
+					}
+
+					&-button {
+						display: block;;
+						width: 100%;
+						margin-top: 100px;
+						padding-top: 27px;
+						padding-bottom: 27px;
+
+						@include mixin.FontSize(36px);
+						font-weight: bold;
+						color: var.$modal-window-color;
+						border: 1px solid var.$modal-window-button-hover-bg-color;
+					}
+				}
+
 			}
 
 			&-overlay {
@@ -2231,14 +2413,14 @@
 
 // スライドショー関連
 // 参考URL；https://and-ha.com/coding/slick/、https://zero-plus.io/media/jquery-slick/
-.main-event-slider-tablet .slick-arrow {
+.main-event-slider-tablet .slick-arrow, .main-guide-slider-tablet .slick-arrow {
 	color: var.$slider-arrow-color;
 	@include mixin.FontSize(0px);
 	cursor: pointer;
 	z-index: 1;
 }
 
-.main-event-slider-tablet .slick-arrow:before {
+.main-event-slider-tablet .slick-arrow:before, .main-guide-slider-tablet .slick-arrow:before {
 	@include mixin.FontSize(50px);
 
 	@include mobile {
@@ -2246,35 +2428,39 @@
 	}
 }
 
-.main-event-slider-tablet .slick-prev {
+.main-event-slider-tablet .slick-prev, .main-guide-slider-tablet .slick-prev {
 	left: 0;
 }
 
-.main-event-slider-tablet .slick-prev:before {
+.main-event-slider-tablet .slick-prev:before, .main-guide-slider-tablet .slick-arrow:before {
 	content: '◀︎';
 	position: absolute;
 	left: 20px;
+	right: auto;
+	bottom: 1px;
 
 	@include mobile {
 		left: 10px;
 	}
 }
 
-.main-event-slider-tablet .slick-next {
+.main-event-slider-tablet .slick-next, .main-guide-slider-tablet .slick-next {
 	right: 0;
 }
 
-.main-event-slider-tablet .slick-next:before {
+.main-event-slider-tablet .slick-next:before, .main-guide-slider-tablet .slick-next:before {
 	content: '▶︎';
 	position: absolute;
-	right: 40px;
+	right: 20px;
+	left: auto;
+	bottom: 1px;
 
 	@include mobile {
 		right: 10px;
 	}
 }
 
-.main-event-slider-tablet .slick-dots {
+.main-event-slider-tablet .slick-dots, .main-guide-slider-tablet .slick-dots {
 	position: absolute;
 	bottom: 20px;
 	z-index: 1;
@@ -2284,7 +2470,7 @@
 	}
 }
 
-.main-event-slider-tablet .slick-dots li button::before {
+.main-event-slider-tablet .slick-dots li button::before, .main-guide-slider-tablet .slick-dots li button::before {
 	@include mixin.FontSize(16px);
 	color: var.$slider-arrow-color;
 

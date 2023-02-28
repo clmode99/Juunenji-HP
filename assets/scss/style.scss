@@ -2,6 +2,7 @@
 @use "main";
 @use "footer";
 @use "common/var";
+@use "common/responsive" as *;
 
 html {
 	font-size: var.$base-font-size;
@@ -36,4 +37,13 @@ img {
 
 .hidden {
 	display: block;
+}
+
+// タブレット時のみ改行
+.br-tablet {
+	display: none;
+
+	@include tablet {
+		display: block;
+	}
 }

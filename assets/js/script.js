@@ -1,5 +1,18 @@
 // jQuery
 $(function () {
+	/* 自作関数 */
+	function MainGuideSliderNav(showNum) {
+		$(`.main-guide-slider-nav-${showNum}`).slick({
+			slidesToShow: showNum,
+			slidesToScroll: 1,
+			asNavFor: '.main-guide-slider-for',
+			dots: false,
+			centerMode: false,
+			focusOnSelect: true,
+		});	
+	}
+
+	/* プラグイン */
 	// 動画再生
 	// デバイス判定参考サイト：https://indoor-today.com/2230
 	var ua = navigator.userAgent;
@@ -50,14 +63,17 @@ $(function () {
 		fade: true,
 		asNavFor: '.main-guide-slider-nav',
 	});
-	$(".main-guide-slider-nav").slick({
-		slidesToShow: 8,
-		slidesToScroll: 1,
-		asNavFor: '.main-guide-slider-for',
-		dots: false,
-		centerMode: false,
-		focusOnSelect: true,
+	MainGuideSliderNav(7);		// Id:1
+	MainGuideSliderNav(6);		// Id:2
+	MainGuideSliderNav(8);		// Id:3
+	$(".main-guide-slider-tablet").slick({
+		dots: true,
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 3000,		// 画像の保持時間(ms)
+		speed: 1000,				// 画像の切り替わる時間(ms)
 	});
+
 
 	// ハンバーガーメニュー
 	$('.button-header-hamburger').click(function() {
@@ -79,5 +95,6 @@ $(function () {
 			$('.header-inner-right-mb-menu-list-overlay').remove();
 		});
 	});
+
 });
 
