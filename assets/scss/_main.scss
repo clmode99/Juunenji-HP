@@ -155,6 +155,11 @@
 					height: 450px;
 				}
 
+				@include mobile {
+					@include mixin.SetBackGroundImage("../images/junenji_guide_mv_mb.png");
+					height: 327px;
+				}
+
 			}
 
 		}
@@ -1047,6 +1052,11 @@
 					@include mixin.FontSize(17px);
 					@include mixin.LineHeight(17, 30);
 				}
+
+				@include mobile {
+					@include mixin.FontSize(13px);
+					@include mixin.LineHeight(13, 19);
+				}
 			}
 		}
 	}
@@ -1936,6 +1946,11 @@
 			padding-top: 100px;
 		}
 
+		@include mobile {
+			padding-top: 57px;
+			padding-bottom: 94px;
+		}
+
 		&-link {
 			&-list {
 				display: flex;
@@ -1947,6 +1962,10 @@
 				@include tablet {
 					width: 70%;
 					column-gap: 19px;
+				}
+
+				@include mobile {
+					width: 90%;
 				}
 			}
 
@@ -1967,11 +1986,23 @@
 					@include mixin.FontSize(22px);
 					@include mixin.LineHeight(22, 36);
 				}
+
+				@include mobile {
+					padding-top: 13px;
+					padding-bottom: 13px;
+
+					@include mixin.FontSize(14px);
+					@include mixin.LineHeight(14, 23);
+				}
 			}
 		}
 
 		&-list {
 			margin-top: 200px;
+
+			@include mobile {
+				margin-top: 94px;
+			}
 		}
 
 		&-item {
@@ -1979,6 +2010,10 @@
 
 			@include tablet {
 				margin-top: 200px;
+			}
+
+			@include mobile {
+				margin-top: 94px;
 			}
 
 			&:first-of-type {
@@ -1993,6 +2028,10 @@
 
 			@include tablet {
 				@include mixin.FontSize(40px);
+			}
+
+			@include mobile {
+				@include mixin.FontSize(23px);
 			}
 		}
 
@@ -2032,6 +2071,19 @@
 					display: block;
 					margin-top: 80px;
 				}
+
+				@include mobile {
+					margin-top: 65px;
+				}
+
+				&-item {
+					img {
+						@include mobile {
+							height: 190px;
+						}
+					}
+
+				}
 			}
 		}
 
@@ -2049,6 +2101,13 @@
 				@include mixin.LineHeight(17, 30);
 				font-weight: bold;
 			}
+
+			@include mobile {
+				margin-top: 30px;
+
+				@include mixin.FontSize(13px);
+				@include mixin.LineHeight(13, 22);
+			}
 		}
 
 		&-button {
@@ -2065,6 +2124,11 @@
 					margin-top: 80px;
 					flex-wrap: wrap;
 					row-gap: 20px;
+				}
+
+				@include mobile {
+					margin-top: 40px;
+					row-gap: 10px;
 				}
 			}
 
@@ -2112,6 +2176,11 @@
 							display: block;
 							height: 200px;
 						}
+
+						@include mobile {
+							width: 151px;
+							height: 97px;
+						}
 					}
 				}
 
@@ -2138,6 +2207,11 @@
 							right: 5%;
 							border-width: 0 30px 30px 0;
 						}
+
+						@include mobile {
+							border-width: 0 14px 14px 0;
+
+						}
 					}
 
 					&-top {
@@ -2145,6 +2219,10 @@
 
 						@include tablet {
 							@include mixin.FontSize(16px);
+						}
+
+						@include mobile {
+							@include mixin.FontSize(8px);
 						}
 					}
 
@@ -2157,6 +2235,12 @@
 							margin-top: 15px;
 
 							@include mixin.FontSize(29px);
+						}
+
+						@include mobile {
+							margin-top: 10px;
+
+							@include mixin.FontSize(15px);
 						}
 					}
 				}
@@ -2320,14 +2404,26 @@
 					&-image {
 						width: 100%;
 						height: 389px;
+
+						@include mobile {
+							height: 190px;
+						}
 					}
 
 					&-title {
 						@include mixin.FontSize(30px);
 						line-height: 1.5;
 
+						@include mobile {
+							@include mixin.FontSize(21px);
+						}
+
 						&-small {
 							@include mixin.FontSize(17px);
+
+							@include mobile {
+								@include mixin.FontSize(13px);
+							}
 						}
 					}
 
@@ -2338,19 +2434,41 @@
 						@include mixin.LineHeight(17, 30);
 						text-align: left;
 
+						@include mobile {
+							margin-top: 30px;
+
+							@include mixin.FontSize(13px);
+							@include mixin.LineHeight(13, 22);
+						}
+
 						&-list {
 							@include mixin.FixContentsCenterTablet;
 							margin-top: 40px;
 							margin-bottom: 100px;
+
+							@include mobile {
+								margin-top: 20px;
+								margin-bottom: 94px;
+							}
 						}
 
 						&-image {
 							margin-top: 50px;
 							height: 451px;
 
+							@include mobile {
+								margin-top: 30px;
+								height: 220px;
+							}
+
 							&-2 {
 								margin-top: 50px;
 								height: 904px;
+
+								@include mobile {
+									margin-top: 57px;
+									height: 446px;
+								}
 							}
 						}
 					}
@@ -2366,6 +2484,14 @@
 						font-weight: bold;
 						color: var.$modal-window-color;
 						border: 1px solid var.$modal-window-button-hover-bg-color;
+
+						@include mobile {
+							margin-top: 79px;
+							padding-top: 13px;
+							padding-bottom: 13px;
+
+							@include mixin.FontSize(18px);
+						}
 					}
 				}
 
