@@ -108,13 +108,13 @@
 		</div><!-- /.main-visual -->
 		<div class="main-bg">
 			<div class="main-contents">
-				<div class="main-about main-about-contact">
+				<div class="main-about main-about-contact main-about-contact-2">
 					<div class="main-about-contents">
 						<h2 class="main-about-contents-title main-about-contact-title">お電話</h2><!-- /.main-about-contents-title -->
 						<p class="main-about-contact-tel">
 							TEL：0566-21-0854
 						</p><!-- /.main-about-conract-tel -->
-						<p class="main-about-contact-text">
+						<p class="main-about-contact-text visible-mb">
 							受付時間：午前10時〜午後5時まで<br>
 							日曜日定休
 						</p><!-- /.main-about-contact-text -->

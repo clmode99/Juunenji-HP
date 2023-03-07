@@ -666,6 +666,12 @@
 				padding-bottom: 94px;
 			}
 
+			&-2 {
+				@include mobile {
+					padding-bottom: 57px;
+				}
+			}
+
 			&-title {
 				margin: 0 auto;
 				width: 45%;
@@ -683,6 +689,7 @@
 
 				@include mobile {
 					@include mixin.FontSize(23px);
+					width: 100%;
 				}
 			}
 
@@ -697,6 +704,12 @@
 					margin-top: 40px;
 
 					@include mixin.FontSize(30px);
+				}
+
+				@include mobile {
+					margin-top: 30px;
+
+					@include mixin.FontSize(24px);
 				}
 			}
 
@@ -2575,6 +2588,10 @@
 				@include mixin.FontSize(30px);
 				border: none;
 			}
+
+			@include mobile {
+				@include mixin.FontSize(23px);
+			}
 		}
 
 		&-text {
@@ -2591,6 +2608,12 @@
 				font-weight: bold;
 			}
 
+			@include mobile {
+				margin-top: 30px;
+
+				@include mixin.FontSize(13px);
+				@include mixin.LineHeight(13, 19);
+			}
 
 			&-center {
 				text-align: center;
@@ -2610,6 +2633,10 @@
 				margin-top: 40px;
 			}
 
+			@include mobile {
+				margin-top: 30px;
+			}
+
 			img {
 				width: 100%;
 				max-width: 498px;
@@ -2618,6 +2645,11 @@
 				@include tablet {
 					max-width: 314px;
 					height: 110px;
+				}
+
+				@include mobile {
+					max-width: 182px;
+					height: 64px;
 				}
 			}
 
@@ -2644,6 +2676,13 @@
 				@include tablet {
 					@include mixin.FontSize(30px);
 				}
+
+				@include mobile {
+					padding-top: 20px;
+					padding-bottom: 20px;
+
+					@include mixin.FontSize(23px);
+				}
 			}
 
 			&-list {
@@ -2666,6 +2705,11 @@
 					padding-bottom: 40px;
 				}
 
+				@include mobile {
+					padding-top: 30px;
+					padding-bottom: 30px;
+				}
+
 				&:first-of-type {
 					padding-top: 0 !important;
 				}
@@ -2681,6 +2725,10 @@
 					@include tablet {
 						padding-bottom: 40px;
 					}
+
+					@include mobile {
+						padding-bottom: 30px;
+					}
 				}
 
 				&-button {
@@ -2688,6 +2736,10 @@
 
 					@include tablet {
 						padding-top: 40px !important;
+					}
+
+					@include mobile {
+						padding-top: 30px !important;
 					}
 				}
 
@@ -2701,6 +2753,10 @@
 						@include mixin.FontSize(21px);
 					}
 
+					@include mobile {
+						@include mixin.FontSize(15px);
+					}
+
 					img {
 						margin-right: 28px;
 						height: 40px;
@@ -2708,6 +2764,11 @@
 						@include tablet {
 							margin-right: 14px;
 							height: 30px;
+						}
+
+						@include mobile {
+							margin-right: 10px;
+							height: 20px;
 						}
 					}
 				}
@@ -2719,6 +2780,10 @@
 					@include tablet {
 						margin-top: 40px;
 						height: 201px;
+					}
+
+					@include mobile {
+						margin-top: 30px;
 					}
 				}
 
@@ -2735,11 +2800,22 @@
 						font-weight: bold;
 					}
 
+					@include mobile {
+						margin-top: 30px;
+						
+						@include mixin.FontSize(13px);
+						@include mixin.LineHeight(13, 19);
+					}
+
 					&-id {
 						margin-top: 50px;
 
 						@include tablet {
 							margin-top: 20px;
+						}
+
+						@include mobile {
+							margin-top: 15px;
 						}
 					}
 				}
@@ -2759,6 +2835,11 @@
 			padding-bottom: 100px;
 		}
 
+		@include mobile {
+			padding-top: 57px;
+			padding-bottom: 94px;
+		}
+
 		&-title {
 			width: 50%;
 			margin: 0 auto;
@@ -2771,10 +2852,15 @@
 			border: 2px solid var.$about-item-border-color;
 
 			@include tablet {
+				width: 100%;
 				padding: 0;
 
 				@include mixin.FontSize(30px);
 				border: 0;
+			}
+
+			@include mobile {
+				@include mixin.FontSize(23px);
 			}
 		}
 
@@ -2783,6 +2869,10 @@
 
 			@include tablet {
 				margin-top: 40px;
+			}
+
+			@include mobile {
+				margin-top: 30px;
 			}
 
 			&-item {
@@ -2802,6 +2892,11 @@
 					padding-bottom: 15px;
 				}
 
+				@include mobile {
+					padding-top: 13px;
+					padding-bottom: 13px;
+				}
+
 				&:last-of-type, &:nth-last-of-type(2){
 					border-bottom: none;
 				}
@@ -2819,6 +2914,12 @@
 
 						@include mixin.FontSize(21px);
 					}
+
+					@include mobile {
+						margin-top: 30px;
+
+						@include mixin.FontSize(15px);
+					}
 				}
 
 				&-input {
@@ -2835,6 +2936,15 @@
 						margin-top: 20px;
 					}
 
+					@include mobile {
+						height: 50px;
+						margin-top: 15px;
+
+						@include mixin.FontSize(15px);
+						padding-left: 20px;
+						border-radius: 10px;
+					}
+
 					&-list {
 						width: 60%;
 
@@ -2845,6 +2955,10 @@
 
 					&-confirmation {
 						margin-top: 22px;
+
+						@include mobile {
+							margin-top: 15px;
+						}
 					}
 
 					&-textarea {
@@ -2858,6 +2972,15 @@
 
 						@include tablet {
 							margin-top: 20px;
+						}
+
+						@include mobile {
+							margin-top: 15px;
+							padding-top: 20px;
+							padding-left: 20px;
+							border-radius: 10px;
+
+							@include mixin.FontSize(15px);
 						}
 					}
 				}
@@ -2885,11 +3008,23 @@
 					@include mixin.FontSize(30px);
 				}
 
+				@include mobile {
+					margin-top: 0;
+					padding-top: 11px;
+					padding-bottom: 11px;
+
+					@include mixin.FontSize(17px);
+				}
+
 				&-confirmation {
 					margin-top: 50px;
 
 					@include tablet {
 						margin-top: 20px;
+					}
+
+					@include mobile {
+						margin-top: 15px;
 					}
 				}
 			}
@@ -2899,6 +3034,11 @@
 				margin-top: 100px;
 				background-color: transparent;
 				color: var.$font-color;
+
+				@include mobile {
+					margin-top: 50px;
+					border-width: 2px;
+				}
 			}
 		}
 	}
@@ -2908,7 +3048,11 @@
 			margin-top: 120px;
 
 			@include tablet {
-				margin-top: 85px
+				margin-top: 85px;
+			}
+
+			@include mobile {
+				margin-top: 57px;
 			}
 		}
 
@@ -2930,8 +3074,19 @@
 				@include mixin.FontSize(20px);
 			}
 
+			@include mobile {
+				padding-top: 30px;
+				padding-bottom: 30px;
+
+				@include mixin.FontSize(15px);
+			}
+
 			&:first-of-type {
 				padding-top: 0;
+
+				@include mobile {
+					padding-bottom: 15px;
+				}
 			}
 
 			&:last-of-type {
@@ -3039,4 +3194,8 @@
 
 	@include mixin.FontSize(20px);
 	color: red;
+
+	@include mobile {
+		@include mixin.FontSize(15px);
+	}
 }

@@ -47,3 +47,9 @@ img {
 		display: block;
 	}
 }
+
+.visible-mb {
+	@include mobile {
+		display: block !important;
+	}
+}
