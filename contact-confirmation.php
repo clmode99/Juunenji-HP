@@ -1,7 +1,24 @@
 <?php
-	// POSTされた内容をSESSIONに入れる
 	session_start();
 
+	require 'assets/php/check_input.php';
+
+	$_POST = CheckInput($_POST);
+
+	// CSRF対策
+	if(isset($_POST['ticket'], $_SESSION['ticket'])) {
+		$ticket = $_POST['ticket'];
+
+		if($ticket !== $_SESSION['ticket']) {
+			die('エラー！トークンが一致しません');
+		}
+	}
+	else {
+		die('エラー！このページには直接アクセスできません');
+	}
+
+// ---------------------------------------------------------
+	// POSTされた内容をSESSIONに入れる	
 	$_SESSION['name']     = $_POST["name"];
 	$_SESSION['ruby']     = $_POST["ruby"];
 	$_SESSION['mail']     = $_POST["mail"];
@@ -121,12 +138,12 @@
 							</div><!-- /.main-confirmation-item -->
 							<div class="main-confirmation-item">
 								<div class="main-confirmation-entry">お問い合わせ内容</div><!-- /.main-confirmation-entry -->
-								<div class="main-confirmation-contents"><?php echo $_POST["contents"]; ?></div><!-- /.main-confirmation-contents -->
+								<div class="main-confirmation-contents"><?php echo nl2br($_POST["contents"]); ?></div><!-- /.main-confirmation-contents -->
 							</div><!-- /.main-confirmation-item -->
+							<input class="main-form-form-item-input" type="hidden" name="ticket" value="<?php echo Escape($ticket); ?>">
 							<input class="main-form-form-back" type="button" onclick="history.back()" value="入力画面へ戻る">
 							<input class="main-form-form-submit main-form-form-submit-confirmation" type="submit" value="上記の内容で送信">
 						</form><!-- /.main-about-confirmation-list -->
-
 					</div><!-- /.main-about-contents -->
 				</div><!-- /.main-about -->
 			</div><!-- /.main-contents -->

@@ -177,11 +177,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 
 		// エラーの位置へスクロールする
-//		const errorElem = document.querySelector('.' + errorClassName);
-//		if(!errorElem) {
-//			return;
-//		}
-//		const errorElemOffsetTop = errorElem.offsetTop;
-//		window.scrollTo({top: errorElemOffsetTop - 40, behavior: 'smooth'});
+		const errorElem = document.querySelector('.' + errorClassName);
+		if(!errorElem) {
+			return;
+		}
+		const errorElemOffsetTop = errorElem.offsetTop;
+		//window.scroll({top: errorElemOffsetTop - 40, behavior: 'smooth'});
 	});
 });

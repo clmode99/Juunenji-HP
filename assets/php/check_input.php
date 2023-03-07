@@ -28,7 +28,7 @@ function CheckInput($var) {
 		die('不正な入力です');
 	}
 	// 改行、タブ文字以外の制御文字チェック
-	if(preg_match('/\A[\r\n\t[:^cntrl:]]*\z/u', $var)) {
+	if(preg_match('/\A[\r\n\t[:^cntrl:]]*\z/u', $var) === 0) {
 		die('不正な入力です');
 	}
 
