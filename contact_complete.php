@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	mb_language("Japanese");
+	mb_internal_encoding("UTF-8");
+?>
+
 <!DOCTYPE html>
 <html lang="jp">
 <head>
@@ -82,16 +88,34 @@
 					<div class="main-about-contents">
 						<h2 class="main-about-contents-title main-about-contact-title">送信完了</h2><!-- /.main-about-contents-title -->
 						<p class="main-about-contact-text">
-							ご入力内容の確認メールをご入力いただいたメールアドレス宛に送信しました。<br><br>
+						<?php 
+							$recipient = "clmode99@gmail.com";		// 受信メールアドレス(十念寺)
+							$title = "十念寺メールフォームから問い合わせがありました";					// タイトル
+							$message = "十念寺メールフォームから問い合わせがありました。\r\n\r\n・名前\r\n{$_SESSION['name']}\r\n\r\n・ふりがな\r\n{$_SESSION['ruby']}\r\n\r\n・メールアドレス\r\n{$_SESSION['mail']}\r\n\r\n・郵便番号\r\n{$_SESSION['zipcode']}\r\n\r\n・住所\r\n{$_SESSION['address']}\r\n\r\n・電話番号\r\n{$_SESSION['tel']}\r\n\r\n・お問い合わせ内容\r\n{$_SESSION['contents']}\r\n\r\n";		// 内容
+							$header = "From: 十念寺メールフォーム";
 
-							確認メールがご自身のメールアドレスに届いていない場合、<br>
-							ご入力頂いたメールアドレスが誤っているか、<br>
-							確認メールが迷惑メールとして扱われている可能性がありますので、<br>
-							再度ご確認ください。<br><br>
+							$sender = $_SESSION['mail'];
+							$title2 = "十念寺メールフォームに送信しました";
+							$message2 = "十念寺メールフォームに以下の内容でメールを送信しました。\r\n\r\n・名前\r\n{$_SESSION['name']}\r\n\r\n・ふりがな\r\n{$_SESSION['ruby']}\r\n\r\n・メールアドレス\r\n{$_SESSION['mail']}\r\n\r\n・郵便番号\r\n{$_SESSION['zipcode']}\r\n\r\n・住所\r\n{$_SESSION['address']}\r\n\r\n・電話番号\r\n{$_SESSION['tel']}\r\n\r\n・お問い合わせ内容\r\n{$_SESSION['contents']}\r\n\r\n";		// 内容
 
-							もしメールが届かない場合は、お手数ではございますが、<br>
-							再度フォームよりお問い合わせいただくか、<br>
-							お電話にてお問い合わせください。
+
+							if(mb_send_mail($recipient, $title, $message, $header) && (mb_send_mail($sender, $title2, $message2, $header))) {
+								echo "ご入力内容の確認メールをご入力いただいたメールアドレス宛に送信しました。<br><br>
+
+								確認メールがご自身のメールアドレスに届いていない場合、<br>
+								ご入力頂いたメールアドレスが誤っているか、<br>
+								確認メールが迷惑メールとして扱われている可能性がありますので、<br>
+								再度ご確認ください。<br><br>
+		
+								もしメールが届かない場合は、お手数ではございますが、<br>
+								再度フォームよりお問い合わせいただくか、<br>
+								お電話にてお問い合わせください。";
+							}
+							else {
+								echo "メールの送信に失敗しました。<br>
+								お手数ではございますが、お電話にてお問い合わせください。";
+							}
+						?>
 						</p><!-- /.main-about-contact-text -->
 						<p class="main-about-contact-text-mobile">
 							ご入力内容の確認メールをご入力いただいたメールアドレス宛に送信しました。<br><br>

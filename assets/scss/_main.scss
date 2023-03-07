@@ -652,6 +652,7 @@
 
 		&-contact {
 			padding-top: 150px;
+			padding-bottom: 150px;
 
 			@include tablet {
 				display: block;
@@ -667,7 +668,7 @@
 
 			&-title {
 				margin: 0 auto;
-				width: 40%;
+				width: 45%;
 				padding-top: 15px;
 				padding-bottom: 15px;
 
@@ -683,6 +684,14 @@
 				@include mobile {
 					@include mixin.FontSize(23px);
 				}
+			}
+
+			&-tel {
+				margin-top: 50px;
+
+				text-align: center;
+				@include mixin.FontSize(45px);
+				font-weight: bold;
 			}
 
 			&-text {
@@ -2530,6 +2539,249 @@
 			}
 		}
 	}
+
+	&-line {
+		position: relative;
+		padding-top: 150px;
+		padding-bottom: 200px;
+
+		&-title {
+			width: 50%;
+			margin: 0 auto;
+			padding-top: 22px;
+			padding-bottom: 22px;
+
+			@include mixin.FontSize(45px);
+			font-weight: bold;
+			text-align: center;
+			border: 2px solid var.$about-item-border-color;
+		}
+
+		&-text {
+			margin-top: 80px;
+
+			@include mixin.FontSize(20px);
+			@include mixin.LineHeight(20, 36);
+
+			&-center {
+				text-align: center;
+			}
+		}
+
+		&-button {
+			display: block;
+			margin: 80px auto 0;
+			text-align: center;
+
+			img {
+				width: 100%;
+				max-width: 498px;
+				height: 174px;
+			}
+
+		}
+
+		&-add {
+			margin-top: 150px;
+
+			&-title {
+				padding-top: 30px;
+				padding-bottom: 30px;
+
+				@include mixin.FontSize(45px);
+				font-weight: bold;
+				text-align: center;
+
+				border-top: 1px solid var.$font-color;
+				border-bottom: 1px solid var.$font-color;
+			}
+
+			&-list {
+				margin-top: 80px;
+				text-align: center;
+			}
+
+			&-item {
+				padding-top: 80px;
+				padding-bottom: 150px;
+
+				border-bottom: 1px dotted var.$font-color;
+
+				&:first-of-type {
+					padding-top: 0;
+				}
+
+				&:last-of-type {
+					padding-bottom: 0;
+					border-bottom: none;
+				}
+
+				&-id {
+					padding-bottom: 80px;
+				}
+
+				&-button {
+					padding-top: 150px;
+				}
+
+				&-title {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					@include mixin.FontSize(40px);
+
+					img {
+						margin-right: 28px;
+						height: 40px;
+					}
+				}
+
+				&-qr {
+					margin-top: 80px;
+					height: 329px;
+				}
+
+				&-text {
+					margin-top: 80px;
+
+					@include mixin.FontSize(20px);
+
+					&-id {
+						margin-top: 50px;
+					}
+				}
+			}
+		}
+	}
+
+	&-form {
+		position: relative;
+		padding-top: 150px;
+		padding-bottom: 200px;
+
+		&-title {
+			width: 50%;
+			margin: 0 auto;
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+			@include mixin.FontSize(45px);
+			font-weight: bold;
+			text-align: center;
+			border: 2px solid var.$about-item-border-color;
+		}
+
+		&-form {
+			margin-top: 150px;
+
+			&-item {
+				display: flex;
+				align-items: left;
+				width: 100%;
+				padding-top: 22px;
+				padding-bottom: 22px;
+
+				border-bottom: 1px solid var.$about-item-border-color;
+
+				&:last-of-type {
+					border-bottom: none;
+				}
+
+				&-text {
+					width: 40%;
+					margin-top: 35px;
+
+					@include mixin.FontSize(26px);
+					font-weight: bold;
+				}
+
+				&-input {
+					width: 100%;
+					height: 90px;
+
+					border: none;
+					padding-left: 30px;
+
+					@include mixin.FontSize(25px);
+
+					&-list {
+						width: 60%;
+					}
+
+					&-confirmation {
+						margin-top: 22px;
+					}
+
+					&-textarea {
+						width: 100%;
+						padding-top: 30px;
+						padding-left: 30px;
+	
+						resize: none;
+						border: none;
+						@include mixin.FontSize(25px);
+					}
+				}
+			}
+
+			&-submit {
+				display: block;
+				width: 45%;
+				margin: 130px auto 0;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				cursor: pointer;
+
+				@include mixin.FontSize(35px);
+				font-weight: bold;
+				background-color: var.$triangle-color;
+				color: var.$triangle-hover-color;
+
+				font-family: 'Source Han Serif', sans-serif;
+
+				&-confirmation {
+					margin-top: 50px;
+				}
+			}
+
+			&-back {
+				@extend .main-form-form-submit;
+				margin-top: 100px;
+				background-color: transparent;
+				color: var.$font-color;
+			}
+		}
+	}
+
+	&-confirmation {
+		&-list {
+			margin-top: 120px;
+		}
+
+		&-item {
+			display: flex;
+
+			padding-top: 50px;
+			padding-bottom: 50px;
+			border-bottom: 1px solid var.$about-item-border-color;
+
+			@include mixin.FontSize(26px);
+			font-weight: bold;
+			text-align: left;
+
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+
+		&-entry {
+			width: 30%;
+		}
+
+		&-contents {
+			width: 70%;
+		}
+	}
 }
 
 // ホバー関連(こうしないと動かない系)
@@ -2603,4 +2855,13 @@
 	@include mobile {
 		@include mixin.FontSize(10px);
 	}
+}
+
+// フォームのエラー関連
+.error-js {
+	display: block;
+	margin-top: 10px;
+
+	@include mixin.FontSize(20px);
+	color: red;
 }
