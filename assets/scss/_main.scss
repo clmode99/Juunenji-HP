@@ -692,6 +692,12 @@
 				text-align: center;
 				@include mixin.FontSize(45px);
 				font-weight: bold;
+
+				@include tablet {
+					margin-top: 40px;
+
+					@include mixin.FontSize(30px);
+				}
 			}
 
 			&-text {
@@ -2545,6 +2551,13 @@
 		padding-top: 150px;
 		padding-bottom: 200px;
 
+		@include tablet {
+			@include mixin.FixContentsCenterTablet;
+
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+
 		&-title {
 			width: 50%;
 			margin: 0 auto;
@@ -2555,6 +2568,13 @@
 			font-weight: bold;
 			text-align: center;
 			border: 2px solid var.$about-item-border-color;
+
+			@include tablet {
+				padding: 0;
+
+				@include mixin.FontSize(30px);
+				border: none;
+			}
 		}
 
 		&-text {
@@ -2562,9 +2582,22 @@
 
 			@include mixin.FontSize(20px);
 			@include mixin.LineHeight(20, 36);
+			
+			@include tablet {
+				margin-top: 40px;
+
+				@include mixin.FontSize(17px);
+				@include mixin.LineHeight(17, 30);
+				font-weight: bold;
+			}
+
 
 			&-center {
 				text-align: center;
+
+				@include tablet {
+					text-align: left;
+				}
 			}
 		}
 
@@ -2573,16 +2606,29 @@
 			margin: 80px auto 0;
 			text-align: center;
 
+			@include tablet {
+				margin-top: 40px;
+			}
+
 			img {
 				width: 100%;
 				max-width: 498px;
 				height: 174px;
+
+				@include tablet {
+					max-width: 314px;
+					height: 110px;
+				}
 			}
 
 		}
 
 		&-add {
 			margin-top: 150px;
+
+			@include tablet {
+				margin-top: 100px;
+			}
 
 			&-title {
 				padding-top: 30px;
@@ -2594,11 +2640,19 @@
 
 				border-top: 1px solid var.$font-color;
 				border-bottom: 1px solid var.$font-color;
+
+				@include tablet {
+					@include mixin.FontSize(30px);
+				}
 			}
 
 			&-list {
 				margin-top: 80px;
 				text-align: center;
+
+				@include tablet {
+					margin-top: 33px;
+				}
 			}
 
 			&-item {
@@ -2607,21 +2661,34 @@
 
 				border-bottom: 1px dotted var.$font-color;
 
+				@include tablet {
+					padding-top: 40px;
+					padding-bottom: 40px;
+				}
+
 				&:first-of-type {
-					padding-top: 0;
+					padding-top: 0 !important;
 				}
 
 				&:last-of-type {
-					padding-bottom: 0;
+					padding-bottom: 0 !important;
 					border-bottom: none;
 				}
 
 				&-id {
 					padding-bottom: 80px;
+
+					@include tablet {
+						padding-bottom: 40px;
+					}
 				}
 
 				&-button {
 					padding-top: 150px;
+
+					@include tablet {
+						padding-top: 40px !important;
+					}
 				}
 
 				&-title {
@@ -2630,15 +2697,29 @@
 					align-items: center;
 					@include mixin.FontSize(40px);
 
+					@include tablet {
+						@include mixin.FontSize(21px);
+					}
+
 					img {
 						margin-right: 28px;
 						height: 40px;
+
+						@include tablet {
+							margin-right: 14px;
+							height: 30px;
+						}
 					}
 				}
 
 				&-qr {
 					margin-top: 80px;
 					height: 329px;
+
+					@include tablet {
+						margin-top: 40px;
+						height: 201px;
+					}
 				}
 
 				&-text {
@@ -2646,8 +2727,20 @@
 
 					@include mixin.FontSize(20px);
 
+					@include tablet {
+						margin-top: 40px;
+
+						@include mixin.FontSize(17px);
+						@include mixin.LineHeight(17, 30);
+						font-weight: bold;
+					}
+
 					&-id {
 						margin-top: 50px;
+
+						@include tablet {
+							margin-top: 20px;
+						}
 					}
 				}
 			}
@@ -2655,9 +2748,16 @@
 	}
 
 	&-form {
+		@include mixin.FixContentsCenterTablet;
 		position: relative;
 		padding-top: 150px;
 		padding-bottom: 200px;
+
+		@include tablet {
+			display: block;
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
 
 		&-title {
 			width: 50%;
@@ -2669,10 +2769,21 @@
 			font-weight: bold;
 			text-align: center;
 			border: 2px solid var.$about-item-border-color;
+
+			@include tablet {
+				padding: 0;
+
+				@include mixin.FontSize(30px);
+				border: 0;
+			}
 		}
 
 		&-form {
 			margin-top: 150px;
+
+			@include tablet {
+				margin-top: 40px;
+			}
 
 			&-item {
 				display: flex;
@@ -2683,7 +2794,15 @@
 
 				border-bottom: 1px solid var.$about-item-border-color;
 
-				&:last-of-type {
+				@include tablet {
+					flex-wrap: wrap;
+					border-bottom-style: dotted;
+
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
+
+				&:last-of-type, &:nth-last-of-type(2){
 					border-bottom: none;
 				}
 
@@ -2693,6 +2812,13 @@
 
 					@include mixin.FontSize(26px);
 					font-weight: bold;
+
+					@include tablet {
+						width: 100%;
+						margin-top: 60px;
+
+						@include mixin.FontSize(21px);
+					}
 				}
 
 				&-input {
@@ -2704,8 +2830,17 @@
 
 					@include mixin.FontSize(25px);
 
+					@include tablet {
+						height: 80px;
+						margin-top: 20px;
+					}
+
 					&-list {
 						width: 60%;
+
+						@include tablet {
+							width: 100%;
+						}
 					}
 
 					&-confirmation {
@@ -2720,6 +2855,10 @@
 						resize: none;
 						border: none;
 						@include mixin.FontSize(25px);
+
+						@include tablet {
+							margin-top: 20px;
+						}
 					}
 				}
 			}
@@ -2739,8 +2878,19 @@
 
 				font-family: 'Source Han Serif', sans-serif;
 
+				@include tablet {
+					width: 100%;
+					margin-top: 15px;
+
+					@include mixin.FontSize(30px);
+				}
+
 				&-confirmation {
 					margin-top: 50px;
+
+					@include tablet {
+						margin-top: 20px;
+					}
 				}
 			}
 
@@ -2756,6 +2906,10 @@
 	&-confirmation {
 		&-list {
 			margin-top: 120px;
+
+			@include tablet {
+				margin-top: 85px
+			}
 		}
 
 		&-item {
@@ -2769,17 +2923,38 @@
 			font-weight: bold;
 			text-align: left;
 
+			@include tablet {
+				flex-wrap: wrap;
+				border-bottom-style: dotted;
+
+				@include mixin.FontSize(20px);
+			}
+
+			&:first-of-type {
+				padding-top: 0;
+			}
+
 			&:last-of-type {
+				padding-bottom: 0;
 				border-bottom: none;
 			}
 		}
 
 		&-entry {
 			width: 30%;
+
+			@include tablet {
+				width: 100%;
+			}
 		}
 
 		&-contents {
 			width: 70%;
+
+			@include tablet {
+				margin-top: 20px;
+				width: 100%;
+			}
 		}
 	}
 }

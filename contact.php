@@ -139,7 +139,7 @@
 							</div><!-- /.main-line-add-item -->
 							<div class="main-line-add-item main-line-add-item-id">
 								<h4 class="main-line-add-item-title"><img src="assets/images/list-icon.png">ID検索</h4><!-- /.main-line-add-item-title -->
-								<p class="main-line-add-item-text main-line-add-item-text-id">LINEアプリ「ホーム」から、検索欄に「＠keikokuji」で検索</p><!-- /.main-line-add-item-text -->
+								<p class="main-line-add-item-text main-line-add-item-text-id">LINEアプリ「ホーム」から、<span class="br-tablet"></span>検索欄に「＠keikokuji」で検索</p><!-- /.main-line-add-item-text -->
 							</div><!-- /.main-line-add-item -->
 							<div class="main-line-add-item main-line-add-item-button">
 								<h4 class="main-line-add-item-title"><img src="assets/images/list-icon.png">友だち追加ボタンから</h4><!-- /.main-line-add-item-title -->
