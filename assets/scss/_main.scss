@@ -28,7 +28,7 @@
 				width: 30%;
 
 				&-img {
-					height: 100%
+					height: auto;
 				}
 			}
 
@@ -1802,7 +1802,7 @@
 		&-list {
 			margin-top: 80px;
 			display: flex;
-			column-gap: 105px;
+			column-gap: 95px;
 			row-gap: 80px;
 			flex-wrap: wrap;
 		}
@@ -1873,8 +1873,14 @@
 		}
 
 		&-tablet {
-			padding-top: 200px;
-			padding-bottom: 200px;
+			display: none;
+
+			@include tablet {
+				display: block;
+
+				padding-top: 200px;
+				padding-bottom: 200px;
+			}
 
 			@include mobile {
 				padding-top: 94px;
@@ -3186,6 +3192,16 @@
 		@include mixin.FontSize(10px);
 	}
 }
+
+// スライドショーのバグ対策
+// 参考URL：https://stackoverflow.com/questions/66170709/slick-slider-transform-issue-on-nav-slider
+.main-event-slider-nav .slick-track,
+.main-guide-slider-nav-6 .slick-track,
+.main-guide-slider-nav-7 .slick-track,
+.main-guide-slider-nav-8 .slick-track {
+	transform: translate3d(0, 0, 0) !important;
+}
+
 
 // フォームのエラー関連
 .error-js {

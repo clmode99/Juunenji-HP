@@ -1,3 +1,11 @@
+// フォントの設定
+WebFont.load({
+	custom: {families: ['源ノ明朝']},
+	active: function() {
+		$('body').addClass('webfont');
+	}
+});
+
 // jQuery
 $(function () {
 	/* 自作関数 */
@@ -74,12 +82,11 @@ $(function () {
 		speed: 1000,				// 画像の切り替わる時間(ms)
 	});
 
-
 	// ハンバーガーメニュー
 	$('.button-header-hamburger').click(function() {
 		$(this).blur();
 
-		// すでにメニュ＝表示してるなら、さようなら(重複させないようにする)
+		// // すでにメニュ＝表示してるなら、さようなら(重複させないようにする)
 		if($('.header-inner-right-mb-menu-list-overlay')[0])
 			return false;
 

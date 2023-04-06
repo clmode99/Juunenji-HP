@@ -38,7 +38,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 1920px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -89,7 +89,7 @@
   white-space: nowrap;
 }
 .header-inner-right-menu-normal {
-  margin-right: 14%;
+  margin-right: 16%;
 }
 .header-inner-right-menu-normal-list {
   display: flex;
@@ -218,7 +218,6 @@
     margin: 100px auto 0;
     text-align: center;
     position: relative;
-    z-index: 3;
   }
 }
 @media screen and (max-width: 520px) {
@@ -231,13 +230,15 @@
 }
 @media screen and (max-width: 960px) {
   .header-inner-right-mb-menu-list-outer {
+    position: fixed;
     width: 100%;
     height: 120vh;
-    z-index: 3;
-    position: fixed;
+    display: none;
+    z-index: 4;
     top: 0;
     left: 0;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 @media screen and (max-width: 960px) {
@@ -248,7 +249,7 @@
     height: 120vh;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     display: none;
   }
 }
@@ -430,42 +431,6 @@
   display: none;
 }
 
-.youtube {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 177.7777778vh; /* 16:9の幅 */
-  height: 56.25vw; /* 16:9の高さ */
-  min-width: 100%;
-  min-height: 100%;
-}
-.youtube-area {
-  z-index: 1;
-  overflow: hidden;
-  opacity: 0;
-}
-.youtube-area.appear {
-  animation-name: PageAnimeAppear;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-.youtube-mask {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@keyframes PageAnimeAppear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .main-visual-inner, .main-visual-inner-memorial, .main-visual-inner-guide, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
   position: relative;
   width: 100%;
@@ -496,7 +461,7 @@
   width: 30%;
 }
 .main-visual-inner-title-img {
-  height: 100%;
+  height: auto;
 }
 .main-visual-inner-memorial, .main-visual-inner-guide, .main-visual-inner-about, .main-visual-inner-contact, .main-visual-inner-event, .main-visual-inner-traffic, .main-visual-inner-grave {
   height: 600px;
@@ -681,7 +646,7 @@
 }
 .main-contents {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .main-bg {
@@ -1298,7 +1263,7 @@
 }
 .main-menu-item {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -1475,7 +1440,7 @@
 }
 .main-video-memorial-video {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1200px;
   height: 700px;
 }
 @media screen and (max-width: 960px) {
@@ -1705,7 +1670,7 @@
 .main-traffic-map {
   margin-top: 87px;
   width: 100%;
-  max-width: 1320px;
+  max-width: 1200px;
   height: 500px;
 }
 @media screen and (max-width: 960px) {
@@ -2263,8 +2228,8 @@
 .main-facility-list {
   margin-top: 80px;
   display: flex;
-  -moz-column-gap: 105px;
-       column-gap: 105px;
+  -moz-column-gap: 95px;
+       column-gap: 95px;
   row-gap: 80px;
   flex-wrap: wrap;
 }
@@ -2317,8 +2282,14 @@
   right: 0;
 }
 .main-facility-tablet {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .main-facility-tablet {
+    display: block;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 @media screen and (max-width: 520px) {
   .main-facility-tablet {
@@ -2742,7 +2713,7 @@
 }
 .main-guide-modal-contents {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
   height: 600px;
   overflow-y: auto;
@@ -3585,6 +3556,13 @@
   }
 }
 
+.main-event-slider-nav .slick-track,
+.main-guide-slider-nav-6 .slick-track,
+.main-guide-slider-nav-7 .slick-track,
+.main-guide-slider-nav-8 .slick-track {
+  transform: translate3d(0, 0, 0) !important;
+}
+
 .error-js {
   display: block;
   margin-top: 10px;
@@ -3605,7 +3583,7 @@
 }
 .footer-inner {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 80px;
@@ -3800,6 +3778,10 @@
   }
 }
 
+@font-face {
+  font-family: "源ノ明朝";
+  src: url("../fonts/SourceHanSerif-Regular.woff") format("woff"), url("../fonts/SourceHanSerif-Regular.otf") format("opentype");
+}
 html {
   font-size: 10px;
 }
@@ -3812,8 +3794,7 @@ html {
 body {
   overflow-x: hidden;
   color: #272727;
-  font-family: "Source Han Serif", sans-serif;
-  background-color: lightgreen;
+  font-family: "源ノ明朝", sans-serif;
 }
 
 a {
@@ -3822,8 +3803,9 @@ a {
 }
 
 button {
+  color: #272727;
   cursor: pointer;
-  font-family: "Source Han Serif", sans-serif;
+  font-family: "源ノ明朝", sans-serif;
 }
 
 img {
