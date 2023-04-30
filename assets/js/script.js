@@ -86,6 +86,16 @@ $(function () {
 	$('.button-header-hamburger').click(function() {
 		$(this).blur();
 
+		// アニメーション
+		$('.header-inner-right-mb-hamburger-icon').toggleClass('active');
+
+		if(!($('.header-inner-right-mb-hamburger-icon').hasClass('active'))) {
+			$('.header-inner-right-mb-menu-list-outer').fadeOut();
+			$('.header-inner-right-mb-menu-list-overlay').fadeOut(function() {
+				$('.header-inner-right-mb-menu-list-overlay').remove();
+			});
+		}
+
 		// // すでにメニュ＝表示してるなら、さようなら(重複させないようにする)
 		if($('.header-inner-right-mb-menu-list-overlay')[0])
 			return false;
@@ -96,12 +106,12 @@ $(function () {
 	});
 
 	// ハンバーガーメニューからの閉じるとき
-	$(".header-inner-right-mb-menu-list-close-button").unbind().click(function() {
-		$('.header-inner-right-mb-menu-list-outer').fadeOut();
-		$('.header-inner-right-mb-menu-list-overlay').fadeOut(function() {
-			$('.header-inner-right-mb-menu-list-overlay').remove();
-		});
-	});
+	//$(".header-inner-right-mb-menu-list-close-button").unbind().click(function() {
+	//	$('.header-inner-right-mb-menu-list-outer').fadeOut();
+	//	$('.header-inner-right-mb-menu-list-overlay').fadeOut(function() {
+	//		$('.header-inner-right-mb-menu-list-overlay').remove();
+	//	});
+	//});
 
 });
 
