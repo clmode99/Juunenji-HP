@@ -5,7 +5,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,11 @@
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="icon" href="assets/images/juunenji_favicon.ico">
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c4e47f3d5e.js" crossorigin="anonymous"></script>
+	
+</head>
+
 </head>
 <body>
 	<header class="header">
@@ -153,6 +158,7 @@
 				<div class="footer-inner-sns-list">
 					<div class="footer-inner-sns-line"><a href="https://s.lmes.jp/landing-qr/1657796689-qP12wvKj?uLand=5Qvb5j"><img src="assets/images/line-icon.png"></a></div><!-- /.footer-inner-sns-line -->
 					<div class="footer-inner-sns-youtube"><a href="https://www.youtube.com/@user-yi7vt4pb1c" target="_black"><img src="assets/images/youtube-icon.png"></a></div><!-- /.footer-inner-sns-youtube -->	
+					<div class="footer-inner-sns-instagram"><a href="https://www.instagram.com/juunenji.kariya?igsh=YThrZGU5c2I4ZTg2" target="_blank"><i class="fa-brands fa-instagram" style="color: #272727; font-size: 3.5em"></i></a></div>
 				</div><!-- /.footer-inner-sns-list -->
 			</div><!-- /.footer-inner-sns -->
 			<div class="footer-inner-copyright">
@@ -179,6 +185,7 @@
 				<div class="footer-inner-sns-list">
 					<div class="footer-inner-sns-line"><a href="https://s.lmes.jp/landing-qr/1657796689-qP12wvKj?uLand=5Qvb5j" target="_blank"><img src="assets/images/line-icon.png"></a></div><!-- /.footer-inner-sns-line -->
 					<div class="footer-inner-sns-youtube"><a href="https://www.youtube.com/@user-yi7vt4pb1c" target="_black"><img src="assets/images/youtube-icon.png"></a></div><!-- /.footer-inner-sns-youtube -->	
+					<div class="footer-inner-sns-instagram"><a href="https://www.instagram.com/juunenji.kariya?igsh=YThrZGU5c2I4ZTg2" target="_blank"><i class="fa-brands fa-instagram" style="color: #272727; font-size: 3.5em"></i></a></div>
 				</div><!-- /.footer-inner-sns-list -->
 			</div><!-- /.footer-inner-sns -->
 			<div class="footer-inner-copyright">

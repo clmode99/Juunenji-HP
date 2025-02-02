@@ -1,257 +1,333 @@
 <!DOCTYPE html>
-<html lang="jp">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>十念寺</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="assets/libs/slick.css">
-	<link rel="stylesheet" href="assets/libs/slick-theme.css">
-	<link rel="stylesheet" href="assets/css/reset.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="icon" href="assets/images/juunenji_favicon.ico">
-</head>
-<body>
-	<header class="header">
-		<div class="header-inner">
-			<div class="header-inner-left">
-				<a class="header-inner-left-logo-link"><img src="assets/images/junenji_logo_black.png" alt="" class="header-inner-left-logo-img"></a><!-- /.header-inner-left-logo-link -->
-			</div><!-- /.header-inner-left -->
-			<div class="header-inner-right tablet-hidden">
-				<div class="header-inner-right-menu">
-					<nav class="header-inner-right-menu-normal">
-						<ol class="header-inner-right-menu-normal-list">
-							<li class="header-inner-right-menu-normal-item"><a href="about.html">十念寺について</a></li>
-							<li class="header-inner-right-menu-normal-item"><a href="guide.html">十念寺のご案内</a></li>
-							<li class="header-inner-right-menu-normal-item"><a href="memorial-service.html">法要</a></li>
-							<li class="header-inner-right-menu-normal-item"><a href="event.html">年間行事</a></li>
-							<li class="header-inner-right-menu-normal-item"><a href="grave.html">永代供養墓地</a></li>
-							<li class="header-inner-right-menu-normal-item"><a href="traffic.html">交通のご案内</a></li>
-						</ol><!-- /.header-inner-right-menu-list -->
-					</nav><!-- /.header-inner-right-menu-normal -->
-					<button class="header-inner-right-menu-contact" onclick="location.href='contact.php'">お問い合わせ</button>
-				</div><!-- /.header-inner-right-menu -->
-			</div><!-- /.header-inner-right -->
-			<div class="header-inner-right-mb">
-				<a href="tel:0566210854" class="header-inner-right-mb-button button-header-tel"><img src="assets/images/tel.png">お電話</a><!-- /.header-inner-right-mb-tel -->
-				<a href="traffic.html" class="header-inner-right-mb-button button-header-access"><img src="assets/images/mappin.png">アクセス</a><!-- /.header-inner-right-mb-button -->
-				<!-- ハンバーガーメニュー参考サイト：https://hakenblog.com/hamburger-menu/、https://codepen.io/sakuragraphica/pen/PozLPBg、https://syncer.jp/jquery-modal-window -->
-				<a class="header-inner-right-mb-button button-header-hamburger">
-					<div class="header-inner-right-mb-hamburger-icon">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div><!-- /.header-inner-right-mb-hamburger-icon -->
-					メニュー
-				</a><!-- /.header-inner-right-mb-menu -->
-			</div><!-- /.header-inner-right-mb -->
-			<nav class="header-inner-right-mb-menu-list-outer">
-				<img class="header-inner-right-mb-menu-list-logo" src="assets/images/junenji_logo_white.png">
-				<ol class="header-inner-right-mb-menu-list">
-					<li class="header-inner-right-mb-menu-item"><a href="index.html">トップページ</a></li>
-					<li class="header-inner-right-mb-menu-item"><a href="about.html">十念寺について</a></li>
-					<li class="header-inner-right-mb-menu-item"><a href="guide.html">十念寺のご案内</a></li>
-					<li class="header-inner-right-mb-menu-item"><a href="memorial-service.html">法要</a></li>
-					<li class="header-inner-right-mb-menu-item"><a href="event.html">年間行事</a></li>
-					<li class="header-inner-right-mb-menu-item"><a href="grave.html">永代供養墓地</a></li>
-					<li class="header-inner-right-mb-menu-item"><a href="traffic.html">交通のご案内</a></li>
-					<li class="header-inner-right-mb-menu-item"><a href="contact.php">お問い合わせ</a></li>
-				</ol><!-- /.header-inner-right-mb-menu-list -->
-			</nav><!-- /.header-inner-right-mb-menu-list-outer -->
-		</div><!-- /.header-inner -->
-	</header>
-	<main class="main">
-		<div class="main-visual">
-			<div class="main-visual-inner" data-property="{
-				videoURL: 'https://www.youtube.com/watch?v=lETYpWTxtps',
-				mute: true,
-				showControls: false,
-				containment: 'self',
-				ratio: '16/9',
-				showYTLogo: false,
-				useOnMobile: false,
-			}">
-				<h1 class="main-visual-inner-title"><img class="main-visual-inner-title-img" src="assets/images/junenji_logo_top.png"></h1>
-			</div><!-- /.main-visual-inner -->
-		</div><!-- /.main-visual -->
-		<div class="main-bg">
-			<div class="main-contents">
-				<div class="main-about">
-					<img class="main-about-left" src="assets/images/about-left.png">
-					<div class="main-about-contents">
-						<h2 class="main-about-contents-title">浄土宗西山禅林寺派<br><span class="main-about-title-contents-small">具足山</span> 十念寺</h2><!-- /.main-about-contents-title -->
-						<p class="main-about-contents-text">刈谷市指定文化財である御本尊や<br>各施設についてご紹介</p><!-- /.main-about-contents-text -->
-						<button class="main-about-contents-button button-normal2" onclick="location.href='about.html'">十念寺について</button><!-- /.main-about-contents-button -->
-					</div><!-- /.main-about-contents -->
-					<img class="main-about-right" src="assets/images/about-right.png">
-				</div><!-- /.main-about -->
-				<div class="main-about-tablet">
-					<div class="main-about-tablet-img">
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>十念寺</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="assets/libs/slick.css">
+		<link rel="stylesheet" href="assets/libs/slick-theme.css">
+		<link rel="stylesheet" href="assets/css/reset.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="icon" href="assets/images/juunenji_favicon.ico">
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/c4e47f3d5e.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header-inner">
+				<div class="header-inner-left">
+					<a class="header-inner-left-logo-link"><img src="assets/images/junenji_logo_black.png" alt=""
+							class="header-inner-left-logo-img"></a><!-- /.header-inner-left-logo-link -->
+				</div><!-- /.header-inner-left -->
+				<div class="header-inner-right tablet-hidden">
+					<div class="header-inner-right-menu">
+						<nav class="header-inner-right-menu-normal">
+							<ol class="header-inner-right-menu-normal-list">
+								<li class="header-inner-right-menu-normal-item"><a href="about.html">十念寺について</a></li>
+								<li class="header-inner-right-menu-normal-item"><a href="guide.html">十念寺のご案内</a></li>
+								<li class="header-inner-right-menu-normal-item"><a href="memorial-service.html">法要</a>
+								</li>
+								<li class="header-inner-right-menu-normal-item"><a href="event.html">年間行事</a></li>
+								<li class="header-inner-right-menu-normal-item"><a href="grave.html">永代供養墓地</a></li>
+								<li class="header-inner-right-menu-normal-item"><a href="traffic.html">交通のご案内</a></li>
+							</ol><!-- /.header-inner-right-menu-list -->
+						</nav><!-- /.header-inner-right-menu-normal -->
+						<button class="header-inner-right-menu-contact"
+							onclick="location.href='contact.php'">お問い合わせ</button>
+					</div><!-- /.header-inner-right-menu -->
+				</div><!-- /.header-inner-right -->
+				<div class="header-inner-right-mb">
+					<a href="tel:0566210854" class="header-inner-right-mb-button button-header-tel"><img
+							src="assets/images/tel.png">お電話</a><!-- /.header-inner-right-mb-tel -->
+					<a href="traffic.html" class="header-inner-right-mb-button button-header-access"><img
+							src="assets/images/mappin.png">アクセス</a><!-- /.header-inner-right-mb-button -->
+					<!-- ハンバーガーメニュー参考サイト：https://hakenblog.com/hamburger-menu/、https://codepen.io/sakuragraphica/pen/PozLPBg、https://syncer.jp/jquery-modal-window -->
+					<a class="header-inner-right-mb-button button-header-hamburger">
+						<div class="header-inner-right-mb-hamburger-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div><!-- /.header-inner-right-mb-hamburger-icon -->
+						メニュー
+					</a><!-- /.header-inner-right-mb-menu -->
+				</div><!-- /.header-inner-right-mb -->
+				<nav class="header-inner-right-mb-menu-list-outer">
+					<img class="header-inner-right-mb-menu-list-logo" src="assets/images/junenji_logo_white.png">
+					<ol class="header-inner-right-mb-menu-list">
+						<li class="header-inner-right-mb-menu-item"><a href="index.html">トップページ</a></li>
+						<li class="header-inner-right-mb-menu-item"><a href="about.html">十念寺について</a></li>
+						<li class="header-inner-right-mb-menu-item"><a href="guide.html">十念寺のご案内</a></li>
+						<li class="header-inner-right-mb-menu-item"><a href="memorial-service.html">法要</a></li>
+						<li class="header-inner-right-mb-menu-item"><a href="event.html">年間行事</a></li>
+						<li class="header-inner-right-mb-menu-item"><a href="grave.html">永代供養墓地</a></li>
+						<li class="header-inner-right-mb-menu-item"><a href="traffic.html">交通のご案内</a></li>
+						<li class="header-inner-right-mb-menu-item"><a href="contact.php">お問い合わせ</a></li>
+					</ol><!-- /.header-inner-right-mb-menu-list -->
+				</nav><!-- /.header-inner-right-mb-menu-list-outer -->
+			</div><!-- /.header-inner -->
+		</header>
+		<main class="main">
+			<div class="main-visual">
+				<div class="main-visual-inner" data-property="{
+			videoURL: 'https://www.youtube.com/watch?v=lETYpWTxtps',
+			mute: true,
+			showControls: false,
+			containment: 'self',
+			ratio: '16/9',
+			showYTLogo: false,
+			useOnMobile: false,
+		}">
+					<h1 class="main-visual-inner-title"><img class="main-visual-inner-title-img"
+							src="assets/images/junenji_logo_top.png"></h1>
+				</div><!-- /.main-visual-inner -->
+			</div><!-- /.main-visual -->
+			<div class="main-bg">
+				<div class="main-contents">
+					<div class="main-about">
 						<img class="main-about-left" src="assets/images/about-left.png">
+						<div class="main-about-contents">
+							<h2 class="main-about-contents-title">浄土宗西山禅林寺派<br><span
+									class="main-about-title-contents-small">具足山</span> 十念寺</h2>
+							<!-- /.main-about-contents-title -->
+							<p class="main-about-contents-text">刈谷市指定文化財である御本尊や<br>各施設についてご紹介</p>
+							<!-- /.main-about-contents-text -->
+							<button class="main-about-contents-button button-normal2"
+								onclick="location.href='about.html'">十念寺について</button><!-- /.main-about-contents-button -->
+						</div><!-- /.main-about-contents -->
 						<img class="main-about-right" src="assets/images/about-right.png">
-					</div><!-- /.main-about-img -->
-					<div class="main-about-contents">
-						<h2 class="main-about-contents-title">浄土宗西山禅林寺派<br><span class="main-about-contents-title-small">具足山</span> 十念寺</h2><!-- /.main-about-contents-title -->
-						<p class="main-about-contents-text">刈谷市指定文化財である御本尊や<br>各施設についてご紹介</p><!-- /.main-about-contents-text -->
-						<button class="main-about-contents-button button-normal2" onclick="location.href='about.html'">十念寺について</button><!-- /.main-about-contents-button -->
-					</div><!-- /.main-about-contents -->
-				</div><!-- /.main-about-tablet -->
-			</div><!-- /.main-contents -->
-		</div><!-- /.main-bg -->
-		<div class="main-menu-list">
-			<div class="main-menu-item-bg">
-				<div class="main-menu-item">
-					<div class="main-menu-item-card main-menu-item-card-right">
-						<div class="main-menu-item-card-inner">
-							<p class="main-menu-item-card-title">ご案内</p><!-- /.main-menu-item-card-title -->
-							<p class="main-menu-item-card-text">刈谷藩主 土井家、天誅組 総裁 松本奎堂、俳人 中島秋挙など。十念寺にまつわる見どころをご案内。</p><!-- /.main-menu-item-card-text -->
-							<button class="main-menu-item-card-button button-normal button-normal-radius" onclick="location.href='guide.html'">詳しく見る</button><!-- /.main-menu-item-card-button -->
-						</div><!-- /.main-menu-item-card-inner -->
-					</div><!-- /.main-menu-item-card -->
-				</div><!-- /.main-menu-item -->	
-			</div><!-- /.main-menu-item-bg -->
-			<div class="main-menu-item-bg">
-				<div class="main-menu-item">
-					<div class="main-menu-item-card main-menu-card-left">
-						<div class="main-menu-item-card-inner">
-							<p class="main-menu-item-card-title">法要</p><!-- /.main-menu-item-card-title -->
-							<p class="main-menu-item-card-text">法要・法事のご要望を承っております。まずはご相談ください</p><!-- /.main-menu-item-card-text -->
-							<button class="main-menu-item-card-button button-normal button-normal-radius" onclick="location.href='memorial-service.html'">詳しく見る</button><!-- /.main-menu-item-card-button -->
-						</div><!-- /.main-menu-item-card-inner -->
-					</div><!-- /.main-menu-item-card -->
-				</div><!-- /.main-menu-item -->	
-			</div><!-- /.main-menu-item-bg -->
-			<div class="main-menu-item-bg">
-				<div class="main-menu-item">
-					<div class="main-menu-item-card main-menu-item-card-right">
-						<div class="main-menu-item-card-inner">
-							<p class="main-menu-item-card-title">年間行事</p><!-- /.main-menu-item-card-title -->
-							<p class="main-menu-item-card-text">十念寺で行われる年間行事です。庚申大祭のご紹介はこちら</p><!-- /.main-menu-item-card-text -->
-							<button class="main-menu-item-card-button button-normal button-normal-radius" onclick="location.href='event.html'">詳しく見る</button><!-- /.main-menu-item-card-button -->
-						</div><!-- /.main-menu-item-card-inner -->
-					</div><!-- /.main-menu-item-card -->
-				</div><!-- /.main-menu-item -->	
-			</div><!-- /.main-menu-item-bg -->
-			<div class="main-menu-item-bg">
-				<div class="main-menu-item">
-					<div class="main-menu-item-card main-menu-card-left">
-						<div class="main-menu-item-card-inner">
-							<p class="main-menu-item-card-title">お墓</p><!-- /.main-menu-item-card-title -->
-							<p class="main-menu-item-card-text">お墓や永代供養墓地でのご相談を承っております。</p><!-- /.main-menu-item-card-text -->
-							<button class="main-menu-item-card-button button-normal button-normal-radius" onclick="location.href='grave.html'">詳しく見る</button><!-- /.main-menu-item-card-button -->
-						</div><!-- /.main-menu-item-card-inner -->
-					</div><!-- /.main-menu-item-card -->
-				</div><!-- /.main-menu-item -->	
-			</div><!-- /.main-menu-item-bg -->
-		</div><!-- /.main-menu-list -->
-		<div class="main-menu-list-tablet-bg">
-			<div class="main-menu-list-tablet">
-				<div class="main-menu-item-tablet">
-					<img class="main-menu-item-tablet-img" src="assets/images/junenji_front_tablet.png">
-					<p class="main-menu-item-tablet-text">刈谷藩主 土井家、天誅組 総裁 松本奎堂、俳人 中島秋挙など。十念寺にまつわる見どころをご案内。</p>
-					<button class="main-menu-item-tablet-button"  onclick="location.href='guide.html'">十念寺のご案内</button>
-				</div><!-- /.main-menu-item-tablet -->
-				<div class="main-menu-item-tablet">
-					<img class="main-menu-item-tablet-img" src="assets/images/junenji_chant_tablet.png">
-					<p class="main-menu-item-tablet-text">法要・法事のご要望を承っております。まずはご相談ください</p>
-					<button class="main-menu-item-tablet-button" onclick="location.href='memorial-service.html'">法要</button>
-				</div><!-- /.main-menu-item-tablet -->
-				<div class="main-menu-item-tablet">
-					<img class="main-menu-item-tablet-img" src="assets/images/junenji_event_tablet.png">
-					<p class="main-menu-item-tablet-text">十念寺で行われる年間行事です。庚申大祭のご紹介はこちら</p>
-					<button class="main-menu-item-tablet-button" onclick="location.href='event.html'">年間行事</button>
-				</div><!-- /.main-menu-item-tablet -->
-				<div class="main-menu-item-tablet">
-					<img class="main-menu-item-tablet-img" src="assets/images/junenji_grave_tablet.png">
-					<p class="main-menu-item-tablet-text">お墓や永代供養墓地でのご相談を承っております。</p>
-					<button class="main-menu-item-tablet-button" onclick="location.href='grave.html'">お墓</button>
-				</div><!-- /.main-menu-item-tablet -->
-			</div><!-- /.main-menu-list-tablet -->
-		</div><!-- /.main-menu-list-tablet-bg -->
-		<div class="main-bg">
-			<div class="main-contents">
-				<div class="main-traffic">
-					<h3 class="main-traffic-title">交通のご案内</h3><!-- /.main-traffic-title -->
-					<iframe class="main-traffic-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1634.4261657822062!2d136.99122306021076!3d34.985363388056115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f6.5!3m3!1m2!1s0x60049cc522e93471%3A0x63cd901e503ac899!2sJunenji!5e0!3m2!1sen!2sjp!4v1674799311471!5m2!1sen!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-					<p class="main-traffic-address main-traffic-text">〒448-0844　愛知県刈谷市広小路4-219</p><!-- /.main-traffic-address -->
-					<p class="main-traffic-tel main-traffic-text">TEL : 0566-21-0854</p><!-- /.main-traffic-tel -->
-					<button class="main-traffic-more button-normal3" onclick="location.href='traffic.html'">詳しくはこちら</button><!-- /.main-traffic-more -->
-				</div><!-- /.main-traffic -->
-			</div><!-- /.main-contents -->	
-		</div><!-- /.main-bg -->
-		<div class="main-slider">
-			<ul class="main-slider-list">
-				<li class="main-slider-item1"></li><!-- /.main-slider-item -->
-				<li class="main-slider-item2"></li><!-- /.main-slider-item -->
-				<li class="main-slider-item3"></li><!-- /.main-slider-item -->
-				<li class="main-slider-item4"></li><!-- /.main-slider-item -->
-				<li class="main-slider-item5"></li><!-- /.main-slider-item -->
-			</ul><!-- /.main-slider-list -->
-		</div><!-- /.main-slider -->
-	</main>
-	<footer class="footer">
-		<div class="footer-inner">
-			<div class="footer-inner-logo"><img class="footer-inner-logo-image" src="assets/images/footer-logo.png"></div><!-- /.footer-inner-logo -->
-			<address class="footer-inner-address">
-				<p class="footer-inner-address-text">〒448-0844　愛知県刈谷市広小路4-219</p><!-- /.footer-inner-address-text -->
-				<p class="footer-inner-address-tel-text">TEL : 0566-21-0854</p><!-- /.footer-inner-address-tel-text -->
-			</address><!-- /.footer-inner-address -->
-			<div class="footer-inner-menu">
+					</div><!-- /.main-about -->
+					<div class="main-about-tablet">
+						<div class="main-about-tablet-img">
+							<img class="main-about-left" src="assets/images/about-left.png">
+							<img class="main-about-right" src="assets/images/about-right.png">
+						</div><!-- /.main-about-img -->
+						<div class="main-about-contents">
+							<h2 class="main-about-contents-title">浄土宗西山禅林寺派<br><span
+									class="main-about-contents-title-small">具足山</span> 十念寺</h2>
+							<!-- /.main-about-contents-title -->
+							<p class="main-about-contents-text">刈谷市指定文化財である御本尊や<br>各施設についてご紹介</p>
+							<!-- /.main-about-contents-text -->
+							<button class="main-about-contents-button button-normal2"
+								onclick="location.href='about.html'">十念寺について</button><!-- /.main-about-contents-button -->
+						</div><!-- /.main-about-contents -->
+					</div><!-- /.main-about-tablet -->
+				</div><!-- /.main-contents -->
+			</div><!-- /.main-bg -->
+			<div class="main-menu-list">
+				<div class="main-menu-item-bg">
+					<div class="main-menu-item">
+						<div class="main-menu-item-card main-menu-item-card-right">
+							<div class="main-menu-item-card-inner">
+								<p class="main-menu-item-card-title">ご案内</p><!-- /.main-menu-item-card-title -->
+								<p class="main-menu-item-card-text">刈谷藩主 土井家、天誅組 総裁 松本奎堂、俳人 中島秋挙など。十念寺にまつわる見どころをご案内。</p>
+								<!-- /.main-menu-item-card-text -->
+								<button class="main-menu-item-card-button button-normal button-normal-radius"
+									onclick="location.href='guide.html'">詳しく見る</button><!-- /.main-menu-item-card-button -->
+							</div><!-- /.main-menu-item-card-inner -->
+						</div><!-- /.main-menu-item-card -->
+					</div><!-- /.main-menu-item -->
+				</div><!-- /.main-menu-item-bg -->
+				<div class="main-menu-item-bg">
+					<div class="main-menu-item">
+						<div class="main-menu-item-card main-menu-card-left">
+							<div class="main-menu-item-card-inner">
+								<p class="main-menu-item-card-title">法要</p><!-- /.main-menu-item-card-title -->
+								<p class="main-menu-item-card-text">法要・法事のご要望を承っております。まずはご相談ください</p>
+								<!-- /.main-menu-item-card-text -->
+								<button class="main-menu-item-card-button button-normal button-normal-radius"
+									onclick="location.href='memorial-service.html'">詳しく見る</button><!-- /.main-menu-item-card-button -->
+							</div><!-- /.main-menu-item-card-inner -->
+						</div><!-- /.main-menu-item-card -->
+					</div><!-- /.main-menu-item -->
+				</div><!-- /.main-menu-item-bg -->
+				<div class="main-menu-item-bg">
+					<div class="main-menu-item">
+						<div class="main-menu-item-card main-menu-item-card-right">
+							<div class="main-menu-item-card-inner">
+								<p class="main-menu-item-card-title">年間行事</p><!-- /.main-menu-item-card-title -->
+								<p class="main-menu-item-card-text">十念寺で行われる年間行事です。庚申大祭のご紹介はこちら</p>
+								<!-- /.main-menu-item-card-text -->
+								<button class="main-menu-item-card-button button-normal button-normal-radius"
+									onclick="location.href='event.html'">詳しく見る</button><!-- /.main-menu-item-card-button -->
+							</div><!-- /.main-menu-item-card-inner -->
+						</div><!-- /.main-menu-item-card -->
+					</div><!-- /.main-menu-item -->
+				</div><!-- /.main-menu-item-bg -->
+				<div class="main-menu-item-bg">
+					<div class="main-menu-item">
+						<div class="main-menu-item-card main-menu-card-left">
+							<div class="main-menu-item-card-inner">
+								<p class="main-menu-item-card-title">お墓</p><!-- /.main-menu-item-card-title -->
+								<p class="main-menu-item-card-text">お墓や永代供養墓地でのご相談を承っております。</p>
+								<!-- /.main-menu-item-card-text -->
+								<button class="main-menu-item-card-button button-normal button-normal-radius"
+									onclick="location.href='grave.html'">詳しく見る</button><!-- /.main-menu-item-card-button -->
+							</div><!-- /.main-menu-item-card-inner -->
+						</div><!-- /.main-menu-item-card -->
+					</div><!-- /.main-menu-item -->
+				</div><!-- /.main-menu-item-bg -->
+			</div><!-- /.main-menu-list -->
+			<div class="main-menu-list-tablet-bg">
+				<div class="main-menu-list-tablet">
+					<div class="main-menu-item-tablet">
+						<img class="main-menu-item-tablet-img" src="assets/images/junenji_front_tablet.png">
+						<p class="main-menu-item-tablet-text">刈谷藩主 土井家、天誅組 総裁 松本奎堂、俳人 中島秋挙など。十念寺にまつわる見どころをご案内。</p>
+						<button class="main-menu-item-tablet-button"
+							onclick="location.href='guide.html'">十念寺のご案内</button>
+					</div><!-- /.main-menu-item-tablet -->
+					<div class="main-menu-item-tablet">
+						<img class="main-menu-item-tablet-img" src="assets/images/junenji_chant_tablet.png">
+						<p class="main-menu-item-tablet-text">法要・法事のご要望を承っております。まずはご相談ください</p>
+						<button class="main-menu-item-tablet-button"
+							onclick="location.href='memorial-service.html'">法要</button>
+					</div><!-- /.main-menu-item-tablet -->
+					<div class="main-menu-item-tablet">
+						<img class="main-menu-item-tablet-img" src="assets/images/junenji_event_tablet.png">
+						<p class="main-menu-item-tablet-text">十念寺で行われる年間行事です。庚申大祭のご紹介はこちら</p>
+						<button class="main-menu-item-tablet-button" onclick="location.href='event.html'">年間行事</button>
+					</div><!-- /.main-menu-item-tablet -->
+					<div class="main-menu-item-tablet">
+						<img class="main-menu-item-tablet-img" src="assets/images/junenji_grave_tablet.png">
+						<p class="main-menu-item-tablet-text">お墓や永代供養墓地でのご相談を承っております。</p>
+						<button class="main-menu-item-tablet-button" onclick="location.href='grave.html'">お墓</button>
+					</div><!-- /.main-menu-item-tablet -->
+				</div><!-- /.main-menu-list-tablet -->
+			</div><!-- /.main-menu-list-tablet-bg -->
+			<div class="main-bg">
+				<div class="main-contents">
+					<div class="main-traffic">
+						<h3 class="main-traffic-title">交通のご案内</h3><!-- /.main-traffic-title -->
+						<iframe class="main-traffic-map"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1634.4261657822062!2d136.99122306021076!3d34.985363388056115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f6.5!3m3!1m2!1s0x60049cc522e93471%3A0x63cd901e503ac899!2sJunenji!5e0!3m2!1sen!2sjp!4v1674799311471!5m2!1sen!2sjp"
+							style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<p class="main-traffic-address main-traffic-text">〒448-0844　愛知県刈谷市広小路4-219</p>
+						<!-- /.main-traffic-address -->
+						<p class="main-traffic-tel main-traffic-text">TEL : 0566-21-0854</p><!-- /.main-traffic-tel -->
+						<button class="main-traffic-more button-normal3"
+							onclick="location.href='traffic.html'">詳しくはこちら</button><!-- /.main-traffic-more -->
+					</div><!-- /.main-traffic -->
+				</div><!-- /.main-contents -->
+			</div><!-- /.main-bg -->
+			<div class="main-slider">
+				<ul class="main-slider-list">
+					<li class="main-slider-item1"></li><!-- /.main-slider-item -->
+					<li class="main-slider-item2"></li><!-- /.main-slider-item -->
+					<li class="main-slider-item3"></li><!-- /.main-slider-item -->
+					<li class="main-slider-item4"></li><!-- /.main-slider-item -->
+					<li class="main-slider-item5"></li><!-- /.main-slider-item -->
+				</ul><!-- /.main-slider-list -->
+			</div><!-- /.main-slider -->
+		</main>
+		<footer class="footer">
+			<div class="footer-inner">
+				<div class="footer-inner-logo"><img class="footer-inner-logo-image" src="assets/images/footer-logo.png">
+				</div><!-- /.footer-inner-logo -->
+				<address class="footer-inner-address">
+					<p class="footer-inner-address-text">〒448-0844　愛知県刈谷市広小路4-219</p>
+					<!-- /.footer-inner-address-text -->
+					<p class="footer-inner-address-tel-text">TEL : 0566-21-0854</p>
+					<!-- /.footer-inner-address-tel-text -->
+				</address><!-- /.footer-inner-address -->
+				<div class="footer-inner-menu">
+					<ol class="footer-inner-menu-list">
+						<li class="footer-inner-menu-item"><a>トップページ</a></li><!-- /.footer-inner-menu-item -->
+						<li class="footer-inner-menu-item"><a href="about.html">十念寺について</a></li>
+						<!-- /.footer-inner-menu-item -->
+						<li class="footer-inner-menu-item"><a href="guide.html">十念寺のご案内</a></li>
+						<!-- /.footer-inner-menu-item -->
+						<li class="footer-inner-menu-item"><a href="memorial-service.html">法要</a></li>
+						<!-- /.footer-inner-menu-item -->
+						<li class="footer-inner-menu-item"><a href="event.html">年間行事</a></li>
+						<!-- /.footer-inner-menu-item -->
+						<li class="footer-inner-menu-item"><a href="grave.html">永代供養墓地</a></li>
+						<!-- /.footer-inner-menu-item -->
+						<li class="footer-inner-menu-item"><a href="traffic.html">交通のご案内</a></li>
+						<!-- /.footer-inner-menu-item -->
+						<li class="footer-inner-menu-item"><a href="contact.php">お問い合わせ</a></li>
+						<!-- /.footer-inner-menu-item -->
+					</ol><!-- /.footer-inner-menu-list -->
+				</div><!-- /.footer-inner-menu -->
+				<div class="footer-inner-sns">
+					<div class="footer-inner-sns-list">
+						<div class="footer-inner-sns-line"><a
+								href="https://s.lmes.jp/landing-qr/1657796689-qP12wvKj?uLand=5Qvb5j"><img
+									src="assets/images/line-icon.png"></a></div><!-- /.footer-inner-sns-line -->
+						<div class="footer-inner-sns-youtube"><a href="https://www.youtube.com/@user-yi7vt4pb1c"
+								target="_black"><img src="assets/images/youtube-icon.png"></a></div>
+						<div class="footer-inner-sns-instagram"><a
+								href="https://www.instagram.com/juunenji.kariya?igsh=YThrZGU5c2I4ZTg2"
+								target="_blank"><i class="fa-brands fa-instagram"
+									style="color: #272727; font-size: 3.5em"></i></a></div>
+						<!-- /.footer-inner-sns-youtube -->
+					</div><!-- /.footer-inner-sns-list -->
+				</div><!-- /.footer-inner-sns -->
+				<div class="footer-inner-copyright">
+					<small class="footer-inner-copyright-text">&copy; 2023 Junenji
+						Temple</small><!-- /.footer-inner-copyright-text -->
+				</div><!-- /.footer-inner-copyright -->
+			</div><!-- /.footer-inner -->
+			<div class="footer-inner-tablet">
 				<ol class="footer-inner-menu-list">
 					<li class="footer-inner-menu-item"><a>トップページ</a></li><!-- /.footer-inner-menu-item -->
-					<li class="footer-inner-menu-item"><a href="about.html">十念寺について</a></li><!-- /.footer-inner-menu-item -->
-					<li class="footer-inner-menu-item"><a href="guide.html">十念寺のご案内</a></li><!-- /.footer-inner-menu-item -->
-					<li class="footer-inner-menu-item"><a href="memorial-service.html">法要</a></li><!-- /.footer-inner-menu-item -->
-					<li class="footer-inner-menu-item"><a href="event.html">年間行事</a></li><!-- /.footer-inner-menu-item -->
-					<li class="footer-inner-menu-item"><a href="grave.html">永代供養墓地</a></li><!-- /.footer-inner-menu-item -->
-					<li class="footer-inner-menu-item"><a href="traffic.html">交通のご案内</a></li><!-- /.footer-inner-menu-item -->
-					<li class="footer-inner-menu-item"><a href="contact.php">お問い合わせ</a></li><!-- /.footer-inner-menu-item -->
+					<li class="footer-inner-menu-item"><a href="about.html">十念寺について</a></li>
+					<!-- /.footer-inner-menu-item -->
+					<li class="footer-inner-menu-item"><a href="guide.html">十念寺のご案内</a></li>
+					<!-- /.footer-inner-menu-item -->
+					<li class="footer-inner-menu-item"><a href="memorial-service.html">法要</a></li>
+					<!-- /.footer-inner-menu-item -->
+					<li class="footer-inner-menu-item"><a href="event.html">年間行事</a></li>
+					<!-- /.footer-inner-menu-item -->
+					<li class="footer-inner-menu-item"><a href="grave.html">永代供養墓地</a></li>
+					<!-- /.footer-inner-menu-item -->
+					<li class="footer-inner-menu-item"><a href="traffic.html">交通のご案内</a></li>
+					<!-- /.footer-inner-menu-item -->
+					<li class="footer-inner-menu-item"><a href="contact.php">お問い合わせ</a></li>
+					<!-- /.footer-inner-menu-item -->
 				</ol><!-- /.footer-inner-menu-list -->
-			</div><!-- /.footer-inner-menu -->
-			<div class="footer-inner-sns">
-				<div class="footer-inner-sns-list">
-					<div class="footer-inner-sns-line"><a href="https://s.lmes.jp/landing-qr/1657796689-qP12wvKj?uLand=5Qvb5j"><img src="assets/images/line-icon.png"></a></div><!-- /.footer-inner-sns-line -->
-					<div class="footer-inner-sns-youtube"><a href="https://www.youtube.com/@user-yi7vt4pb1c" target="_black"><img src="assets/images/youtube-icon.png"></a></div><!-- /.footer-inner-sns-youtube -->	
-				</div><!-- /.footer-inner-sns-list -->
-			</div><!-- /.footer-inner-sns -->
-			<div class="footer-inner-copyright">
-				<small class="footer-inner-copyright-text">&copy; 2023 Junenji Temple</small><!-- /.footer-inner-copyright-text -->
-			</div><!-- /.footer-inner-copyright -->
-		</div><!-- /.footer-inner -->
-		<div class="footer-inner-tablet">
-			<ol class="footer-inner-menu-list">
-				<li class="footer-inner-menu-item"><a>トップページ</a></li><!-- /.footer-inner-menu-item -->
-				<li class="footer-inner-menu-item"><a href="about.html">十念寺について</a></li><!-- /.footer-inner-menu-item -->
-				<li class="footer-inner-menu-item"><a href="guide.html">十念寺のご案内</a></li><!-- /.footer-inner-menu-item -->
-				<li class="footer-inner-menu-item"><a href="memorial-service.html">法要</a></li><!-- /.footer-inner-menu-item -->
-				<li class="footer-inner-menu-item"><a href="event.html">年間行事</a></li><!-- /.footer-inner-menu-item -->
-				<li class="footer-inner-menu-item"><a href="grave.html">永代供養墓地</a></li><!-- /.footer-inner-menu-item -->
-				<li class="footer-inner-menu-item"><a href="traffic.html">交通のご案内</a></li><!-- /.footer-inner-menu-item -->
-				<li class="footer-inner-menu-item"><a href="contact.php">お問い合わせ</a></li><!-- /.footer-inner-menu-item -->
-			</ol><!-- /.footer-inner-menu-list -->
-			<div class="footer-inner-logo"><img class="footer-inner-logo-image" src="assets/images/footer-logo.png"></div><!-- /.footer-inner-logo -->
-			<address class="footer-inner-address">
-				<p class="footer-inner-address-text">〒448-0844　愛知県刈谷市広小路4-219</p><!-- /.footer-inner-address-text -->
-				<p class="footer-inner-address-tel-text">TEL : 0566-21-0854</p><!-- /.footer-inner-address-tel-text -->
-			</address><!-- /.footer-inner-address -->
-			<div class="footer-inner-sns">
-				<div class="footer-inner-sns-list">
-					<div class="footer-inner-sns-line"><a href="https://s.lmes.jp/landing-qr/1657796689-qP12wvKj?uLand=5Qvb5j" target="_blank"><img src="assets/images/line-icon.png"></a></div><!-- /.footer-inner-sns-line -->
-					<div class="footer-inner-sns-youtube"><a href="https://www.youtube.com/@user-yi7vt4pb1c" target="_blank"><img src="assets/images/youtube-icon.png"></a></div><!-- /.footer-inner-sns-youtube -->	
-				</div><!-- /.footer-inner-sns-list -->
-			</div><!-- /.footer-inner-sns -->
-			<div class="footer-inner-copyright">
-				<small class="footer-inner-copyright-text">&copy; 2023 Junenji Temple</small><!-- /.footer-inner-copyright-text -->
-			</div><!-- /.footer-inner-copyright -->
-		</div><!-- /.footer-inner-tablet -->
-	</footer>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js?ver=4.9.1"></script>
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="assets/libs/jquery.mb.YTPlayer.min.js"></script>
-	<script type="text/javascript" src="assets/libs/slick.min.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
-</body>
+				<div class="footer-inner-logo"><img class="footer-inner-logo-image" src="assets/images/footer-logo.png">
+				</div><!-- /.footer-inner-logo -->
+				<address class="footer-inner-address">
+					<p class="footer-inner-address-text">〒448-0844　愛知県刈谷市広小路4-219</p>
+					<!-- /.footer-inner-address-text -->
+					<p class="footer-inner-address-tel-text">TEL : 0566-21-0854</p>
+					<!-- /.footer-inner-address-tel-text -->
+				</address><!-- /.footer-inner-address -->
+				<div class="footer-inner-sns">
+					<div class="footer-inner-sns-list">
+						<div class="footer-inner-sns-line"><a
+								href="https://s.lmes.jp/landing-qr/1657796689-qP12wvKj?uLand=5Qvb5j"
+								target="_blank"><img src="assets/images/line-icon.png"></a></div>
+						<!-- /.footer-inner-sns-line -->
+						<div class="footer-inner-sns-youtube"><a href="https://www.youtube.com/@user-yi7vt4pb1c"
+								target="_blank"><img src="assets/images/youtube-icon.png"></a></div>
+						<div class="footer-inner-sns-instagram"><a
+								href="https://www.instagram.com/juunenji.kariya?igsh=YThrZGU5c2I4ZTg2"
+								target="_blank"><i class="fa-brands fa-instagram"
+									style="color: #272727; font-size: 3.5em"></i></a></div>
+						<!-- /.footer-inner-sns-youtube -->
+					</div><!-- /.footer-inner-sns-list -->
+				</div><!-- /.footer-inner-sns -->
+				<div class="footer-inner-copyright">
+					<small class="footer-inner-copyright-text">&copy; 2023 Junenji
+						Temple</small><!-- /.footer-inner-copyright-text -->
+				</div><!-- /.footer-inner-copyright -->
+			</div><!-- /.footer-inner-tablet -->
+		</footer>
+		<script type="text/javascript"
+			src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js?ver=4.9.1"></script>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/libs/jquery.mb.YTPlayer.min.js"></script>
+		<script type="text/javascript" src="assets/libs/slick.min.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+	</body>
+
 </html>
